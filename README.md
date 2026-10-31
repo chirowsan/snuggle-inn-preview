@@ -17,3 +17,4 @@ Your progress is saved only in this browser, for this address. Best in landscape
 - **Tink the engineer** (a later unlock): spots and fixes breakages for you.
 - **Gentle blackout / leaky-pipe events:** swipe the breaker up or turn the valve. Nothing is lost.
 - **Clearer controls:** turn handles with solid arrowheads, finish motions for activities, a footsteps toggle.
+- **Fix (Oct 31):** furniture in the Decorate room view could appear stretched across the floor on some phones. Tables and other pieces now always draw at their normal shape.

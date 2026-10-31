@@ -1,18 +1,27 @@
 /** Decoration-only two-wall room. Never replaces the classic service hallway. */
 import {fitRoomCamera,projectRoomPoint,unprojectRoomPoint,roomGroundPolygon} from './room-isometric-projection.mjs';
 import {furnishingArt} from './room-isometric-scene.mjs';
+export const DECOR_FLOOR_PATH='assets/interior/decor-catalogue-v1/light-oak-floor.webp';
+const floorCopies=new WeakMap();
+/** The floor is the only image drawn through the skewed floor matrix. It is
+ * painted from a private canvas copy so a device GPU can never substitute a
+ * furniture sprite's texture for it (owner bug, Samsung Chrome, Oct 31). */
+function floorTexture(image){if(!image||typeof image!=='object')return null;if(floorCopies.has(image))return floorCopies.get(image);let out=image;try{const doc=globalThis.document,w=image.naturalWidth||image.width,h=image.naturalHeight||image.height;const copy=typeof OffscreenCanvas==='function'?new OffscreenCanvas(w,h):doc?.createElement?.('canvas');if(copy&&w&&h){copy.width=w;copy.height=h;const cc=copy.getContext('2d');if(cc){cc.drawImage(image,0,0,w,h);out=copy;}}}catch{out=image;}floorCopies.set(image,out);return out;}
+/** True when a loaded decor image has the pixel size its manifest frames
+ * promise; a mismatched (swapped or truncated) file must not be drawn. */
+export function decorImageMatchesFrames(path,image,art={}){const w=image?.naturalWidth||image?.width,h=image?.naturalHeight||image?.height;if(!w||!h)return false;for(const item of Object.values(art||{}))for(const f of Object.values(item?.rotations||{0:item}))if(f?.path===path&&Array.isArray(f.frame)&&(f.frame[0]+f.frame[2]>w+0.5||f.frame[1]+f.frame[3]>h+0.5||f.frame[2]<w*.5||f.frame[3]<h*.5))return false;return true;}
 const poly=(c,points,fill,stroke)=>{c.beginPath();points.forEach((p,i)=>i?c.lineTo(p.x,p.y):c.moveTo(p.x,p.y));c.closePath();if(fill){c.fillStyle=fill;c.fill();}if(stroke){c.strokeStyle=stroke;c.lineWidth=1;c.stroke();}};
 function plane(c,points,camera,fill,stroke){poly(c,points.map(p=>projectRoomPoint(p,camera)),fill,stroke);}
 function line(c,a,b,camera,color,width=1){const p=projectRoomPoint(a,camera),q=projectRoomPoint(b,camera);c.beginPath();c.moveTo(p.x,p.y);c.lineTo(q.x,q.y);c.strokeStyle=color;c.lineWidth=width;c.stroke();}
 export function drawDecorationRoom(c,{width,height,shell,items=[],catalog={},images={},art={},selectedId,preview=null}){
  const s=shell||{x:0,y:0,w:320,h:320},x=s.x,y=s.y,w=s.w,h=s.h,H=160;
  const camera=fitRoomCamera({x,y,w,h,wallHeight:H},width,height,Math.max(14,Math.min(width,height)*.045));
- c.clearRect(0,0,width,height);const bg=c.createLinearGradient(0,0,0,height);bg.addColorStop(0,'#5b3b26');bg.addColorStop(.55,'#8a5a36');bg.addColorStop(1,'#3e2718');c.fillStyle=bg;c.fillRect(0,0,width,height);const glow=c.createLinearGradient(0,0,width,0);glow.addColorStop(0,'#ffd99a00');glow.addColorStop(.5,'#ffd99a59');glow.addColorStop(1,'#ffd99a00');c.fillStyle=glow;c.fillRect(0,0,width,height);
+ const base=c.getTransform?.();c.clearRect(0,0,width,height);const bg=c.createLinearGradient(0,0,0,height);bg.addColorStop(0,'#5b3b26');bg.addColorStop(.55,'#8a5a36');bg.addColorStop(1,'#3e2718');c.fillStyle=bg;c.fillRect(0,0,width,height);const glow=c.createLinearGradient(0,0,width,0);glow.addColorStop(0,'#ffd99a00');glow.addColorStop(.5,'#ffd99a59');glow.addColorStop(1,'#ffd99a00');c.fillStyle=glow;c.fillRect(0,0,width,height);
  c.save();c.shadowColor='#77594038';c.shadowBlur=26*camera.scale;c.shadowOffsetY=12*camera.scale;poly(c,roomGroundPolygon(s,camera,-9),'#b98c53');c.restore();
  plane(c,[{x,y:y+h},{x:x+w,y:y+h},{x:x+w,y:y+h,z:-9},{x,y:y+h,z:-9}],camera,'#ad7d43');
  plane(c,[{x:x+w,y},{x:x+w,y:y+h},{x:x+w,y:y+h,z:-9},{x:x+w,y,z:-9}],camera,'#c4965a');
  poly(c,roomGroundPolygon(s,camera),'#e2be83');
- const oak=images['assets/interior/decor-catalogue-v1/light-oak-floor.webp'];
+ const oak=floorTexture(images[DECOR_FLOOR_PATH]);
  if(oak){c.save();c.transform(.8660254038*camera.scale,.5*camera.scale,-.8660254038*camera.scale,.5*camera.scale,camera.x,camera.y);c.beginPath();c.rect(x,y,w,h);c.clip();c.drawImage(oak,0,0,oak.width,oak.height,x,y,w,h);c.restore();}
  else{c.save();poly(c,roomGroundPolygon(s,camera));c.clip();for(let yy=y;yy<y+h;yy+=18){plane(c,[{x,y:yy},{x:x+w,y:yy},{x:x+w,y:yy+18},{x,y:yy+18}],camera,Math.round((yy-y)/18)%2?'#ddbf8d':'#e2c795');line(c,{x,y:yy},{x:x+w,y:yy},camera,'#aa835141',.7);for(let xx=x+((Math.round((yy-y)/18)%2)*44);xx<x+w;xx+=88)line(c,{x:xx,y:yy},{x:xx,y:yy+18},camera,'#aa835130',.6);}c.restore();}
 
@@ -38,7 +47,9 @@ export function drawDecorationRoom(c,{width,height,shell,items=[],catalog={},ima
   c.save();c.globalAlpha=.16;poly(c,roomGroundPolygon(rect,camera),'#5e472e');c.restore();if(preview?.id===item.id){c.save();c.lineWidth=2.5;poly(c,roomGroundPolygon(rect,camera),preview.valid===false?'#e0484866':'#4cc4705c',preview.valid===false?'#c0392b':'#2e8b4a');c.restore();}else if(selectedId===item.id){const g=roomGroundPolygon({x:rect.x-6,y:rect.y-6,w:rect.w+12,h:rect.h+12},camera);c.save();c.lineJoin='round';c.lineWidth=7;poly(c,g,'#ffe27a40',null);c.strokeStyle='#fff8dccc';c.stroke();c.lineWidth=3;c.strokeStyle='#e0a526';c.stroke();c.restore();}
   const p=projectRoomPoint({x:item.x+ww/2,y:item.y+hh/2},camera),span=(ww+hh)*.8660254038*camera.scale,sw=span*(frameArt?.scale||1.1),sh=frame?sw*frame[3]/frame[2]:sw;
   const box={x:p.x-sw/2,y:p.y-sh+(ww+hh)*.5*camera.scale*.30,w:sw,h:sh};
-  if(image&&frame)c.drawImage(image,...frame,box.x,box.y,box.w,box.h);
+  // r3 fix (owner bug "the table got stretched"): a sprite is always painted
+  // upright with its own aspect ratio, never through the skewed floor matrix.
+  if(image&&frame){c.save();if(base)c.setTransform(base);c.drawImage(image,...frame,box.x,box.y,box.w,box.h);c.restore();}
   else if(item.kind==='rug'||item.legacy?.kind==='rug'||item.catalogId==='woven-rug')poly(c,roomGroundPolygon(rect,camera),'#caba9a','#eadfc4');
   hitItems.push({item,rect,box,rendered:!!(image&&frame)});
  }

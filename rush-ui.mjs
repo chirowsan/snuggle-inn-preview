@@ -1,6 +1,7 @@
 import {guestMood} from './inside-ambience.mjs';
 import {readFootsteps,writeFootsteps} from './footstep-pref.mjs';
 import {mountRoomDecoration} from './room-decoration-view.mjs';
+import {decorImageMatchesFrames} from './room-decoration-scene.mjs';
 import {commitRoomDecorInventory,resolveRoomDecorInventory} from './room-decor-inventory.mjs';
 import {mountIsometricRoomEditor} from './room-isometric-view.mjs';
 import {validRoomFurnishings} from './hotel-room-furnishings.mjs';
@@ -436,7 +437,7 @@ async function openRoomDecoration(){
  const ownerSaved=saved,openGeneration=++decorationOpenGeneration;clearSelection();$('result').hidden=true;openModal('room-layout-modal');const root=$('room-layout-modal').querySelector('.layout-card');
  root.innerHTML='<h2>Opening your room…</h2><button class="secondary" data-decor-loading-cancel>Cancel</button>';root.querySelector('[data-decor-loading-cancel]').onclick=closeModal;
  try{
-  decorationAssetsPromise??=(async()=>{const manifest=await json('assets/interior/decor-catalogue-v1/manifest.json'),art=manifest.items||{},paths=new Set(manifest.floor?.path?[manifest.floor.path]:[]);for(const item of Object.values(art))for(const frame of Object.values(item.rotations||{0:item}))if(frame.path)paths.add(frame.path);await furnitureArt;const images={...renderer.images};await Promise.all([...paths].map(path=>new Promise((resolve,reject)=>{const im=new Image(),timer=setTimeout(()=>reject(Error('Room artwork timed out.')),15000);im.onload=()=>{clearTimeout(timer);images[path]=im;resolve();};im.onerror=()=>{clearTimeout(timer);reject(Error('Room artwork could not load.'));};im.src=assetURL(path);})));return{art,images};})();
+  decorationAssetsPromise??=(async()=>{const manifest=await json('assets/interior/decor-catalogue-v1/manifest.json'),art=manifest.items||{},paths=new Set(manifest.floor?.path?[manifest.floor.path]:[]);for(const item of Object.values(art))for(const frame of Object.values(item.rotations||{0:item}))if(frame.path)paths.add(frame.path);await furnitureArt;const images={...renderer.images};await Promise.all([...paths].map(path=>new Promise((resolve,reject)=>{const im=new Image(),timer=setTimeout(()=>reject(Error('Room artwork timed out.')),15000);im.onload=async()=>{clearTimeout(timer);let pic=im;try{await im.decode?.();}catch{}if(!decorImageMatchesFrames(path,im,art)){reject(Error('Room artwork could not load.'));return;}try{if(typeof createImageBitmap==='function')pic=await createImageBitmap(im);}catch{pic=im;}images[path]=pic;resolve();};im.onerror=()=>{clearTimeout(timer);reject(Error('Room artwork could not load.'));};im.src=assetURL(path);})));return{art,images};})().catch(error=>{decorationAssetsPromise=null;throw error;});
   const assets=await decorationAssetsPromise;if(openGeneration!==decorationOpenGeneration||saved!==ownerSaved||modal!=='room-layout-modal')return;
   const rooms=projectHotelBuilding(profile,state,saved.roomLayout).rooms.filter(r=>r.floor===1);
   roomLayoutView=mountRoomDecoration(root,{saved:ownerSaved,rooms,bank:profile.bank,...assets,onCancel:closeModal,onRoomSize:()=>{roomLayoutView?.destroy();roomLayoutView=null;modal='result';openRoomFurnishings();},onApply:async inventory=>{
