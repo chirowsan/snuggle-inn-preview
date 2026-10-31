@@ -1,0 +1,251 @@
+{
+  "version": 1,
+  "camera": "orthographic 30 degree isometric",
+  "anchor": "bottom-center",
+  "items": {
+    "linen-sofa": {
+      "rotations": {
+        "90": {
+          "path": "assets/interior/decor-catalogue-v1/linen-sofa-90.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            388
+          ],
+          "scale": 1.04
+        },
+        "0": {
+          "path": "assets/interior/decor-catalogue-v1/linen-sofa-0.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            389
+          ],
+          "scale": 1.04
+        },
+        "180": {
+          "path": "assets/interior/decor-catalogue-v1/linen-sofa-180.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            369
+          ],
+          "scale": 1.04
+        },
+        "270": {
+          "path": "assets/interior/decor-catalogue-v1/linen-sofa-270.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            370
+          ],
+          "scale": 1.04
+        }
+      },
+      "rotationMode": "authored-four-views"
+    },
+    "olive-chair": {
+      "rotations": {
+        "0": {
+          "path": "assets/interior/decor-catalogue-v1/olive-chair-0.webp",
+          "frame": [
+            0,
+            0,
+            461,
+            512
+          ],
+          "scale": 1.03
+        },
+        "90": {
+          "path": "assets/interior/decor-catalogue-v1/olive-chair-90.webp",
+          "frame": [
+            0,
+            0,
+            456,
+            512
+          ],
+          "scale": 1.03
+        },
+        "270": {
+          "path": "assets/interior/decor-catalogue-v1/olive-chair-270.webp",
+          "frame": [
+            0,
+            0,
+            491,
+            487
+          ],
+          "scale": 1.03
+        },
+        "180": {
+          "path": "assets/interior/decor-catalogue-v1/olive-chair-180.webp",
+          "frame": [
+            0,
+            0,
+            495,
+            490
+          ],
+          "scale": 1.03
+        }
+      },
+      "rotationMode": "authored-four-views"
+    },
+    "oak-table": {
+      "rotations": {
+        "0": {
+          "path": "assets/interior/decor-catalogue-v1/oak-table-0.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            396
+          ],
+          "scale": 0.94
+        },
+        "90": {
+          "path": "assets/interior/decor-catalogue-v1/oak-table-0.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            396
+          ],
+          "scale": 0.94
+        },
+        "180": {
+          "path": "assets/interior/decor-catalogue-v1/oak-table-0.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            396
+          ],
+          "scale": 0.94
+        },
+        "270": {
+          "path": "assets/interior/decor-catalogue-v1/oak-table-0.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            396
+          ],
+          "scale": 0.94
+        }
+      },
+      "rotationMode": "radial-symmetry"
+    },
+    "terracotta-plant": {
+      "rotations": {
+        "0": {
+          "path": "assets/interior/decor-catalogue-v1/terracotta-plant-0.webp",
+          "frame": [
+            0,
+            0,
+            360,
+            512
+          ],
+          "scale": 1.08
+        }
+      },
+      "rotationMode": "fixed-organic-view",
+      "rotatable": false
+    },
+    "walnut-table": {
+      "rotations": {
+        "0": {
+          "path": "assets/interior/decor-catalogue-v1/walnut-table-0.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            470
+          ],
+          "scale": 0.94
+        },
+        "90": {
+          "path": "assets/interior/decor-catalogue-v1/walnut-table-0.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            470
+          ],
+          "scale": 0.94
+        },
+        "180": {
+          "path": "assets/interior/decor-catalogue-v1/walnut-table-0.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            470
+          ],
+          "scale": 0.94
+        },
+        "270": {
+          "path": "assets/interior/decor-catalogue-v1/walnut-table-0.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            470
+          ],
+          "scale": 0.94
+        }
+      },
+      "rotationMode": "radial-symmetry"
+    },
+    "marble-table": {
+      "rotations": {
+        "0": {
+          "path": "assets/interior/decor-catalogue-v1/marble-table-0.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            460
+          ],
+          "scale": 0.94
+        },
+        "90": {
+          "path": "assets/interior/decor-catalogue-v1/marble-table-0.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            460
+          ],
+          "scale": 0.94
+        },
+        "180": {
+          "path": "assets/interior/decor-catalogue-v1/marble-table-0.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            460
+          ],
+          "scale": 0.94
+        },
+        "270": {
+          "path": "assets/interior/decor-catalogue-v1/marble-table-0.webp",
+          "frame": [
+            0,
+            0,
+            512,
+            460
+          ],
+          "scale": 0.94
+        }
+      },
+      "rotationMode": "radial-symmetry"
+    }
+  },
+  "floor": {
+    "path": "assets/interior/decor-catalogue-v1/light-oak-floor.webp"
+  }
+}

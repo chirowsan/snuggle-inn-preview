@@ -1,0 +1,1 @@
+{"schema_version":1,"variants":{"front":{"file":"body-front.webp","size":[174,224],"sockets":{"near_shoulder":[19.228,117.266],"far_shoulder":[153.984,117.266],"near_hip":[64.62,200.264],"far_hip":[109.38,200.264],"tail":[43.815,191.775],"head_center":[87.0,69.636]},"root":[64.62,200.264]}},"overlays":{},"runtime_blink":"original base body + source-atop eye patches only"}

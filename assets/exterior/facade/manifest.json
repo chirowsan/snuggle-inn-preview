@@ -1,0 +1,101 @@
+{
+  "source": "Built-in imagegen, six one-pass modules, actual generated pixels inspected. Approved original lobby is retained as a CSS-clipped base, not regenerated.",
+  "assets": [
+    {
+      "key": "environment",
+      "path": "assets/exterior/facade/environment.webp",
+      "pixels": [
+        1642,
+        958
+      ],
+      "sourceAlphaBounds": [
+        0,
+        0,
+        1642,
+        958
+      ],
+      "sha256": "9cd7aa46486a466eda07eb43d66da4515bed5fb490442eef7095292e2d31f4c7",
+      "bytes": 400780
+    },
+    {
+      "key": "floor-shell",
+      "path": "assets/exterior/facade/floor-shell.webp",
+      "pixels": [
+        1760,
+        367
+      ],
+      "sourceAlphaBounds": [
+        18,
+        134,
+        2155,
+        580
+      ],
+      "sha256": "3d170ef541b8bc6c2e37672c5fbac84d765d2c76c490fed209824e342716b1b8",
+      "bytes": 132832
+    },
+    {
+      "key": "roof-cap",
+      "path": "assets/exterior/facade/roof-cap.webp",
+      "pixels": [
+        1760,
+        175
+      ],
+      "sourceAlphaBounds": [
+        21,
+        274,
+        2158,
+        486
+      ],
+      "sha256": "8bfafa6784bbc9b000ba55dbd7f8f18085891cfe0c26344c96561b26cdad98ca",
+      "bytes": 136876
+    },
+    {
+      "key": "window-regular",
+      "path": "assets/exterior/facade/window-regular.webp",
+      "pixels": [
+        459,
+        193
+      ],
+      "sourceAlphaBounds": [
+        112,
+        74,
+        1743,
+        757
+      ],
+      "sha256": "8249d1a464b221febfdd5c25b00075c0f5d10fd053b90300781ba28804b8fdf2",
+      "bytes": 23400
+    },
+    {
+      "key": "window-luxury",
+      "path": "assets/exterior/facade/window-luxury.webp",
+      "pixels": [
+        459,
+        176
+      ],
+      "sourceAlphaBounds": [
+        56,
+        81,
+        1804,
+        753
+      ],
+      "sha256": "84961768883ef22c8b35ddbcb54b4cdf814824e8b3330f6a7d152751010f2a95",
+      "bytes": 26564
+    },
+    {
+      "key": "window-family",
+      "path": "assets/exterior/facade/window-family.webp",
+      "pixels": [
+        460,
+        172
+      ],
+      "sourceAlphaBounds": [
+        57,
+        111,
+        1805,
+        763
+      ],
+      "sha256": "90f229b2f422e5064b7784bd9a6fc7745942c13cc350c500a23240196d783d47",
+      "bytes": 26728
+    }
+  ]
+}

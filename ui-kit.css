@@ -1,0 +1,58 @@
+/* r2 UI kit: one font pair (Fredoka headings · Nunito text, both SIL OFL, bundled), one button style,
+   locked look, coin progress bars, end-of-shift layout and painted tabletops. Loaded last. */
+@font-face{font-family:SnuggleDisplay;src:url('assets/fonts/fredoka-latin-600-normal.woff2') format('woff2');font-weight:400 700;font-display:swap}
+@font-face{font-family:SnuggleText;src:url('assets/fonts/nunito-latin-700-normal.woff2') format('woff2');font-weight:400 700;font-display:swap}
+@font-face{font-family:SnuggleText;src:url('assets/fonts/nunito-latin-800-normal.woff2') format('woff2');font-weight:800 900;font-display:swap}
+:root{--ui-text:SnuggleText,'Nunito',system-ui,Arial,sans-serif;--ui-display:SnuggleDisplay,'Fredoka',Georgia,serif;--ui-green:#2c6650;--ui-green-dark:#173f31;--ui-cream:#f3e6c6;--ui-cream-dark:#c9ad74;--ui-ink:#33473a;--ui-gold:#f6c85f}
+body,button,input,select{font-family:var(--ui-text)}
+.paper h2,.paper h3,.overlay h2,.mode-card h2,.result-card h2,.activity-card h2,#hotel-menu h1,#hotel-menu h2,.brand h1{font-family:var(--ui-display);font-weight:600;letter-spacing:.2px}
+#first-step-story,.story-lesson{font-family:var(--ui-text)}
+/* Buttons: chunky, rounded, a little "pressable" lip. */
+.overlay .primary,.overlay .secondary,.paper .primary,.paper .secondary{font-family:var(--ui-text);font-weight:800;border-radius:14px;min-height:44px;box-shadow:0 3px 0 #0000002e;transition:transform .08s,box-shadow .08s}
+.overlay .primary,.paper .primary{background:linear-gradient(#347a5f,var(--ui-green));border:1px solid var(--ui-green-dark);color:#fff4d6}
+.overlay .secondary,.paper .secondary{background:linear-gradient(#f8eed4,var(--ui-cream));border:1px solid var(--ui-cream-dark);color:var(--ui-ink)}
+.overlay .primary:active:not(:disabled),.overlay .secondary:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0000002e}
+.primary,.secondary,.primary-button,.secondary-button,#portrait-play,.first-stay-reopen{min-height:44px}
+button:focus-visible{outline:3px solid var(--ui-gold);outline-offset:2px}
+/* Locked things look locked (not just disabled to a screen reader). */
+.overlay button:disabled,.locked-look{filter:grayscale(.75);opacity:.72;cursor:not-allowed;box-shadow:none!important;border-style:dashed!important}
+.locked-look::after{content:'🔒';position:absolute;top:4px;right:6px;font-size:13px;filter:none}
+.upgrade-choice.locked-look,.room-upgrade.locked-look{position:relative}
+.need-bar{display:block;height:6px;margin:4px 6px 0;border-radius:4px;background:#0000001f;overflow:hidden}
+.need-bar>i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,#f0b93c,var(--ui-gold))}
+/* ── End of shift: stars → three big choices → small icon row. ───────────────────────── */
+#result .result-card{width:min(560px,95vw);max-height:96dvh;overflow:auto;overscroll-behavior:contain}
+.result-stars{display:flex;justify-content:center;gap:8px;margin:2px 0 4px;font-size:42px;line-height:1}
+.result-stars span{color:#d7c9a6;text-shadow:0 2px 0 #b59f6e;display:inline-block}
+.result-stars span.lit{color:var(--ui-gold);text-shadow:0 2px 0 #c7922b,0 0 14px #ffe08a}
+.result-stars span.pop{animation:star-pop .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes star-pop{0%{transform:scale(.2) rotate(-30deg)}100%{transform:scale(1) rotate(0)}}
+.result-summary-row{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;margin:2px 0}
+.result-summary-row #result-hearts,.result-summary-row #result-money{margin:0}
+#result #collect-door-coins{margin:6px auto;display:block}
+.result-big{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0 6px}
+.result-tile{position:relative;display:flex;flex-direction:column;align-items:stretch}
+.result-tile[hidden]{display:none}
+.result-tile>button{width:100%;min-width:0!important;min-height:96px;padding:44px 6px 10px!important;margin:0!important;font-size:18px;line-height:1.1;border-radius:18px!important}
+.result-tile .tile-icon{position:absolute;z-index:2;top:10px;left:50%;transform:translateX(-50%);font-size:32px;line-height:1;pointer-events:none}
+.result-tile .tile-note{display:block;min-height:15px;margin-top:3px;font-size:12px;font-weight:800;color:#6b5a3a;text-align:center}
+.result-tile.locked .tile-icon{filter:grayscale(1);opacity:.6}
+.result-tile.hint>button{animation:tile-hint 1.4s ease-in-out infinite;border-color:var(--ui-gold)!important}
+@keyframes tile-hint{50%{box-shadow:0 0 0 5px #f6c85f99,0 3px 0 #0000002e}}
+.result-small{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:4px}
+.result-small button{min-width:0!important;min-height:44px!important;padding:6px 12px!important;font-size:14px!important;margin:0!important}
+/* Shop page */
+.result-shop-page[hidden]{display:none!important}
+#result.shop-open .result-card>:not(.result-shop-page){display:none!important}
+.result-shop-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:4px}
+.result-shop-head .result-shop-back{min-width:0!important;padding:6px 14px!important}
+.result-shop-head #hotel-bank{margin:0}
+@media(max-height:500px){.result-stars{font-size:30px;margin:0}.result-card h2{margin:0 0 2px}.result-big{margin:6px 0 4px;gap:8px}.result-tile>button{min-height:72px;padding:32px 6px 6px!important;font-size:16px}.result-tile .tile-icon{top:6px;font-size:24px}.result-tile .tile-note{min-height:13px;font-size:11px;margin-top:2px}.result-small button{padding:4px 10px!important;font-size:13px!important}#first-stay-note{margin:0 0 2px}}
+@media(max-width:420px){.result-tile>button{font-size:15px}.result-big{gap:6px}}
+@media(prefers-reduced-motion:reduce){.result-stars span.pop,.result-tile.hint>button{animation:none}}
+/* ── Painted tabletops for the mini-games (pure CSS, no new art). ─────────────────────── */
+.activity-card{background:radial-gradient(ellipse at 20% 0,#fff8e4 0,#f3e0b8 45%,#e3c58f 100%);border:4px solid #b98d55;box-shadow:0 16px 60px #071d19b0,inset 0 0 0 3px #fff3cf66,inset 0 0 40px #a5753f40}
+.activity-board{border:6px solid #8d6234;border-radius:20px;box-shadow:inset 0 0 0 2px #f3cf9266,inset 0 10px 24px #4a2c1255,inset 0 -6px 18px #fff0c833,0 4px 0 #5e3d1d;background:radial-gradient(ellipse at 30% 20%,#ffffff2e,transparent 55%),radial-gradient(ellipse at 80% 90%,#5a361722,transparent 60%),repeating-linear-gradient(92deg,#c99d62 0 2px,#d8b47c 3px 9px,#d2aa70 10px 34px,#c79a5e 35px 37px,#d6b076 38px 62px)}
+.result-bank-mini{font:800 20px var(--ui-text);color:#5a4524}
+#result.first-stay-result #result-money:empty{display:none}
+#first-stay-note{font-family:var(--ui-text);font-style:italic}

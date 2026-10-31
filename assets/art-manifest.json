@@ -1,0 +1,206 @@
+{
+  "logicalCanvas": [
+    1200,
+    700
+  ],
+  "background": {
+    "path": "assets/background.webp",
+    "size": [
+      1642,
+      958
+    ],
+    "guestEntry": [
+      600,
+      650
+    ],
+    "serviceEntry": [
+      1195,
+      535
+    ],
+    "receptionService": [
+      245,
+      270
+    ],
+    "guestroomFront": [
+      480,
+      230
+    ],
+    "lobbyCourtyardDivideX": 730,
+    "clearRouteY": 440,
+    "fountainSuggestedFootpoint": [
+      1010,
+      330
+    ],
+    "widePath": "assets/background-wide.webp",
+    "wideSize": [
+      2172,
+      724
+    ],
+    "wideVariantNotes": "Native 3:1 composition, not a resized or stretched base image. Same logical 1200\u00d7700 landmarks. Reception front(245,270), guestroom(480,230), side entrance(1185,535), main entrance(600,650) remain walkable."
+  },
+  "propsAtlas": {
+    "path": "assets/props-atlas.webp",
+    "size": [
+      1680,
+      1120
+    ]
+  },
+  "props": {
+    "bell": {
+      "path": "assets/props/bell.webp",
+      "width": 308,
+      "height": 490,
+      "anchor": [
+        0.5,
+        0.98367
+      ],
+      "recommendedDisplaySize": [
+        60,
+        94
+      ],
+      "sourceCrop": [
+        121,
+        49,
+        413,
+        523
+      ],
+      "atlasFrame": [
+        126,
+        70,
+        308,
+        490
+      ]
+    },
+    "cart": {
+      "path": "assets/props/cart.webp",
+      "width": 425,
+      "height": 545,
+      "anchor": [
+        0.5,
+        0.98532
+      ],
+      "recommendedDisplaySize": [
+        105,
+        128
+      ],
+      "sourceCrop": [
+        571,
+        19,
+        980,
+        548
+      ],
+      "atlasFrame": [
+        627,
+        15,
+        425,
+        545
+      ]
+    },
+    "sprinkler": {
+      "path": "assets/props/sprinkler.webp",
+      "width": 411,
+      "height": 361,
+      "anchor": [
+        0.5,
+        0.97784
+      ],
+      "recommendedDisplaySize": [
+        94,
+        82
+      ],
+      "sourceCrop": [
+        1097,
+        147,
+        1492,
+        492
+      ],
+      "atlasFrame": [
+        1194,
+        199,
+        411,
+        361
+      ]
+    },
+    "gate-closed": {
+      "path": "assets/props/gate-closed.webp",
+      "width": 523,
+      "height": 341,
+      "anchor": [
+        0.5,
+        0.97654
+      ],
+      "recommendedDisplaySize": [
+        148,
+        104
+      ],
+      "sourceCrop": [
+        18,
+        570,
+        525,
+        895
+      ],
+      "atlasFrame": [
+        18,
+        779,
+        523,
+        341
+      ]
+    },
+    "gate-open": {
+      "path": "assets/props/gate-open.webp",
+      "width": 465,
+      "height": 380,
+      "anchor": [
+        0.5,
+        0.97895
+      ],
+      "recommendedDisplaySize": [
+        148,
+        119
+      ],
+      "sourceCrop": [
+        567,
+        530,
+        1016,
+        894
+      ],
+      "atlasFrame": [
+        607,
+        740,
+        465,
+        380
+      ]
+    },
+    "fountain": {
+      "path": "assets/props/fountain.webp",
+      "width": 475,
+      "height": 445,
+      "anchor": [
+        0.5,
+        0.98202
+      ],
+      "recommendedDisplaySize": [
+        174,
+        164
+      ],
+      "sourceCrop": [
+        1058,
+        538,
+        1517,
+        967
+      ],
+      "atlasFrame": [
+        1162,
+        675,
+        475,
+        445
+      ]
+    }
+  },
+  "notes": [
+    "All art generated using built-in image_gen. No paid external service.",
+    "Transparent sprite alpha preserved; only crop, padding, atlas packing and web encoding applied.",
+    "Background perspective is orthographic-style with broad clear tiled floor. Props have polished warm illustrated materials.",
+    "Gate open and closed are separate rendered poses, not a transform of one image."
+  ]
+}

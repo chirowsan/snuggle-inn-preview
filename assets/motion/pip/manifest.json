@@ -1,0 +1,371 @@
+{
+  "kind": "pip",
+  "parts": {
+    "body": {
+      "file": "body.webp",
+      "size": [
+        126,
+        217
+      ],
+      "proximal": [
+        52.5,
+        192.0
+      ],
+      "distal": [
+        66.5,
+        72.0
+      ],
+      "reference_length": null,
+      "sockets": {
+        "near_shoulder": [
+          31.0,
+          141.5
+        ],
+        "far_shoulder": [
+          100.5,
+          124.0
+        ],
+        "near_hip": [
+          52.5,
+          192.0
+        ],
+        "far_hip": [
+          82.0,
+          189.5
+        ],
+        "tail": [
+          30.5,
+          180.5
+        ],
+        "head_center": [
+          66.5,
+          72.0
+        ]
+      },
+      "alpha_bounds": [
+        0,
+        0,
+        126,
+        217
+      ]
+    },
+    "tail": {
+      "file": "tail.webp",
+      "size": [
+        144,
+        91
+      ],
+      "proximal": [
+        132.652,
+        38.889
+      ],
+      "distal": [
+        10.957,
+        37.333
+      ],
+      "reference_length": 121.705,
+      "alpha_bounds": [
+        0,
+        0,
+        144,
+        91
+      ]
+    },
+    "near_upper_arm": {
+      "file": "near_upper_arm.webp",
+      "size": [
+        41,
+        49
+      ],
+      "proximal": [
+        31.38,
+        7.822
+      ],
+      "distal": [
+        10.994,
+        39.798
+      ],
+      "reference_length": 37.922,
+      "alpha_bounds": [
+        0,
+        0,
+        41,
+        49
+      ]
+    },
+    "near_forearm": {
+      "file": "near_forearm.webp",
+      "size": [
+        39,
+        58
+      ],
+      "proximal": [
+        26.156,
+        11.885
+      ],
+      "distal": [
+        16.581,
+        44.689
+      ],
+      "reference_length": 34.173,
+      "alpha_bounds": [
+        0,
+        0,
+        39,
+        58
+      ]
+    },
+    "far_upper_arm": {
+      "file": "far_upper_arm.webp",
+      "size": [
+        50,
+        51
+      ],
+      "proximal": [
+        36.25,
+        8.75
+      ],
+      "distal": [
+        14.75,
+        39.75
+      ],
+      "reference_length": 37.726,
+      "alpha_bounds": [
+        0,
+        0,
+        50,
+        51
+      ]
+    },
+    "far_forearm": {
+      "file": "far_forearm.webp",
+      "size": [
+        41,
+        53
+      ],
+      "proximal": [
+        11.576,
+        10.743
+      ],
+      "distal": [
+        25.565,
+        41.541
+      ],
+      "reference_length": 33.826,
+      "alpha_bounds": [
+        0,
+        0,
+        41,
+        53
+      ]
+    },
+    "near_thigh": {
+      "file": "near_thigh.webp",
+      "size": [
+        41,
+        53
+      ],
+      "proximal": [
+        11.951,
+        7.571
+      ],
+      "distal": [
+        29.417,
+        45.613
+      ],
+      "reference_length": 41.86,
+      "alpha_bounds": [
+        0,
+        0,
+        41,
+        53
+      ]
+    },
+    "near_shin": {
+      "file": "near_shin.webp",
+      "size": [
+        29,
+        43
+      ],
+      "proximal": [
+        9.305,
+        6.388
+      ],
+      "distal": [
+        18.92,
+        36.768
+      ],
+      "reference_length": 31.865,
+      "alpha_bounds": [
+        0,
+        0,
+        29,
+        43
+      ]
+    },
+    "near_shoe": {
+      "file": "near_shoe.webp",
+      "size": [
+        58,
+        46
+      ],
+      "proximal": [
+        18.59,
+        20.0
+      ],
+      "distal": [
+        49.325,
+        32.25
+      ],
+      "reference_length": 33.086,
+      "sole_anchor": [
+        28.009,
+        43.25
+      ],
+      "alpha_bounds": [
+        0,
+        0,
+        58,
+        46
+      ]
+    },
+    "far_thigh": {
+      "file": "far_thigh.webp",
+      "size": [
+        40,
+        52
+      ],
+      "proximal": [
+        10.655,
+        7.075
+      ],
+      "distal": [
+        30.044,
+        44.395
+      ],
+      "reference_length": 42.056,
+      "alpha_bounds": [
+        0,
+        0,
+        40,
+        52
+      ]
+    },
+    "far_shin": {
+      "file": "far_shin.webp",
+      "size": [
+        30,
+        43
+      ],
+      "proximal": [
+        9.895,
+        5.942
+      ],
+      "distal": [
+        20.262,
+        36.12
+      ],
+      "reference_length": 31.909,
+      "alpha_bounds": [
+        0,
+        0,
+        30,
+        43
+      ]
+    },
+    "far_shoe": {
+      "file": "far_shoe.webp",
+      "size": [
+        58,
+        44
+      ],
+      "proximal": [
+        18.094,
+        19.141
+      ],
+      "distal": [
+        48.829,
+        31.571
+      ],
+      "reference_length": 33.153,
+      "sole_anchor": [
+        28.752,
+        41.266
+      ],
+      "alpha_bounds": [
+        0,
+        0,
+        58,
+        44
+      ]
+    },
+    "wrench": {
+      "file": "../badger/wrench.webp",
+      "size": [
+        20,
+        66
+      ],
+      "handle_grip": [
+        9.901,
+        39.439
+      ],
+      "working_tip": [
+        10.594,
+        7.244
+      ],
+      "jaw_center": [
+        10.594,
+        7.244
+      ],
+      "lower_edge": [
+        8.713,
+        64.29
+      ],
+      "proximal": [
+        9.901,
+        39.439
+      ],
+      "distal": [
+        10.594,
+        7.244
+      ],
+      "reference_length": 32.20245757702353
+    },
+    "broom": {
+      "file": "../badger/broom.webp",
+      "size": [
+        63,
+        184
+      ],
+      "handle_grip": [
+        25.886,
+        72.28
+      ],
+      "secondary_hand_grip": [
+        27.446,
+        100.564
+      ],
+      "working_tip": [
+        31.032,
+        182.114
+      ],
+      "ground_contact": [
+        31.032,
+        182.114
+      ],
+      "lower_edge": [
+        31.032,
+        182.114
+      ],
+      "proximal": [
+        25.886,
+        72.28
+      ],
+      "distal": [
+        31.032,
+        182.114
+      ],
+      "reference_length": 109.95448545648331
+    }
+  }
+}

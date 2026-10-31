@@ -1,0 +1,2436 @@
+{
+  "version": 1,
+  "art_source": "OpenAI built-in image_gen; original painted artwork",
+  "frame_size": [
+    384,
+    384
+  ],
+  "walk_fps": 8,
+  "walk_sequence": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "facing": "right",
+  "camera": "elevated orthographic, roughly 40 degrees",
+  "characters": {
+    "fox": {
+      "sheet": "assets/characters/fox-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_crop": [
+            11,
+            0,
+            330,
+            325
+          ],
+          "source_foot_anchor": [
+            235,
+            319
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            66,
+            85
+          ],
+          "name": "fox-walk-0",
+          "file": "assets/characters/fox-walk-0.webp",
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            0,
+            0,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            323,
+            0,
+            629,
+            328
+          ],
+          "source_foot_anchor": [
+            530,
+            315
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            80,
+            88
+          ],
+          "name": "fox-walk-1",
+          "file": "assets/characters/fox-walk-1.webp",
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            384,
+            0,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            623,
+            9,
+            939,
+            330
+          ],
+          "source_foot_anchor": [
+            850,
+            321
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            63,
+            91
+          ],
+          "name": "fox-walk-2",
+          "file": "assets/characters/fox-walk-2.webp",
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            768,
+            0,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            951,
+            8,
+            1254,
+            326
+          ],
+          "source_foot_anchor": [
+            1153,
+            318
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            84,
+            92
+          ],
+          "name": "fox-walk-3",
+          "file": "assets/characters/fox-walk-3.webp",
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            1152,
+            0,
+            384,
+            384
+          ]
+        }
+      ],
+      "actions": {
+        "idle": "courier-idle",
+        "work": "courier-work"
+      }
+    },
+    "badger": {
+      "sheet": "assets/characters/badger-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_crop": [
+            27,
+            335,
+            341,
+            647
+          ],
+          "source_foot_anchor": [
+            220,
+            640
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            92,
+            97
+          ],
+          "name": "badger-walk-0",
+          "file": "assets/characters/badger-walk-0.webp",
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            0,
+            384,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            363,
+            334,
+            645,
+            648
+          ],
+          "source_foot_anchor": [
+            535,
+            635
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            110,
+            100
+          ],
+          "name": "badger-walk-1",
+          "file": "assets/characters/badger-walk-1.webp",
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            384,
+            384,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            654,
+            334,
+            958,
+            653
+          ],
+          "source_foot_anchor": [
+            845,
+            640
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            94,
+            96
+          ],
+          "name": "badger-walk-2",
+          "file": "assets/characters/badger-walk-2.webp",
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            768,
+            384,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            987,
+            335,
+            1254,
+            647
+          ],
+          "source_foot_anchor": [
+            1168,
+            635
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            102,
+            101
+          ],
+          "name": "badger-walk-3",
+          "file": "assets/characters/badger-walk-3.webp",
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            1152,
+            384,
+            384,
+            384
+          ]
+        }
+      ],
+      "actions": {
+        "idle": "mechanic-idle",
+        "work": "mechanic-work"
+      }
+    },
+    "raccoon": {
+      "sheet": "assets/characters/raccoon-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_crop": [
+            0,
+            651,
+            339,
+            939
+          ],
+          "source_foot_anchor": [
+            235,
+            931
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            56,
+            118
+          ],
+          "name": "raccoon-walk-0",
+          "file": "assets/characters/raccoon-walk-0.webp",
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            0,
+            768,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            332,
+            646,
+            636,
+            935
+          ],
+          "source_foot_anchor": [
+            536,
+            923
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            83,
+            121
+          ],
+          "name": "raccoon-walk-1",
+          "file": "assets/characters/raccoon-walk-1.webp",
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            384,
+            768,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            636,
+            645,
+            959,
+            941
+          ],
+          "source_foot_anchor": [
+            862,
+            931
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            64,
+            113
+          ],
+          "name": "raccoon-walk-2",
+          "file": "assets/characters/raccoon-walk-2.webp",
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            768,
+            768,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            964,
+            653,
+            1254,
+            936
+          ],
+          "source_foot_anchor": [
+            1165,
+            924
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            85,
+            126
+          ],
+          "name": "raccoon-walk-3",
+          "file": "assets/characters/raccoon-walk-3.webp",
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            1152,
+            768,
+            384,
+            384
+          ]
+        }
+      ],
+      "actions": {
+        "idle": "thief-idle",
+        "slip": "thief-slip"
+      }
+    },
+    "rabbit": {
+      "sheet": "assets/characters/rabbit-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_crop": [
+            105,
+            913,
+            356,
+            1230
+          ],
+          "source_foot_anchor": [
+            245,
+            1225
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            137,
+            91
+          ],
+          "name": "rabbit-walk-0",
+          "file": "assets/characters/rabbit-walk-0.webp",
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            0,
+            1152,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            424,
+            916,
+            651,
+            1226
+          ],
+          "source_foot_anchor": [
+            545,
+            1216
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            153,
+            101
+          ],
+          "name": "rabbit-walk-1",
+          "file": "assets/characters/rabbit-walk-1.webp",
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            384,
+            1152,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            735,
+            910,
+            985,
+            1240
+          ],
+          "source_foot_anchor": [
+            870,
+            1229
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            141,
+            85
+          ],
+          "name": "rabbit-walk-2",
+          "file": "assets/characters/rabbit-walk-2.webp",
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            768,
+            1152,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            1046,
+            915,
+            1254,
+            1230
+          ],
+          "source_foot_anchor": [
+            1185,
+            1224
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            138,
+            93
+          ],
+          "name": "rabbit-walk-3",
+          "file": "assets/characters/rabbit-walk-3.webp",
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            1152,
+            1152,
+            384,
+            384
+          ]
+        }
+      ],
+      "actions": {
+        "idle": "guest-idle",
+        "wave": "guest-wave"
+      }
+    },
+    "courier": {
+      "sheet": "assets/characters/fox-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_crop": [
+            11,
+            0,
+            330,
+            325
+          ],
+          "source_foot_anchor": [
+            235,
+            319
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            66,
+            85
+          ],
+          "name": "fox-walk-0",
+          "file": "assets/characters/fox-walk-0.webp",
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            0,
+            0,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            323,
+            0,
+            629,
+            328
+          ],
+          "source_foot_anchor": [
+            530,
+            315
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            80,
+            88
+          ],
+          "name": "fox-walk-1",
+          "file": "assets/characters/fox-walk-1.webp",
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            384,
+            0,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            623,
+            9,
+            939,
+            330
+          ],
+          "source_foot_anchor": [
+            850,
+            321
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            63,
+            91
+          ],
+          "name": "fox-walk-2",
+          "file": "assets/characters/fox-walk-2.webp",
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            768,
+            0,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            951,
+            8,
+            1254,
+            326
+          ],
+          "source_foot_anchor": [
+            1153,
+            318
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            84,
+            92
+          ],
+          "name": "fox-walk-3",
+          "file": "assets/characters/fox-walk-3.webp",
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            1152,
+            0,
+            384,
+            384
+          ]
+        }
+      ],
+      "species": "fox",
+      "portrait": "assets/characters/courier-portrait.webp",
+      "actions": {
+        "idle": "courier-idle",
+        "work": "courier-work"
+      },
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "frame_size": [
+        384,
+        384
+      ],
+      "fps": 8
+    },
+    "mechanic": {
+      "sheet": "assets/characters/badger-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_crop": [
+            27,
+            335,
+            341,
+            647
+          ],
+          "source_foot_anchor": [
+            220,
+            640
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            92,
+            97
+          ],
+          "name": "badger-walk-0",
+          "file": "assets/characters/badger-walk-0.webp",
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            0,
+            384,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            363,
+            334,
+            645,
+            648
+          ],
+          "source_foot_anchor": [
+            535,
+            635
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            110,
+            100
+          ],
+          "name": "badger-walk-1",
+          "file": "assets/characters/badger-walk-1.webp",
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            384,
+            384,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            654,
+            334,
+            958,
+            653
+          ],
+          "source_foot_anchor": [
+            845,
+            640
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            94,
+            96
+          ],
+          "name": "badger-walk-2",
+          "file": "assets/characters/badger-walk-2.webp",
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            768,
+            384,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            987,
+            335,
+            1254,
+            647
+          ],
+          "source_foot_anchor": [
+            1168,
+            635
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            102,
+            101
+          ],
+          "name": "badger-walk-3",
+          "file": "assets/characters/badger-walk-3.webp",
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            1152,
+            384,
+            384,
+            384
+          ]
+        }
+      ],
+      "species": "badger",
+      "portrait": "assets/characters/mechanic-portrait.webp",
+      "actions": {
+        "idle": "mechanic-idle",
+        "work": "mechanic-work"
+      },
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "frame_size": [
+        384,
+        384
+      ],
+      "fps": 8
+    },
+    "guest": {
+      "sheet": "assets/characters/rabbit-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_crop": [
+            105,
+            913,
+            356,
+            1230
+          ],
+          "source_foot_anchor": [
+            245,
+            1225
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            137,
+            91
+          ],
+          "name": "rabbit-walk-0",
+          "file": "assets/characters/rabbit-walk-0.webp",
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            0,
+            1152,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            424,
+            916,
+            651,
+            1226
+          ],
+          "source_foot_anchor": [
+            545,
+            1216
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            153,
+            101
+          ],
+          "name": "rabbit-walk-1",
+          "file": "assets/characters/rabbit-walk-1.webp",
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            384,
+            1152,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            735,
+            910,
+            985,
+            1240
+          ],
+          "source_foot_anchor": [
+            870,
+            1229
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            141,
+            85
+          ],
+          "name": "rabbit-walk-2",
+          "file": "assets/characters/rabbit-walk-2.webp",
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            768,
+            1152,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            1046,
+            915,
+            1254,
+            1230
+          ],
+          "source_foot_anchor": [
+            1185,
+            1224
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            138,
+            93
+          ],
+          "name": "rabbit-walk-3",
+          "file": "assets/characters/rabbit-walk-3.webp",
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            1152,
+            1152,
+            384,
+            384
+          ]
+        }
+      ],
+      "species": "rabbit",
+      "portrait": "assets/characters/guest-portrait.webp",
+      "actions": {
+        "idle": "guest-idle",
+        "wave": "guest-wave"
+      },
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "frame_size": [
+        384,
+        384
+      ],
+      "fps": 8
+    },
+    "thief": {
+      "sheet": "assets/characters/raccoon-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_crop": [
+            0,
+            651,
+            339,
+            939
+          ],
+          "source_foot_anchor": [
+            235,
+            931
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            56,
+            118
+          ],
+          "name": "raccoon-walk-0",
+          "file": "assets/characters/raccoon-walk-0.webp",
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            0,
+            768,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            332,
+            646,
+            636,
+            935
+          ],
+          "source_foot_anchor": [
+            536,
+            923
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            83,
+            121
+          ],
+          "name": "raccoon-walk-1",
+          "file": "assets/characters/raccoon-walk-1.webp",
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            384,
+            768,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            636,
+            645,
+            959,
+            941
+          ],
+          "source_foot_anchor": [
+            862,
+            931
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            64,
+            113
+          ],
+          "name": "raccoon-walk-2",
+          "file": "assets/characters/raccoon-walk-2.webp",
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            768,
+            768,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            964,
+            653,
+            1254,
+            936
+          ],
+          "source_foot_anchor": [
+            1165,
+            924
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            85,
+            126
+          ],
+          "name": "raccoon-walk-3",
+          "file": "assets/characters/raccoon-walk-3.webp",
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            1152,
+            768,
+            384,
+            384
+          ]
+        }
+      ],
+      "species": "raccoon",
+      "portrait": "assets/characters/thief-portrait.webp",
+      "actions": {
+        "idle": "thief-idle",
+        "slip": "thief-slip"
+      },
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "frame_size": [
+        384,
+        384
+      ],
+      "fps": 8
+    }
+  },
+  "actions": {
+    "courier-idle": {
+      "name": "courier-idle",
+      "file": "assets/characters/courier-idle.webp",
+      "source": "animal-clean-actions-source-v2.png",
+      "source_crop": [
+        0,
+        47,
+        374,
+        500
+      ],
+      "source_foot_anchor": [
+        284,
+        494
+      ],
+      "source_scale": 0.6,
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "size": [
+        384,
+        384
+      ],
+      "sheet_rect": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    "courier-work": {
+      "name": "courier-work",
+      "file": "assets/characters/courier-work.webp",
+      "source": "animal-clean-actions-source-v2.png",
+      "source_crop": [
+        375,
+        67,
+        820,
+        500
+      ],
+      "source_foot_anchor": [
+        622,
+        495
+      ],
+      "source_scale": 0.6,
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "size": [
+        384,
+        384
+      ],
+      "sheet_rect": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    "mechanic-idle": {
+      "name": "mechanic-idle",
+      "file": "assets/characters/mechanic-idle.webp",
+      "source": "animal-clean-actions-source-v2.png",
+      "source_crop": [
+        773,
+        80,
+        1125,
+        502
+      ],
+      "source_foot_anchor": [
+        995,
+        497
+      ],
+      "source_scale": 0.61,
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "size": [
+        384,
+        384
+      ],
+      "sheet_rect": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    "mechanic-work": {
+      "name": "mechanic-work",
+      "file": "assets/characters/mechanic-work.webp",
+      "source": "animal-clean-actions-source-v2.png",
+      "source_crop": [
+        1149,
+        79,
+        1523,
+        500
+      ],
+      "source_foot_anchor": [
+        1340,
+        494
+      ],
+      "source_scale": 0.61,
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "size": [
+        384,
+        384
+      ],
+      "sheet_rect": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    "guest-idle": {
+      "name": "guest-idle",
+      "file": "assets/characters/guest-idle.webp",
+      "source": "animal-clean-actions-source-v2.png",
+      "source_crop": [
+        59,
+        493,
+        390,
+        962
+      ],
+      "source_foot_anchor": [
+        244,
+        953
+      ],
+      "source_scale": 0.565,
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "size": [
+        384,
+        384
+      ],
+      "sheet_rect": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    "guest-wave": {
+      "name": "guest-wave",
+      "file": "assets/characters/guest-wave.webp",
+      "source": "animal-clean-actions-source-v2.png",
+      "source_crop": [
+        411,
+        491,
+        756,
+        964
+      ],
+      "source_foot_anchor": [
+        596,
+        958
+      ],
+      "source_scale": 0.565,
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "size": [
+        384,
+        384
+      ],
+      "sheet_rect": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    "thief-idle": {
+      "name": "thief-idle",
+      "file": "assets/characters/thief-idle.webp",
+      "source": "animal-clean-actions-source-v2.png",
+      "source_crop": [
+        737,
+        558,
+        1128,
+        948
+      ],
+      "source_foot_anchor": [
+        984,
+        938
+      ],
+      "source_scale": 0.625,
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "size": [
+        384,
+        384
+      ],
+      "sheet_rect": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    "thief-slip": {
+      "name": "thief-slip",
+      "file": "assets/characters/thief-slip.webp",
+      "source": "animal-clean-actions-source-v2.png",
+      "source_crop": [
+        1119,
+        528,
+        1536,
+        959
+      ],
+      "source_foot_anchor": [
+        1420,
+        948
+      ],
+      "source_scale": 0.625,
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "size": [
+        384,
+        384
+      ],
+      "sheet_rect": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    }
+  },
+  "preparation": "Original RGBA sources preserved. Component-isolated atlas crops retain original alpha and RGB. Uniform per-series resize with Lanczos; padded foot-aligned cells; lossless WebP.",
+  "combined_walks": {
+    "file": "assets/characters/animal-walks.webp",
+    "size": [
+      1536,
+      1536
+    ],
+    "columns": 4,
+    "rows": 4,
+    "frame_size": [
+      384,
+      384
+    ]
+  },
+  "combined_actions": {
+    "file": "assets/characters/animal-actions-clean.webp",
+    "size": [
+      1536,
+      768
+    ],
+    "columns": 4,
+    "rows": 2,
+    "frame_size": [
+      384,
+      384
+    ]
+  },
+  "actors": {
+    "courier": {
+      "sheet": "assets/characters/fox-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_crop": [
+            11,
+            0,
+            330,
+            325
+          ],
+          "source_foot_anchor": [
+            235,
+            319
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            66,
+            85
+          ],
+          "name": "fox-walk-0",
+          "file": "assets/characters/fox-walk-0.webp",
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            0,
+            0,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            323,
+            0,
+            629,
+            328
+          ],
+          "source_foot_anchor": [
+            530,
+            315
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            80,
+            88
+          ],
+          "name": "fox-walk-1",
+          "file": "assets/characters/fox-walk-1.webp",
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            384,
+            0,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            623,
+            9,
+            939,
+            330
+          ],
+          "source_foot_anchor": [
+            850,
+            321
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            63,
+            91
+          ],
+          "name": "fox-walk-2",
+          "file": "assets/characters/fox-walk-2.webp",
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            768,
+            0,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            951,
+            8,
+            1254,
+            326
+          ],
+          "source_foot_anchor": [
+            1153,
+            318
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            84,
+            92
+          ],
+          "name": "fox-walk-3",
+          "file": "assets/characters/fox-walk-3.webp",
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            1152,
+            0,
+            384,
+            384
+          ]
+        }
+      ],
+      "species": "fox",
+      "portrait": "assets/characters/courier-portrait.webp",
+      "actions": {
+        "idle": "courier-idle",
+        "work": "courier-work"
+      },
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "frame_size": [
+        384,
+        384
+      ],
+      "fps": 8
+    },
+    "mechanic": {
+      "sheet": "assets/characters/badger-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_crop": [
+            27,
+            335,
+            341,
+            647
+          ],
+          "source_foot_anchor": [
+            220,
+            640
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            92,
+            97
+          ],
+          "name": "badger-walk-0",
+          "file": "assets/characters/badger-walk-0.webp",
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            0,
+            384,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            363,
+            334,
+            645,
+            648
+          ],
+          "source_foot_anchor": [
+            535,
+            635
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            110,
+            100
+          ],
+          "name": "badger-walk-1",
+          "file": "assets/characters/badger-walk-1.webp",
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            384,
+            384,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            654,
+            334,
+            958,
+            653
+          ],
+          "source_foot_anchor": [
+            845,
+            640
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            94,
+            96
+          ],
+          "name": "badger-walk-2",
+          "file": "assets/characters/badger-walk-2.webp",
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            768,
+            384,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            987,
+            335,
+            1254,
+            647
+          ],
+          "source_foot_anchor": [
+            1168,
+            635
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            102,
+            101
+          ],
+          "name": "badger-walk-3",
+          "file": "assets/characters/badger-walk-3.webp",
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            1152,
+            384,
+            384,
+            384
+          ]
+        }
+      ],
+      "species": "badger",
+      "portrait": "assets/characters/mechanic-portrait.webp",
+      "actions": {
+        "idle": "mechanic-idle",
+        "work": "mechanic-work"
+      },
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "frame_size": [
+        384,
+        384
+      ],
+      "fps": 8
+    },
+    "guest": {
+      "sheet": "assets/characters/rabbit-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_crop": [
+            105,
+            913,
+            356,
+            1230
+          ],
+          "source_foot_anchor": [
+            245,
+            1225
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            137,
+            91
+          ],
+          "name": "rabbit-walk-0",
+          "file": "assets/characters/rabbit-walk-0.webp",
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            0,
+            1152,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            424,
+            916,
+            651,
+            1226
+          ],
+          "source_foot_anchor": [
+            545,
+            1216
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            153,
+            101
+          ],
+          "name": "rabbit-walk-1",
+          "file": "assets/characters/rabbit-walk-1.webp",
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            384,
+            1152,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            735,
+            910,
+            985,
+            1240
+          ],
+          "source_foot_anchor": [
+            870,
+            1229
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            141,
+            85
+          ],
+          "name": "rabbit-walk-2",
+          "file": "assets/characters/rabbit-walk-2.webp",
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            768,
+            1152,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            1046,
+            915,
+            1254,
+            1230
+          ],
+          "source_foot_anchor": [
+            1185,
+            1224
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            138,
+            93
+          ],
+          "name": "rabbit-walk-3",
+          "file": "assets/characters/rabbit-walk-3.webp",
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            1152,
+            1152,
+            384,
+            384
+          ]
+        }
+      ],
+      "species": "rabbit",
+      "portrait": "assets/characters/guest-portrait.webp",
+      "actions": {
+        "idle": "guest-idle",
+        "wave": "guest-wave"
+      },
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "frame_size": [
+        384,
+        384
+      ],
+      "fps": 8
+    },
+    "thief": {
+      "sheet": "assets/characters/raccoon-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_crop": [
+            0,
+            651,
+            339,
+            939
+          ],
+          "source_foot_anchor": [
+            235,
+            931
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            56,
+            118
+          ],
+          "name": "raccoon-walk-0",
+          "file": "assets/characters/raccoon-walk-0.webp",
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            0,
+            768,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            332,
+            646,
+            636,
+            935
+          ],
+          "source_foot_anchor": [
+            536,
+            923
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            83,
+            121
+          ],
+          "name": "raccoon-walk-1",
+          "file": "assets/characters/raccoon-walk-1.webp",
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "combined_rect": [
+            384,
+            768,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            636,
+            645,
+            959,
+            941
+          ],
+          "source_foot_anchor": [
+            862,
+            931
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            64,
+            113
+          ],
+          "name": "raccoon-walk-2",
+          "file": "assets/characters/raccoon-walk-2.webp",
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            768,
+            768,
+            384,
+            384
+          ]
+        },
+        {
+          "source_crop": [
+            964,
+            653,
+            1254,
+            936
+          ],
+          "source_foot_anchor": [
+            1165,
+            924
+          ],
+          "source_scale": 0.85,
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "source_paste_origin": [
+            85,
+            126
+          ],
+          "name": "raccoon-walk-3",
+          "file": "assets/characters/raccoon-walk-3.webp",
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "combined_rect": [
+            1152,
+            768,
+            384,
+            384
+          ]
+        }
+      ],
+      "species": "raccoon",
+      "portrait": "assets/characters/thief-portrait.webp",
+      "actions": {
+        "idle": "thief-idle",
+        "slip": "thief-slip"
+      },
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "frame_size": [
+        384,
+        384
+      ],
+      "fps": 8
+    }
+  },
+  "role_aliases": {
+    "courier": "fox",
+    "mechanic": "badger",
+    "guest": "rabbit",
+    "thief": "raccoon"
+  }
+}

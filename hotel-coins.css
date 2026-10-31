@@ -1,0 +1,24 @@
+/* Door coins stay separate from the room's clean/service/assignment target. */
+#door-coins{position:absolute;inset:0;pointer-events:none;z-index:7}
+.door-coin{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;min-width:56px;min-height:54px;padding:4px 7px 3px;transform:translate(-50%,-12%);pointer-events:auto;touch-action:manipulation;border:0;border-radius:24px;background:radial-gradient(ellipse,#ffe7a560 0%,#ffe7a500 72%);color:#543d16;filter:drop-shadow(0 3px 3px #49331565);cursor:pointer}
+.door-coin:focus-visible{outline:3px solid #fff5bf;outline-offset:3px;background:#285c44}
+.door-coin:disabled{cursor:wait;opacity:.75}.door-coin:active .coin-stack{transform:scale(.91)}
+.coin-stack{display:grid;place-items:center;flex:none;width:29px;height:29px;border:2px solid #fff1a0;border-radius:50%;background:radial-gradient(circle at 33% 28%,#fff7ba,#efbd42 55%,#bc7c20);box-shadow:inset 0 0 0 2px #d69529,0 3px 0 #9d651e,0 5px 0 -1px #f1c75c,0 7px 0 -1px #96601b;color:#9b6319;font:bold 22px Georgia;line-height:1;animation:door-coin-bob 2.5s ease-in-out infinite}
+.door-coin-amount{display:block;min-width:30px;padding:1px 6px;margin-top:6px;border:1px solid #a67f3b;border-radius:10px;background:#fff4d4;font:bold 12px/1.2 Arial;color:#513b16}
+.coin-pop{position:absolute;pointer-events:none;transform:translate(-50%,-20%);font:bold 24px Georgia;color:#ffe7a3;text-shadow:0 2px 0 #775120,0 0 8px #604d2d;animation:door-coin-collect 1s ease-out forwards}
+.coin-pop.gentle{animation:none}.coin-announcement{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#money.coin-gain{animation:coin-bank-glow .65s ease-out}.collect-door-coins{min-height:44px}
+#first-stay-reopen.has-coins{border-color:#d0a342;background:#fff2bd}
+@keyframes door-coin-bob{0%,100%{translate:0 0}50%{translate:0 -3px}}
+@keyframes door-coin-collect{0%{opacity:1;translate:0 0;scale:.9}20%{opacity:1;scale:1.12}100%{opacity:0;translate:0 -70px;scale:1}}
+@keyframes coin-bank-glow{0%{filter:drop-shadow(0 0 10px #ffdf72);scale:1.1}100%{filter:none;scale:1}}
+.gentle-motion .coin-stack,.gentle-motion .coin-pop,.gentle-motion #money.coin-gain{animation:none}
+@media(prefers-reduced-motion:reduce){.coin-stack,.coin-pop,#money.coin-gain{animation:none}}
+#floors button.coins-waiting{box-shadow:inset 0 -3px #edc766}#floors button.coins-waiting i svg:last-child{color:#ffdd76}
+/* R1 celebration layer: fixed, click-through, transform/opacity only. */
+.fx-layer{position:fixed;inset:0;pointer-events:none;z-index:9000;overflow:hidden;contain:strict}
+.fx-layer i{position:absolute;display:block;will-change:transform,opacity}
+.fx-coin{width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff6cf 0 18%,#f5c34f 45%,#b17a22 100%);box-shadow:0 1px 3px #0005}
+.fx-spark{width:8px;height:8px;margin:-4px 0 0 -4px;background:#fff1b0;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+.fx-glow{width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:radial-gradient(#ffe7a6aa,#ffe7a600 70%)}
+.fx-confetti{width:8px;height:12px;margin-left:-4px;border-radius:2px}

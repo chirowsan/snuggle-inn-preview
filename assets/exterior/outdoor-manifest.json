@@ -1,0 +1,335 @@
+{
+  "designVersion": 3,
+  "world": [
+    -300,
+    0,
+    1800,
+    1250
+  ],
+  "ground": [
+    -280,
+    574,
+    1760,
+    656
+  ],
+  "objectLimit": 60,
+  "catalogCount": 31,
+  "props": [
+    {
+      "path": "props/birdbath.webp",
+      "sha256": "c7d8b8c094f9bfca8584a9e9719965c4c480001510445fbd57f18569d1bdf620",
+      "bytes": 15774,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        213,
+        273
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/bollard-light.webp",
+      "sha256": "307d8f99e9cefe7abc12bb767ed8f59f6faea1128268201c0a021d3722c0b003",
+      "bytes": 2892,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        38,
+        108
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/boxwood-hedge.webp",
+      "sha256": "8a321054bb1ba1a412207b009cf590b18a95299d778f5ef4c17027b96234c327",
+      "bytes": 20754,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        315,
+        167
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/brick-path.svg",
+      "sha256": "033d7402837622d2737f70072bdc54128e9ea3366a5ad2de09f1a460f134fa87",
+      "bytes": 2309,
+      "source": "code-native-ground"
+    },
+    {
+      "path": "props/cafe-table.webp",
+      "sha256": "1b3142e1a79ab514e3081d76bf2e8aa1e2cd40c5125cc8e12150d4251cd3a19c",
+      "bytes": 16808,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        248,
+        218
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/cypress-tree.webp",
+      "sha256": "a887a3128b8eee33851e5a9d7c2e84c8c1ffb24f3f30ef0db5ceaf1b80c5ef5d",
+      "bytes": 23666,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        165,
+        396
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/fern-pot.webp",
+      "sha256": "f1e2ef0e8c38e72ac679dc5f05d61d11030226371fb367943573080f0d4e409b",
+      "bytes": 23268,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        186,
+        179
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/fire-bowl.webp",
+      "sha256": "fe010a713b639b71efc2690013f1ecbc3e96beb93decd2b28d651a56dd5a8474",
+      "bytes": 12938,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        263,
+        166
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/floor-lantern.webp",
+      "sha256": "ac4252f0e21590d4827c01b955292e8baf94df96eb3a73719b59321a466a382e",
+      "bytes": 7756,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        87,
+        137
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/flower-planter.webp",
+      "sha256": "56eacdcb3404ce6bf7316d1f0846a555cf63634ffa652d04f00d078644962501",
+      "bytes": 25924,
+      "source": "legacy-approved",
+      "pixels": [
+        180,
+        209
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/garden-arch.webp",
+      "sha256": "6f0e9a06f9cf73644c9a29ff68515fe15b2959ef22f2e363e3f2fce85d779052",
+      "bytes": 76506,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        375,
+        463
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/garden-bench.webp",
+      "sha256": "f21ceeebb8909ebf173c09ec1a97bd700f7ccb1a036d582022737ce58084d4a8",
+      "bytes": 21710,
+      "source": "legacy-approved",
+      "pixels": [
+        287,
+        169
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/garden-lantern.webp",
+      "sha256": "517153e6dcbeacd480b013cb1daed59e0e245c000c7a079132046571decc4051",
+      "bytes": 8924,
+      "source": "legacy-approved",
+      "pixels": [
+        78,
+        260
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/garden-statue.webp",
+      "sha256": "f7cda57fc6aa267f557693f04285803651221425396da98391ebe0fb92438a73",
+      "bytes": 15864,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        101,
+        288
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/grass-patch.svg",
+      "sha256": "7e77eafb2303c3820f9599595b9a17454b23e49d75e38dcce052df9ce5435036",
+      "bytes": 13449,
+      "source": "code-native-ground"
+    },
+    {
+      "path": "props/gravel-bed.svg",
+      "sha256": "5100b282c2113a76999741a72485f1b453b4b2fa72f4b821a9b5b8e1f76b0d45",
+      "bytes": 7354,
+      "source": "code-native-ground"
+    },
+    {
+      "path": "props/hydrangea.webp",
+      "sha256": "acd81439d94cefe69ee095b8590bf9619789485d74d9cc1d2efaa69678f5b19b",
+      "bytes": 29494,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        312,
+        212
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/lavender-bed.webp",
+      "sha256": "e0d800d6c7cbca2cc355a148f5ab4390aeff32e9a803e49d28bd00c2e0a44606",
+      "bytes": 26344,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        320,
+        139
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/lemon-tree.webp",
+      "sha256": "0cb187edc68892d85fe086a594977e1d3ff88a3924ea28f4559f21d9bd476e5f",
+      "bytes": 43298,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        256,
+        376
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/lounge-chair.webp",
+      "sha256": "24619793fbad44e739958241004ce29f95955979fb406b044b762a0ae80c69a2",
+      "bytes": 15384,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        321,
+        197
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/olive-tree.webp",
+      "sha256": "189b1816fa1883c6ccbd2befd698d68ae7c831a83993c216234ca779576d1273",
+      "bytes": 44820,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        301,
+        287
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/palm-planter.webp",
+      "sha256": "393f8fd21736f6ebef2194c14583589ce872ea38f66d929f620b47c2a8fd3d94",
+      "bytes": 46300,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        268,
+        377
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/parasol-table.webp",
+      "sha256": "12442e3b650d763eb5d2207868900362512d7df24a0bdec391397728eb2f1f75",
+      "bytes": 40002,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        462,
+        480
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/patio-chair.webp",
+      "sha256": "bff2f55bc8bc55489419fee7f3440a31174080b2cce4a1789ae59890af09f4aa",
+      "bytes": 19772,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        169,
+        219
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/picnic-table.webp",
+      "sha256": "dff0c882a04be5a282a0b28b9ce6ab6c23ff0da4a02e3e72fc77ff916e210d73",
+      "bytes": 26700,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        383,
+        232
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/rose-trellis.webp",
+      "sha256": "ea530d3945b0b24033e29fba93cb7004a110596942b084a75f97be64fe1b094a",
+      "bytes": 71156,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        278,
+        415
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/square-paving.svg",
+      "sha256": "f1d4dc59971a6bc8f7eb199e25f2aca1874cd848fff2f2c6d9a52ff3f5269376",
+      "bytes": 833,
+      "source": "code-native-ground"
+    },
+    {
+      "path": "props/stepping-stones.svg",
+      "sha256": "7ed0413384c4e43c7ef4f7497bf978a6d24b00631923e3ff9e70f73d13a61142",
+      "bytes": 825,
+      "source": "code-native-ground"
+    },
+    {
+      "path": "props/stone-fountain.webp",
+      "sha256": "0a329c7506eca008fa74e2286311e62f003be537f7c8ad703a27cdd0b8460287",
+      "bytes": 54888,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        377,
+        361
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/string-light-post.webp",
+      "sha256": "1e652168d33a94de43ae424469c3ae08073f290057fb4a5446e6aa11ebbb00cf",
+      "bytes": 30018,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        404,
+        426
+      ],
+      "alpha": true
+    },
+    {
+      "path": "props/welcome-sign.webp",
+      "sha256": "907111fc6028f2f730cb3713fd58fab3e496033549c9f3eae3d47cc320e73a1f",
+      "bytes": 14256,
+      "source": "built-in-imagegen-single-pass",
+      "pixels": [
+        199,
+        236
+      ],
+      "alpha": true
+    }
+  ]
+}

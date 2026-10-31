@@ -1,0 +1,309 @@
+{
+  "version": 1,
+  "logicalCanvas": [
+    1200,
+    700
+  ],
+  "coordinateSystem": "Top-left origin. Rectangles are [x,y,width,height], crops are [left,top,right,bottom]. Foot anchors are normalized [0..1].",
+  "background": {
+    "path": "hotel-exterior.webp",
+    "size": [
+      1200,
+      700
+    ],
+    "bytes": 313950,
+    "completeUpperWindowLevels": 3,
+    "atticLevelVisible": true,
+    "frontalPerspective": true,
+    "charactersBakedIn": false,
+    "textBakedIn": false,
+    "sha256": "c1974f6a393e258ebf85f8fd23c40045f05b612f9ec07e3b27e00ea220492389"
+  },
+  "sign": {
+    "boardBounds": [
+      476,
+      400,
+      246,
+      43
+    ],
+    "greenInteriorBounds": [
+      486,
+      409,
+      223,
+      26
+    ],
+    "safeTextBounds": [
+      493,
+      411,
+      210,
+      22
+    ],
+    "center": [
+      598,
+      422
+    ],
+    "recommendedFontSize": 20,
+    "smallScreenNote": "At 667\u00d7375 contained view the safe text area is about 113\u00d712 px. Use a zoomed sign-edit preview for manipulation, then show the live neon overlay on the same board. Keep text and glow inside greenInteriorBounds."
+  },
+  "entrance": {
+    "center": [
+      598.5,
+      510.5
+    ],
+    "footpoint": [
+      598.5,
+      565
+    ],
+    "frameBounds": [
+      541,
+      446,
+      116,
+      123
+    ],
+    "doorPatchBounds": [
+      550,
+      454,
+      97,
+      113
+    ],
+    "doorInteriorBounds": [
+      556,
+      469,
+      85,
+      96
+    ],
+    "closedPatch": {
+      "path": "door-closed.webp",
+      "size": [
+        194,
+        226
+      ],
+      "sha256": "58387a0f13c5ca7014458999ce40dcf931ee36250329295587f23d6f1acea7e1"
+    },
+    "openPatch": {
+      "path": "door-open.webp",
+      "size": [
+        194,
+        226
+      ],
+      "sha256": "d94dd902a9d4dba534d100923083f5c8253b28c5388be5db4afc61070d0a935b"
+    },
+    "patchAlpha": false,
+    "notes": [
+      "The two small patches intentionally cover the baked closed doors; draw both at exactly doorPatchBounds. They retain the unchanged surrounding arch/frame pixels so the warm open passage can fully replace the original.",
+      "Open patch was inspected in-context at 667\u00d7375 and blends cleanly. Use a short crossfade with restrained warm glow and a subtle camera ease. Do not stretch or recenter it independently.",
+      "Door leaf hinge animation would need runtime clipping/meshes; these are visual endpoint patches, not separately alpha-masked door leaves."
+    ]
+  },
+  "decoration": {
+    "courtyardBounds": [
+      90,
+      572,
+      1020,
+      128
+    ],
+    "usableImageBounds": [
+      100,
+      574,
+      1000,
+      116
+    ],
+    "recommendedFootZones": [
+      [
+        120,
+        640,
+        400,
+        45
+      ],
+      [
+        680,
+        640,
+        400,
+        45
+      ]
+    ],
+    "keepClearPathPolygon": [
+      [
+        554,
+        567
+      ],
+      [
+        646,
+        567
+      ],
+      [
+        670,
+        700
+      ],
+      [
+        530,
+        700
+      ]
+    ],
+    "placementRule": "Keep full sprite image within usableImageBounds after applying its normalized foot anchor. Do not place footprints into keepClearPathPolygon. For a tall lantern, use foot y >= 661. Sort by foot y for overlap.",
+    "smallScreenNote": "The unobscured lower courtyard is about 69 px high at a contained 667\u00d7375 viewport. Keep the bottom unobstructed by editing UI. The recommended prop sizes remain identifiable at this scale.",
+    "bakedProps": "Only perimeter/balcony landscaping and two fixed doorway urns. No bench or freestanding lamp in the editable courtyard."
+  },
+  "props": {
+    "flower-planter": {
+      "source": "flower-planter.png",
+      "sourceCrop": [
+        14,
+        4,
+        1151,
+        1325
+      ],
+      "size": [
+        180,
+        209
+      ],
+      "anchor": [
+        0.5,
+        0.9952153110047847
+      ],
+      "recommendedDisplaySize": [
+        54,
+        63
+      ],
+      "suggestedFootpoint": [
+        250,
+        650
+      ],
+      "footprint": [
+        38,
+        12
+      ],
+      "path": "props/flower-planter.webp",
+      "bytes": 25924,
+      "alpha": {
+        "mode": "RGBA",
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentPixels": 13201,
+        "partialPixels": 23415,
+        "fullyOpaquePixels": 1004,
+        "trueAlpha": true,
+        "bakedCastShadow": false
+      },
+      "sha256": "56eacdcb3404ce6bf7316d1f0846a555cf63634ffa652d04f00d078644962501"
+    },
+    "garden-bench": {
+      "source": "garden-bench.png",
+      "sourceCrop": [
+        27,
+        4,
+        1615,
+        938
+      ],
+      "size": [
+        287,
+        169
+      ],
+      "anchor": [
+        0.5,
+        0.9940828402366864
+      ],
+      "recommendedDisplaySize": [
+        120,
+        71
+      ],
+      "suggestedFootpoint": [
+        410,
+        665
+      ],
+      "footprint": [
+        112,
+        18
+      ],
+      "path": "props/garden-bench.webp",
+      "bytes": 21710,
+      "alpha": {
+        "mode": "RGBA",
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentPixels": 21827,
+        "partialPixels": 24531,
+        "fullyOpaquePixels": 2145,
+        "trueAlpha": true,
+        "bakedCastShadow": false
+      },
+      "sha256": "f21ceeebb8909ebf173c09ec1a97bd700f7ccb1a036d582022737ce58084d4a8"
+    },
+    "garden-lantern": {
+      "source": "garden-lantern-v1.png",
+      "sourceCrop": [
+        294,
+        35,
+        729,
+        1484
+      ],
+      "size": [
+        78,
+        260
+      ],
+      "anchor": [
+        0.5,
+        0.9961538461538462
+      ],
+      "recommendedDisplaySize": [
+        26,
+        87
+      ],
+      "suggestedFootpoint": [
+        900,
+        675
+      ],
+      "footprint": [
+        24,
+        10
+      ],
+      "path": "props/garden-lantern.webp",
+      "bytes": 8924,
+      "alpha": {
+        "mode": "RGBA",
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentPixels": 11145,
+        "partialPixels": 8608,
+        "fullyOpaquePixels": 527,
+        "trueAlpha": true,
+        "bakedCastShadow": false
+      },
+      "sha256": "517153e6dcbeacd480b013cb1daed59e0e245c000c7a079132046571decc4051"
+    }
+  },
+  "camera": {
+    "logicalSize": [
+      1200,
+      700
+    ],
+    "suggestedViewportFit": "contain",
+    "proofViewport": [
+      667,
+      375
+    ],
+    "proofDrawSize": [
+      643,
+      375
+    ],
+    "proofHorizontalMargin": 12,
+    "notes": "Aspect-preserving contain preserves roofline and all courtyard. Avoid cover cropping; place controls outside or above the scene."
+  },
+  "runtimeTotalBytes": 387530,
+  "proofPaths": [
+    "proof/exterior-props-667x375.png",
+    "proof/exterior-open-667x375.png",
+    "proof/alpha-on-light-dark.png"
+  ],
+  "notes": [
+    "All paths relative to this artifact folder. Copy only runtime files into the game bundle; originals and proof are separate source/QA.",
+    "No repo, runtime source, deployment, approved lobby or leisure assets were modified.",
+    "All props retain genuine generated alpha; transparent background pixels were never chroma-keyed."
+  ]
+}

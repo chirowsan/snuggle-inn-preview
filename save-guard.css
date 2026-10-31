@@ -1,0 +1,2 @@
+/* Above both the hotel and the exterior. No dismissal without save ownership. */
+#save-guard{position:fixed;inset:0;z-index:10000}#save-guard .paper{max-width:min(390px,calc(100vw - 32px));padding:24px}#save-guard p{line-height:1.5;margin:12px 0 20px}#save-guard button{min-height:48px;min-width:120px}#save-guard[hidden]{display:none}

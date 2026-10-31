@@ -1,0 +1,18 @@
+{
+  "tool": "OpenAI built-in image_gen",
+  "sources": {
+    "cat_walk": "exec-05f198f7-f5cc-483e-9ab8-c869efda9d7b.png",
+    "cat_idle_portrait": "exec-ed338710-c699-4b82-b898-5553789718db.png",
+    "family": "exec-655c7cb3-a43f-4ba0-9cbd-ce5e0ac3a507.png",
+    "room_overlays": "exec-4ab90cc4-b487-4ad8-8d4c-24d208ec0daf.png",
+    "service_wing": "exec-191bcd6f-e0b6-45d5-8c8c-2e2bb3fc60ea.png",
+    "chef": "exec-0ea408fc-7c5a-4932-9646-db24d9070c33.png"
+  },
+  "final_prompt_briefs": {
+    "cat": "Edit exact gray-cat design into a four-frame walk cycle. Preserve silver-gray fur, teal coat, gold scarf/buttons, boots, suitcase, detailed painted elevated 3/4 view facing right. Four whole-body cutouts in 2\u00d72 cells; extended stride, passing/support step, opposite stride variation, lifted-knee passing step. Same head size and baseline. Genuine alpha, no background/text/borders. Idle and portrait from original cat generation.",
+    "family": "Correct original six-cell bear-parent-and-cub sheet, preserving two animals in every full-body cell. Coral cardigan, ochre scarf, cub in mustard coat and coral scarf, linked paws, suitcase. Four distinct stride/heel-lift/knee-up poses, idle together, double portrait. Same original hotel perspective and painted fur. Transparent alpha, no background or text.",
+    "room_overlays": "Two isolated tall rounded-arch doorway interiors based on exact original hotel door pixels. Left luxury room: cream/teal large bed, gold lamp, warm wood and stool. Right family room: double bed and separate small cub bed, coral/ochre blankets, toys and stuffed teddy. Slim teal jamb only, no exterior stone arch, corridor, or characters. Pure transparent exterior, each arch width:height about 0.62.",
+    "service_wing": "New complete 1200\u00d7700 upper-floor service wing matching original rush-wing sandstone, teal trim, brass lamps, ivy and tiled floor. Three real open architectural bays: ramen counter/kitchen, grooming salon mirror/chair/towels, massage couch/greenery. Bays upper portion with centers approximately x240/530/820, thresholds y330; generous corridor below. Reserve rightmost250px for existing separate stairs. No stairs, labels, text, characters, UI or cards; opaque full background.",
+    "chef": "New white duck chef matching original rabbit painted art, orange bill/webbed feet, white toque, cream apron, teal shirt, coral neckerchief, elevated 3/4 facing right. Three full-body transparent poses: idle holding copper saucepan and lowered spoon; stirring low/down; stirring with higher wing and oppositely angled spoon. Same body scale/baseline, planted feet. No scene, floor, counter, text or labels."
+  }
+}

@@ -1,0 +1,46 @@
+/* One stationary tap cue. Gestural play stays available, but is never required. */
+#gesture-path{display:none!important}
+#guide-hand,.activity-board .activity-hand,#fold-hand{animation:tap-press 1.5s ease-in-out infinite!important;transform-origin:10px 8px;pointer-events:none;z-index:12;filter:drop-shadow(0 2px 2px #173b2aaa)}
+#guide-hand{width:34px;height:40px;transform:translate(-5px,-5px)}
+#guide-hand b,.activity-hand b,#fold-hand b{position:absolute;left:50%;top:31px;transform:translateX(-50%);font:bold 11px/1.2 Arial;white-space:nowrap;padding:3px 6px;color:#153d31;background:#fff2aa;border:1px solid #b1813a;border-radius:7px;box-shadow:0 2px 4px #173b2a44}
+@keyframes tap-press{0%,60%,100%{scale:1}25%,40%{scale:.84}}
+.activity-board .next:not(:disabled),.guide-target,.room.guide-target,.fold-next{outline:4px solid #ffdc69!important;outline-offset:3px!important;box-shadow:0 0 0 6px #fff8d23b,0 0 14px #ffde7b!important;border-radius:12px}
+.activity-board .chosen{outline:2px solid #8ee3a4;outline-offset:2px;filter:drop-shadow(0 0 5px #8ee3a4)}
+.activity-board .chosen:after{content:'✓';position:absolute;right:-6px;top:-6px;border-radius:50%;background:#285d41;color:#fff5c8;font:bold 18px Arial;padding:2px 5px;z-index:5}
+.activity-board .cooking-motion,.activity-board .leisure-motion,.activity-board .cooking-link{display:none!important}
+.activity-board .activity-hand{width:32px;height:38px}
+#fold-hand{position:absolute;top:90px;width:34px;height:40px}#fold-hand svg{width:100%;height:100%}
+#carried-guest .carry-check{position:absolute;right:0;top:0;background:#285d41;color:#fff2bd;border-radius:50%;padding:2px 5px;font:bold 16px Arial}
+.tap-help{position:absolute;left:12px;top:55px;display:flex;align-items:center;gap:4px;min-height:36px;padding:4px 8px;border:2px solid #d7bd7b;border-radius:20px;background:#f8edcd;color:#284f3c;font:bold 11px Arial;pointer-events:auto}.tap-help svg{width:22px;height:22px}.tap-help.active{border-color:#ffdc69}
+#tap-lesson{position:absolute;z-index:10;top:58px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:4px 5px 4px 11px;background:#f8edebf2;border:2px solid #d7bd7b;border-radius:18px;color:#284f3c;font:bold 11px Arial;white-space:nowrap}#tap-lesson button{min-width:42px;min-height:30px;border:0;border-radius:16px;color:#375745;background:#e3d6b7;font:bold 11px Arial}
+#replay-tap-guide{margin-top:8px;min-height:36px;font-size:12px}
+.recipe-choice.recommended{outline:4px solid #ffdc69;outline-offset:2px;position:relative}.recipe-choice.recommended:after{content:'Tap';position:absolute;right:6px;top:6px;background:#fff2aa;border-radius:8px;padding:4px 7px;font:bold 11px Arial;color:#284f3c}
+@media(max-width:450px) and (orientation:portrait){.tap-help{top:91px;left:7px}#tap-lesson{top:137px;max-width:calc(100% - 12px);font-size:10px}}
+.gentle-motion #guide-hand,.gentle-motion .activity-hand,.gentle-motion #fold-hand{animation:none!important}
+.ex-tap-hint{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);padding:7px 12px;border:2px solid #d7bd7b;border-radius:18px;color:#284f3c;background:#fff2d8;font:bold 12px Arial;pointer-events:none;z-index:8;white-space:nowrap}.ex-tap-zone{position:absolute;outline:4px dashed #ffdf7a;outline-offset:-4px;background:#ffdf7a18;pointer-events:none;z-index:0;border-radius:10px}
+.recipe-tap-hand{position:absolute;right:10px;top:34px;width:30px;height:34px;z-index:2;animation:tap-press 1.5s ease-in-out infinite;pointer-events:none}.recipe-tap-hand svg{width:100%;height:100%}#carried-guest>svg{width:100%;height:100%}
+#tap-lesson{padding:3px 4px 3px 7px;gap:3px;background:#f8edcdf2}#tap-lesson-status{display:grid;place-items:center}#tap-lesson-status svg{width:18px;height:18px}.tap-help.active span{display:none}
+/* Selected items stay clear of the waiting guests, with an explicit cancel affordance. */
+#carried-guest{top:53px;right:12px;left:auto;bottom:auto;width:44px;height:44px}#carried-guest .carry-check{right:-5px;top:-5px;width:20px;height:20px;padding:0;line-height:19px;background:#fff2d0;color:#345b44;border:1px solid #8aa47d;font-size:20px}
+@media(orientation:portrait) and (max-width:650px){#carried-guest{top:88px;bottom:auto}}
+
+/* The same single task becomes a familiar face for opt-in new hotels. */
+#tap-lesson.story-lesson{top:58px;border-radius:14px;max-width:min(430px,56%);white-space:normal;padding:7px 9px;gap:7px;align-items:center;background:#fff5dcf5}
+#first-step-story{display:flex;gap:9px;align-items:center;text-align:left;font:12px/1.35 Arial;color:#31513f}
+#first-step-story>img{width:42px;height:42px;object-fit:contain;flex-shrink:0;background:#e0e6cb;border-radius:50%}
+#first-step-story>span{display:grid;gap:2px}#first-step-story strong{font-size:12px;color:#775530}
+#tap-lesson.story-lesson button{flex-shrink:0;min-height:40px}
+.small-beginnings #counter{justify-content:center;gap:15px}
+.first-stay-result{background:transparent;align-items:flex-end;padding:10px}
+.first-stay-result .result-card{width:min(520px,95%);max-height:76vh;overflow:auto;padding:18px;background:#fff4dfeF;border:2px solid #b7a574}
+.first-stay-result #result-hearts,.first-stay-result #result-money,.first-stay-result #shop-tabs,.first-stay-result .room-upgrades{display:none}
+#first-stay-note{font:14px/1.5 Georgia,serif;color:#5c6d48;margin:7px 0 12px}
+.first-stay-result .result-actions{flex-wrap:wrap}.first-stay-result #result-title{font-size:24px}
+.first-stay-reopen{position:absolute;z-index:15;bottom:24px;left:50%;transform:translateX(-50%);border:2px solid #b7a574;border-radius:20px;padding:12px 18px;background:#fff4df;color:#37563e;font:bold 14px Arial}
+@media(max-height:450px){#tap-lesson.story-lesson{top:50px;max-width:48%;padding:5px 8px}#first-step-story{font-size:10px}#first-step-story>img{width:32px;height:32px}.first-stay-result .result-card{max-height:82vh;padding:10px 16px}.first-stay-result #result-title{font-size:20px}#first-stay-note{font-size:12px;margin:4px 0}}
+@media(orientation:portrait) and (max-width:650px){#tap-lesson.story-lesson{top:137px;max-width:calc(100% - 20px);width:400px}#first-step-story{font-size:11px}}
+/* r2: keep Pip's tip on the open floor just above the tray, never over doors or the tray. */
+@media not ((orientation:portrait) and (max-width:650px)){#tap-lesson.story-lesson{top:auto;bottom:94px}#first-step-story{pointer-events:none}.first-stay-reopen{bottom:auto;top:56px;left:auto;right:12px;transform:none;padding:10px 14px;min-height:44px}}
+@media (min-width:1051px) and (min-height:501px){#tap-lesson.story-lesson{bottom:106px}}
+#first-step-story{font-size:14px;line-height:1.3}#first-step-story strong{font-size:12px}
+@media(max-height:450px){#first-step-story{font-size:12px}}

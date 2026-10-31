@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "proof": "Additional cast isolated connected-motion candidate; pending native visual approval",
+  "rigs": {
+    "pip": {
+      "base": "assets/motion/pip",
+      "manifest": "assets/motion/pip/manifest.json",
+      "variants": "assets/motion/pip/core-variants/manifest.json",
+      "files": [
+        "assets/motion/pip/body.webp",
+        "assets/motion/pip/near_shoe.webp",
+        "assets/motion/pip/near_forearm.webp",
+        "assets/motion/pip/near_upper_arm.webp",
+        "assets/motion/pip/far_shoe.webp",
+        "assets/motion/pip/far_shin.webp",
+        "assets/motion/pip/far_forearm.webp",
+        "assets/motion/pip/far_thigh.webp",
+        "assets/motion/pip/tail.webp",
+        "assets/motion/pip/near_shin.webp",
+        "assets/motion/pip/near_thigh.webp",
+        "assets/motion/pip/far_upper_arm.webp",
+        "assets/motion/pip/core-variants/body-front.webp",
+        "assets/motion/pip/core-variants/body-blink.webp",
+        "assets/motion/badger/wrench.webp",
+        "assets/motion/badger/broom.webp"
+      ]
+    },
+    "rabbit": {
+      "base": "assets/motion/rabbit",
+      "manifest": "assets/motion/rabbit/manifest.json",
+      "variants": "assets/motion/rabbit/core-variants/manifest.json",
+      "files": [
+        "assets/motion/rabbit/body.webp",
+        "assets/motion/rabbit/suitcase.webp",
+        "assets/motion/rabbit/near_shoe.webp",
+        "assets/motion/rabbit/near_forearm.webp",
+        "assets/motion/rabbit/near_upper_arm.webp",
+        "assets/motion/rabbit/far_shoe.webp",
+        "assets/motion/rabbit/far_shin.webp",
+        "assets/motion/rabbit/far_forearm.webp",
+        "assets/motion/rabbit/far_thigh.webp",
+        "assets/motion/rabbit/tail.webp",
+        "assets/motion/rabbit/near_shin.webp",
+        "assets/motion/rabbit/near_thigh.webp",
+        "assets/motion/rabbit/far_upper_arm.webp",
+        "assets/motion/rabbit/core-variants/body-front.webp",
+        "assets/motion/rabbit/core-variants/body-blink.webp"
+      ]
+    },
+    "badger": {
+      "base": "assets/motion/badger",
+      "manifest": "assets/motion/badger/manifest.json",
+      "variants": "assets/motion/badger/core-variants/manifest.json",
+      "files": [
+        "assets/motion/badger/broom.webp",
+        "assets/motion/badger/body.webp",
+        "assets/motion/badger/near_shoe.webp",
+        "assets/motion/badger/near_forearm.webp",
+        "assets/motion/badger/near_upper_arm.webp",
+        "assets/motion/badger/far_shoe.webp",
+        "assets/motion/badger/far_shin.webp",
+        "assets/motion/badger/far_forearm.webp",
+        "assets/motion/badger/far_thigh.webp",
+        "assets/motion/badger/tail.webp",
+        "assets/motion/badger/near_shin.webp",
+        "assets/motion/badger/wrench.webp",
+        "assets/motion/badger/near_thigh.webp",
+        "assets/motion/badger/far_upper_arm.webp",
+        "assets/motion/badger/core-variants/body-front.webp"
+      ]
+    },
+    "cat": {
+      "base": "assets/motion/cat",
+      "manifest": "assets/motion/cat/manifest.json",
+      "variants": "assets/motion/cat/core-variants/manifest.json",
+      "files": [
+        "assets/motion/cat/body.webp",
+        "assets/motion/cat/suitcase.webp",
+        "assets/motion/cat/near_shoe.webp",
+        "assets/motion/cat/near_forearm.webp",
+        "assets/motion/cat/near_upper_arm.webp",
+        "assets/motion/cat/far_shoe.webp",
+        "assets/motion/cat/far_shin.webp",
+        "assets/motion/cat/far_forearm.webp",
+        "assets/motion/cat/far_thigh.webp",
+        "assets/motion/cat/tail.webp",
+        "assets/motion/cat/near_shin.webp",
+        "assets/motion/cat/near_thigh.webp",
+        "assets/motion/cat/far_upper_arm.webp",
+        "assets/motion/cat/core-variants/blink-near-eye.webp",
+        "assets/motion/cat/core-variants/body-front.webp",
+        "assets/motion/cat/core-variants/blink-far-eye.webp"
+      ]
+    },
+    "raccoon": {
+      "base": "assets/motion/raccoon",
+      "manifest": "assets/motion/raccoon/manifest.json",
+      "variants": "assets/motion/raccoon/core-variants/manifest.json",
+      "files": [
+        "assets/motion/raccoon/body.webp",
+        "assets/motion/raccoon/near_shoe.webp",
+        "assets/motion/raccoon/near_forearm.webp",
+        "assets/motion/raccoon/near_upper_arm.webp",
+        "assets/motion/raccoon/far_shoe.webp",
+        "assets/motion/raccoon/far_shin.webp",
+        "assets/motion/raccoon/far_forearm.webp",
+        "assets/motion/raccoon/far_thigh.webp",
+        "assets/motion/raccoon/tail.webp",
+        "assets/motion/raccoon/near_shin.webp",
+        "assets/motion/raccoon/near_thigh.webp",
+        "assets/motion/raccoon/far_upper_arm.webp",
+        "assets/motion/raccoon/core-variants/blink-near-eye.webp",
+        "assets/motion/raccoon/core-variants/body-front.webp",
+        "assets/motion/raccoon/core-variants/blink-far-eye.webp"
+      ]
+    },
+    "bear-parent": {
+      "base": "assets/motion/bear-parent",
+      "manifest": "assets/motion/bear-parent/manifest.json",
+      "variants": "assets/motion/bear-parent/core-variants/manifest.json",
+      "files": [
+        "assets/motion/bear-parent/body.webp",
+        "assets/motion/bear-parent/suitcase.webp",
+        "assets/motion/bear-parent/near_shoe.webp",
+        "assets/motion/bear-parent/near_forearm.webp",
+        "assets/motion/bear-parent/near_upper_arm.webp",
+        "assets/motion/bear-parent/far_shoe.webp",
+        "assets/motion/bear-parent/far_shin.webp",
+        "assets/motion/bear-parent/far_forearm.webp",
+        "assets/motion/bear-parent/far_thigh.webp",
+        "assets/motion/bear-parent/tail.webp",
+        "assets/motion/bear-parent/near_shin.webp",
+        "assets/motion/bear-parent/near_thigh.webp",
+        "assets/motion/bear-parent/far_upper_arm.webp",
+        "assets/motion/bear-parent/core-variants/blink-near-eye.webp",
+        "assets/motion/bear-parent/core-variants/body-front.webp",
+        "assets/motion/bear-parent/core-variants/blink-far-eye.webp"
+      ]
+    },
+    "bear-child": {
+      "base": "assets/motion/bear-child",
+      "manifest": "assets/motion/bear-child/manifest.json",
+      "variants": "assets/motion/bear-child/core-variants/manifest.json",
+      "files": [
+        "assets/motion/bear-child/body.webp",
+        "assets/motion/bear-child/near_shoe.webp",
+        "assets/motion/bear-child/near_forearm.webp",
+        "assets/motion/bear-child/near_upper_arm.webp",
+        "assets/motion/bear-child/far_shoe.webp",
+        "assets/motion/bear-child/far_shin.webp",
+        "assets/motion/bear-child/far_forearm.webp",
+        "assets/motion/bear-child/far_thigh.webp",
+        "assets/motion/bear-child/tail.webp",
+        "assets/motion/bear-child/near_shin.webp",
+        "assets/motion/bear-child/near_thigh.webp",
+        "assets/motion/bear-child/far_upper_arm.webp",
+        "assets/motion/bear-child/core-variants/blink-near-eye.webp",
+        "assets/motion/bear-child/core-variants/body-front.webp",
+        "assets/motion/bear-child/core-variants/blink-far-eye.webp"
+      ]
+    },
+    "chef": {
+      "base": "assets/motion/chef",
+      "manifest": "assets/motion/chef/manifest.json",
+      "variants": "assets/motion/chef/core-variants/manifest.json",
+      "files": [
+        "assets/motion/chef/body.webp",
+        "assets/motion/chef/near_shoe.webp",
+        "assets/motion/chef/near_forearm.webp",
+        "assets/motion/chef/near_upper_arm.webp",
+        "assets/motion/chef/far_shoe.webp",
+        "assets/motion/chef/far_shin.webp",
+        "assets/motion/chef/far_forearm.webp",
+        "assets/motion/chef/far_thigh.webp",
+        "assets/motion/chef/tail.webp",
+        "assets/motion/chef/spoon.webp",
+        "assets/motion/chef/near_shin.webp",
+        "assets/motion/chef/near_thigh.webp",
+        "assets/motion/chef/far_upper_arm.webp",
+        "assets/motion/chef/saucepan.webp",
+        "assets/motion/chef/core-variants/blink-near-eye.webp",
+        "assets/motion/chef/core-variants/body-front.webp",
+        "assets/motion/chef/core-variants/blink-far-eye.webp"
+      ]
+    },
+    "owl": {
+      "base": "assets/motion/owl",
+      "manifest": "assets/motion/owl/manifest.json",
+      "variants": "assets/motion/owl/core-variants/manifest.json",
+      "files": [
+        "assets/motion/owl/body.webp",
+        "assets/motion/owl/near_shoe.webp",
+        "assets/motion/owl/near_forearm.webp",
+        "assets/motion/owl/clipboard.webp",
+        "assets/motion/owl/near_upper_arm.webp",
+        "assets/motion/owl/far_shoe.webp",
+        "assets/motion/owl/far_shin.webp",
+        "assets/motion/owl/far_forearm.webp",
+        "assets/motion/owl/far_thigh.webp",
+        "assets/motion/owl/tail.webp",
+        "assets/motion/owl/pencil.webp",
+        "assets/motion/owl/near_shin.webp",
+        "assets/motion/owl/near_thigh.webp",
+        "assets/motion/owl/far_upper_arm.webp",
+        "assets/motion/owl/core-variants/blink-near-eye.webp",
+        "assets/motion/owl/core-variants/body-front.webp",
+        "assets/motion/owl/core-variants/blink-far-eye.webp"
+      ]
+    },
+    "hedgehog": {
+      "base": "assets/motion/hedgehog",
+      "manifest": "assets/motion/hedgehog/manifest.json",
+      "variants": "assets/motion/hedgehog/core-variants/manifest.json",
+      "files": [
+        "assets/motion/hedgehog/guitar.webp",
+        "assets/motion/hedgehog/body.webp",
+        "assets/motion/hedgehog/near_shoe.webp",
+        "assets/motion/hedgehog/near_forearm.webp",
+        "assets/motion/hedgehog/near_upper_arm.webp",
+        "assets/motion/hedgehog/far_shoe.webp",
+        "assets/motion/hedgehog/far_shin.webp",
+        "assets/motion/hedgehog/far_forearm.webp",
+        "assets/motion/hedgehog/far_thigh.webp",
+        "assets/motion/hedgehog/tail.webp",
+        "assets/motion/hedgehog/near_shin.webp",
+        "assets/motion/hedgehog/near_thigh.webp",
+        "assets/motion/hedgehog/far_upper_arm.webp",
+        "assets/motion/hedgehog/core-variants/blink-near-eye.webp",
+        "assets/motion/hedgehog/core-variants/body-front.webp",
+        "assets/motion/hedgehog/core-variants/blink-far-eye.webp",
+        "assets/motion/hedgehog/core-variants/singing-mouth.webp"
+      ]
+    },
+    "deer": {
+      "base": "assets/motion/deer",
+      "manifest": "assets/motion/deer/manifest.json",
+      "variants": "assets/motion/deer/core-variants/manifest.json",
+      "files": [
+        "assets/motion/deer/body.webp",
+        "assets/motion/deer/near_shoe.webp",
+        "assets/motion/deer/near_forearm.webp",
+        "assets/motion/deer/near_upper_arm.webp",
+        "assets/motion/deer/far_shoe.webp",
+        "assets/motion/deer/far_shin.webp",
+        "assets/motion/deer/far_forearm.webp",
+        "assets/motion/deer/far_thigh.webp",
+        "assets/motion/deer/microphone.webp",
+        "assets/motion/deer/tail.webp",
+        "assets/motion/deer/near_shin.webp",
+        "assets/motion/deer/near_thigh.webp",
+        "assets/motion/deer/far_upper_arm.webp",
+        "assets/motion/deer/core-variants/blink-near-eye.webp",
+        "assets/motion/deer/core-variants/body-front.webp",
+        "assets/motion/deer/core-variants/blink-far-eye.webp",
+        "assets/motion/deer/core-variants/singing-mouth.webp"
+      ]
+    }
+  },
+  "reused": [
+    "assets/props/cart.webp"
+  ]
+}

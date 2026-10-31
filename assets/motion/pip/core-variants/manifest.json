@@ -1,0 +1,70 @@
+{
+  "variants": {
+    "front": {
+      "file": "body-front.webp",
+      "size": [
+        132,
+        217
+      ],
+      "sockets": {
+        "near_shoulder": [
+          24.667,
+          131.066
+        ],
+        "far_shoulder": [
+          107.759,
+          131.066
+        ],
+        "near_hip": [
+          52.5,
+          192.0
+        ],
+        "far_hip": [
+          82.192,
+          192.148
+        ],
+        "tail": [
+          66.0,
+          189.585
+        ],
+        "head_center": [
+          66.0,
+          64.004
+        ]
+      }
+    },
+    "blink": {
+      "file": "body-blink.webp",
+      "size": [
+        126,
+        217
+      ],
+      "sockets": {
+        "near_shoulder": [
+          31.0,
+          141.5
+        ],
+        "far_shoulder": [
+          100.5,
+          124.0
+        ],
+        "near_hip": [
+          52.5,
+          192.0
+        ],
+        "far_hip": [
+          82.0,
+          189.5
+        ],
+        "tail": [
+          30.5,
+          180.5
+        ],
+        "head_center": [
+          66.5,
+          72.0
+        ]
+      }
+    }
+  }
+}

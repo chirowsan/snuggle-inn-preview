@@ -1,0 +1,37 @@
+/** World-space catalog. Existing keys and dimensions remain stable for saved designs. */
+const item=(label,category,width,height,extra={})=>Object.freeze({label,category,width,height,anchor:Object.freeze([.5,1]),footprint:Object.freeze([width*.8,Math.min(24,height*.3)]),home:Object.freeze([350,850]),asset:`./assets/exterior/props/${extra.key||''}.webp`,...extra});
+export const PROP_TYPES=Object.freeze({
+ 'flower-planter':item('Flower planter','Plants',54,63,{anchor:Object.freeze([.5,208/209]),footprint:Object.freeze([38,12]),home:Object.freeze([250,650])}),
+ 'garden-bench':item('Garden bench','Seating',120,71,{anchor:Object.freeze([.5,168/169]),footprint:Object.freeze([112,18]),home:Object.freeze([410,665])}),
+ 'garden-lantern':item('Tall lantern','Lights',26,87,{anchor:Object.freeze([.5,259/260]),footprint:Object.freeze([24,10]),home:Object.freeze([900,675])}),
+ 'olive-tree':item('Olive tree','Plants',112,158),
+ 'cypress-tree':item('Cypress','Plants',66,176),
+ 'lemon-tree':item('Lemon tree','Plants',106,138),
+ 'palm-planter':item('Potted palm','Plants',102,130),
+ 'hydrangea':item('Hydrangea','Plants',94,66),
+ 'lavender-bed':item('Lavender bed','Plants',122,56),
+ 'rose-trellis':item('Rose trellis','Plants',102,148),
+ 'boxwood-hedge':item('Boxwood hedge','Plants',126,60),
+ 'fern-pot':item('Fern pot','Plants',68,64),
+ 'lounge-chair':item('Lounger','Seating',116,70),
+ 'cafe-table':item('Café table','Seating',94,80),
+ 'patio-chair':item('Patio chair','Seating',62,80),
+ 'picnic-table':item('Picnic table','Seating',150,90),
+ 'parasol-table':item('Parasol table','Seating',154,162),
+ 'stone-fountain':item('Stone fountain','Features',132,130),
+ 'birdbath':item('Birdbath','Features',76,92),
+ 'garden-statue':item('Heron sculpture','Features',66,108),
+ 'garden-arch':item('Garden arch','Features',142,172),
+ 'fire-bowl':item('Fire bowl','Features',100,63),
+ 'welcome-sign':item('Welcome sign','Features',70,86),
+ 'bollard-light':item('Bollard light','Lights',29,61),
+ 'string-light-post':item('String lights','Lights',138,148),
+ 'floor-lantern':item('Floor lantern','Lights',40,49),
+ 'square-paving':item('Limestone tile','Paths',92,48,{ground:true,asset:'./assets/exterior/props/square-paving.svg'}),
+ 'stepping-stones':item('Stepping stones','Paths',108,54,{ground:true,asset:'./assets/exterior/props/stepping-stones.svg'}),
+ 'brick-path':item('Brick path','Paths',120,58,{ground:true,asset:'./assets/exterior/props/brick-path.svg'}),
+ 'gravel-bed':item('Gravel bed','Paths',132,64,{ground:true,asset:'./assets/exterior/props/gravel-bed.svg'}),
+ 'grass-patch':item('Lawn patch','Paths',130,66,{ground:true,asset:'./assets/exterior/props/grass-patch.svg'}),
+});
+export const propAsset = kind => PROP_TYPES[kind]?.asset?.endsWith('.svg') ? PROP_TYPES[kind].asset : `./assets/exterior/props/${kind}.webp`;
+export const CATEGORIES=Object.freeze(['All','Plants','Seating','Lights','Paths','Features']);

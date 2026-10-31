@@ -1,0 +1,41 @@
+{
+  "version": "0.10",
+  "floor": "assets/leisure/leisure-floor.webp",
+  "paths": [
+    "assets/leisure/leisure-floor.webp",
+    "assets/leisure/hedgehog-idle.webp",
+    "assets/leisure/hedgehog-portrait.webp",
+    "assets/leisure/hedgehog-perform.webp",
+    "assets/leisure/deer-idle.webp",
+    "assets/leisure/deer-portrait.webp",
+    "assets/leisure/deer-perform.webp",
+    "assets/leisure/owl-idle.webp",
+    "assets/leisure/owl-portrait.webp",
+    "assets/leisure/owl-walk.webp"
+  ],
+  "frameSize": 384,
+  "anchor": [
+    256,
+    356
+  ],
+  "actors": {
+    "hedgehog": {
+      "idle": "assets/leisure/hedgehog-idle.webp",
+      "portrait": "assets/leisure/hedgehog-portrait.webp",
+      "atlas": "assets/leisure/hedgehog-perform.webp",
+      "fps": 4
+    },
+    "deer": {
+      "idle": "assets/leisure/deer-idle.webp",
+      "portrait": "assets/leisure/deer-portrait.webp",
+      "atlas": "assets/leisure/deer-perform.webp",
+      "fps": 3
+    },
+    "owl": {
+      "idle": "assets/leisure/owl-idle.webp",
+      "portrait": "assets/leisure/owl-portrait.webp",
+      "atlas": "assets/leisure/owl-walk.webp",
+      "fps": 6
+    }
+  }
+}

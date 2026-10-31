@@ -1,0 +1,28 @@
+{
+  "version": "0.9",
+  "reference": "assets/guests-v08/service-wing.webp",
+  "referenceSize": {
+    "width": 1200,
+    "height": 700
+  },
+  "paths": {
+    "sushi": "assets/cuisines-v09/sushi-bar.webp",
+    "stirfry": "assets/cuisines-v09/chinese-stir-fry.webp",
+    "crepe": "assets/cuisines-v09/french-creperie.webp",
+    "pasta": "assets/cuisines-v09/italian-pasta.webp",
+    "pizza": "assets/cuisines-v09/pizza-kitchen.webp"
+  },
+  "textureSize": {
+    "width": 450,
+    "height": 450
+  },
+  "sourceBounds": {
+    "x": 72,
+    "y": 74,
+    "width": 223,
+    "height": 250
+  },
+  "archPath": "M 72 324 L 72 146 C 78 106 121 75 179 74 C 234 74 277 99 295 140 L 295 324 Z",
+  "compositing": "Draw the unchanged service-wing first. In its 1200×700 source coordinate transform, save, clip with archPath, draw the selected texture into sourceBounds, restore. Draw closed shutters afterward. With cuisine ramen or missing/unloaded texture, draw nothing: keep the original approved ramen interior. Do not draw a replacement arch/frame, salon, spa, corridor, stairs, or reception.",
+  "packagingNote": "Generated panels were reduced to 450×500 then bottom floor-only overflow was trimmed to 450×450 to align stool bases with the original bay. Draw the complete packaged texture into sourceBounds; no additional source crop is required."
+}

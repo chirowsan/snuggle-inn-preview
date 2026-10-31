@@ -1,0 +1,294 @@
+{
+  "version": 2,
+  "logicalCanvas": [
+    1200,
+    700
+  ],
+  "coordinateSystem": "Top-left origin. Rectangles are [x,y,width,height], crops are [left,top,right,bottom]. Foot anchors are normalized [0..1].",
+  "background": {
+    "path": "hotel-modern.webp",
+    "size": [
+      1200,
+      700
+    ],
+    "bytes": 244390,
+    "sha256": "bc03fa5bef98a4cb980daaabfa41d07b77cf55c463f1d589bd5bec1b0ace0cad",
+    "completeUpperWindowLevels": 2,
+    "roofPavilionVisible": true,
+    "frontalPerspective": true,
+    "charactersBakedIn": false,
+    "textBakedIn": false
+  },
+  "sign": {
+    "boardBounds": [
+      203,
+      297,
+      789,
+      69
+    ],
+    "safeTextBounds": [
+      214,
+      304,
+      772,
+      56
+    ],
+    "center": [
+      598,
+      332
+    ],
+    "recommendedFontSize": 30,
+    "defaultPlaqueBounds": [
+      418,
+      313,
+      360,
+      38
+    ],
+    "placement": "All free sign lettering is constrained to the continuous opaque canopy fascia. Safe text bounds include the full 48px sign box. No lettering is placed on sky, glass or courtyard."
+  },
+  "entrance": {
+    "center": [
+      596.5,
+      453
+    ],
+    "footpoint": [
+      596.5,
+      514
+    ],
+    "doorPatchBounds": [
+      535,
+      392,
+      123,
+      122
+    ],
+    "closedPatch": {
+      "path": "door-modern-closed.webp",
+      "size": [
+        246,
+        244
+      ],
+      "bytes": 10608,
+      "sha256": "02bcad7e3dbc95b4ac5a296a64b561361ef258849aed803c004e8cef1254b3b8"
+    },
+    "openPatch": {
+      "path": "door-modern-open.webp",
+      "size": [
+        246,
+        244
+      ],
+      "bytes": 9476,
+      "sha256": "c0a65e466d41baeeea95a4a4c9f1accccbe224ebdbc91e4ae55eb01515398975"
+    },
+    "patchAlpha": false,
+    "notes": [
+      "Both patches are rectangular crops from the generated modern closed/open door endpoints, drawn at exactly doorPatchBounds.",
+      "Camera translates while zooming to keep the doorway anchor stable. Existing 600ms crossfade, skip and reduced-motion semantics remain."
+    ]
+  },
+  "decoration": {
+    "courtyardBounds": [
+      90,
+      572,
+      1020,
+      128
+    ],
+    "usableImageBounds": [
+      100,
+      574,
+      1000,
+      116
+    ],
+    "recommendedFootZones": [
+      [
+        120,
+        640,
+        400,
+        45
+      ],
+      [
+        680,
+        640,
+        400,
+        45
+      ]
+    ],
+    "keepClearPathPolygon": [
+      [
+        554,
+        567
+      ],
+      [
+        646,
+        567
+      ],
+      [
+        670,
+        700
+      ],
+      [
+        530,
+        700
+      ]
+    ],
+    "placementRule": "Keep full sprite image within usableImageBounds after applying its normalized foot anchor. Do not place footprints into keepClearPathPolygon. For a tall lantern, use foot y >= 661. Sort by foot y for overlap.",
+    "smallScreenNote": "The unobscured lower courtyard is about 69 px high at a contained 667\u00d7375 viewport. Keep the bottom unobstructed by editing UI. The recommended prop sizes remain identifiable at this scale.",
+    "bakedProps": "Only perimeter/balcony landscaping and two fixed doorway urns. No bench or freestanding lamp in the editable courtyard."
+  },
+  "props": {
+    "flower-planter": {
+      "source": "flower-planter.png",
+      "sourceCrop": [
+        14,
+        4,
+        1151,
+        1325
+      ],
+      "size": [
+        180,
+        209
+      ],
+      "anchor": [
+        0.5,
+        0.9952153110047847
+      ],
+      "recommendedDisplaySize": [
+        54,
+        63
+      ],
+      "suggestedFootpoint": [
+        250,
+        650
+      ],
+      "footprint": [
+        38,
+        12
+      ],
+      "path": "props/flower-planter.webp",
+      "bytes": 25924,
+      "alpha": {
+        "mode": "RGBA",
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentPixels": 13201,
+        "partialPixels": 23415,
+        "fullyOpaquePixels": 1004,
+        "trueAlpha": true,
+        "bakedCastShadow": false
+      },
+      "sha256": "56eacdcb3404ce6bf7316d1f0846a555cf63634ffa652d04f00d078644962501"
+    },
+    "garden-bench": {
+      "source": "garden-bench.png",
+      "sourceCrop": [
+        27,
+        4,
+        1615,
+        938
+      ],
+      "size": [
+        287,
+        169
+      ],
+      "anchor": [
+        0.5,
+        0.9940828402366864
+      ],
+      "recommendedDisplaySize": [
+        120,
+        71
+      ],
+      "suggestedFootpoint": [
+        410,
+        665
+      ],
+      "footprint": [
+        112,
+        18
+      ],
+      "path": "props/garden-bench.webp",
+      "bytes": 21710,
+      "alpha": {
+        "mode": "RGBA",
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentPixels": 21827,
+        "partialPixels": 24531,
+        "fullyOpaquePixels": 2145,
+        "trueAlpha": true,
+        "bakedCastShadow": false
+      },
+      "sha256": "f21ceeebb8909ebf173c09ec1a97bd700f7ccb1a036d582022737ce58084d4a8"
+    },
+    "garden-lantern": {
+      "source": "garden-lantern-v1.png",
+      "sourceCrop": [
+        294,
+        35,
+        729,
+        1484
+      ],
+      "size": [
+        78,
+        260
+      ],
+      "anchor": [
+        0.5,
+        0.9961538461538462
+      ],
+      "recommendedDisplaySize": [
+        26,
+        87
+      ],
+      "suggestedFootpoint": [
+        900,
+        675
+      ],
+      "footprint": [
+        24,
+        10
+      ],
+      "path": "props/garden-lantern.webp",
+      "bytes": 8924,
+      "alpha": {
+        "mode": "RGBA",
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentPixels": 11145,
+        "partialPixels": 8608,
+        "fullyOpaquePixels": 527,
+        "trueAlpha": true,
+        "bakedCastShadow": false
+      },
+      "sha256": "517153e6dcbeacd480b013cb1daed59e0e245c000c7a079132046571decc4051"
+    }
+  },
+  "camera": {
+    "logicalSize": [
+      1200,
+      700
+    ],
+    "suggestedViewportFit": "contain",
+    "proofViewport": [
+      667,
+      375
+    ],
+    "proofDrawSize": [
+      643,
+      375
+    ],
+    "proofHorizontalMargin": 12,
+    "notes": "Aspect-preserving contain preserves roofline and all courtyard. Avoid cover cropping; place controls outside or above the scene."
+  },
+  "migration": {
+    "from": 1,
+    "to": 2,
+    "mapping": "Normalized legal text-box center coordinates from old facade [160,112,880,323] to canopy [214,304,772,56]. The available center span accounts for current glyph box width and height. A persisted version2 marker prevents remapping. Docked signs move to [598,332], preserving valid old explicit size. Text, color, glow, font, size and garden instances survive. New defaults use size30; no save is cleared.",
+    "garden": "Identity mapping: existing safe zones, foot anchors, sizes, IDs and kinds are unchanged."
+  },
+  "runtimeTotalBytes": 321032
+}

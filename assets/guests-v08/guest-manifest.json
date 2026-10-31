@@ -1,0 +1,1130 @@
+{
+  "version": "0.8",
+  "source": "OpenAI built-in image_gen, new derivative art from original rabbit reference; all original files unchanged",
+  "facing": "right",
+  "camera": "Warm detailed painted elevated orthographic three-quarter; matched original hotel assets",
+  "frame_size": [
+    384,
+    384
+  ],
+  "walk_fps": 8,
+  "walk_sequence": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "foot_anchor": [
+    256,
+    356
+  ],
+  "alpha": "Genuine source transparency preserved; bbox thresholds used only for measurement, not alpha removal",
+  "characters": {
+    "cat": {
+      "name": "Elegant gray cat traveler",
+      "party_size": 1,
+      "frames": [
+        {
+          "source_cell_bbox": [
+            138,
+            16,
+            637,
+            494
+          ],
+          "source_scale": 0.550209,
+          "source_anchor_x": 440,
+          "paste_origin": [
+            89,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            90,
+            93,
+            365,
+            356
+          ],
+          "file": "assets/guests-v08/cat-walk-0.webp",
+          "bytes": 27418,
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ]
+        },
+        {
+          "source_cell_bbox": [
+            77,
+            16,
+            561,
+            500
+          ],
+          "source_scale": 0.543388,
+          "source_anchor_x": 380,
+          "paste_origin": [
+            90,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            91,
+            93,
+            354,
+            356
+          ],
+          "file": "assets/guests-v08/cat-walk-1.webp",
+          "bytes": 25584,
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ]
+        },
+        {
+          "source_cell_bbox": [
+            152,
+            8,
+            638,
+            480
+          ],
+          "source_scale": 0.557203,
+          "source_anchor_x": 441,
+          "paste_origin": [
+            94,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            95,
+            94,
+            366,
+            356
+          ],
+          "file": "assets/guests-v08/cat-walk-2.webp",
+          "bytes": 25996,
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ]
+        },
+        {
+          "source_cell_bbox": [
+            60,
+            9,
+            540,
+            487
+          ],
+          "source_scale": 0.550209,
+          "source_anchor_x": 380,
+          "paste_origin": [
+            79,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            80,
+            93,
+            344,
+            356
+          ],
+          "file": "assets/guests-v08/cat-walk-3.webp",
+          "bytes": 24860,
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ]
+        }
+      ],
+      "walk_pose_notes": [
+        "Extended stride",
+        "Passing/support step",
+        "Opposite stride variation with rear heel lift",
+        "Lifted-knee passing step"
+      ],
+      "recommended_visible_height_px": 55,
+      "approx_visible_width_px": 55,
+      "idle": {
+        "source_cell_bbox": [
+          51,
+          40,
+          445,
+          461
+        ],
+        "source_scale": 0.624703,
+        "source_anchor_x": 305,
+        "paste_origin": [
+          96,
+          92
+        ],
+        "foot_anchor": [
+          256,
+          356
+        ],
+        "size": [
+          384,
+          384
+        ],
+        "visible_alpha_bbox": [
+          97,
+          94,
+          344,
+          356
+        ],
+        "file": "assets/guests-v08/cat-idle.webp",
+        "bytes": 25848
+      },
+      "sheet": {
+        "file": "assets/guests-v08/cat-walk.webp",
+        "size": [
+          768,
+          768
+        ],
+        "columns": 2,
+        "rows": 2,
+        "bytes": 101480
+      },
+      "portrait": {
+        "file": "assets/guests-v08/cat-portrait.webp",
+        "size": [
+          256,
+          256
+        ],
+        "bytes": 23182
+      },
+      "frame_sha256": [
+        "299c8e936c1ab23894db5772539ebe287fc79ea58fd58037a2192f2114d33c6d",
+        "d85a67f5531112b1af51339c1045030415a518f7cc0ba520cf1c5fad25b5392b",
+        "ad7c8db9b1a3a558cbde91a87d747ce1b4223838cc7416a244bf5de02841575a",
+        "2da5e47caf710f5ecdb0d8ebd210d00d69b5950ebb3b3db4c68e3c0241ba2278"
+      ]
+    },
+    "bear-family": {
+      "name": "Brown bear parent and cub",
+      "party_size": 2,
+      "frames": [
+        {
+          "source_cell_bbox": [
+            51,
+            71,
+            501,
+            471
+          ],
+          "source_scale": 0.6575,
+          "source_anchor_x": 335,
+          "paste_origin": [
+            68,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            69,
+            93,
+            366,
+            357
+          ],
+          "file": "assets/guests-v08/bear-family-walk-0.webp",
+          "bytes": 32808,
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ]
+        },
+        {
+          "source_cell_bbox": [
+            39,
+            71,
+            473,
+            472
+          ],
+          "source_scale": 0.65586,
+          "source_anchor_x": 305,
+          "paste_origin": [
+            80,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            81,
+            93,
+            366,
+            357
+          ],
+          "file": "assets/guests-v08/bear-family-walk-1.webp",
+          "bytes": 30006,
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ]
+        },
+        {
+          "source_cell_bbox": [
+            17,
+            70,
+            479,
+            479
+          ],
+          "source_scale": 0.643032,
+          "source_anchor_x": 305,
+          "paste_origin": [
+            70,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            71,
+            94,
+            369,
+            357
+          ],
+          "file": "assets/guests-v08/bear-family-walk-2.webp",
+          "bytes": 32220,
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ]
+        },
+        {
+          "source_cell_bbox": [
+            50,
+            38,
+            508,
+            448
+          ],
+          "source_scale": 0.641463,
+          "source_anchor_x": 335,
+          "paste_origin": [
+            72,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            73,
+            93,
+            367,
+            357
+          ],
+          "file": "assets/guests-v08/bear-family-walk-3.webp",
+          "bytes": 30564,
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ]
+        }
+      ],
+      "walk_pose_notes": [
+        "Extended stride",
+        "Passing/support step",
+        "Opposite stride variation with rear heel lift",
+        "Lifted-knee passing step"
+      ],
+      "recommended_visible_height_px": 55,
+      "approx_visible_width_px": 63,
+      "idle": {
+        "source_cell_bbox": [
+          58,
+          39,
+          472,
+          446
+        ],
+        "source_scale": 0.646192,
+        "source_anchor_x": 305,
+        "paste_origin": [
+          95,
+          92
+        ],
+        "foot_anchor": [
+          256,
+          356
+        ],
+        "size": [
+          384,
+          384
+        ],
+        "visible_alpha_bbox": [
+          96,
+          93,
+          364,
+          357
+        ],
+        "file": "assets/guests-v08/bear-family-idle.webp",
+        "bytes": 29834
+      },
+      "sheet": {
+        "file": "assets/guests-v08/bear-family-walk.webp",
+        "size": [
+          768,
+          768
+        ],
+        "columns": 2,
+        "rows": 2,
+        "bytes": 123780
+      },
+      "portrait": {
+        "file": "assets/guests-v08/bear-family-portrait.webp",
+        "size": [
+          256,
+          256
+        ],
+        "bytes": 18876
+      },
+      "frame_sha256": [
+        "3f76900bb8c0c4fdd6a0dc123e5b00c40ea8fc92dd048a6bce4445e1a35c9ed5",
+        "6b8674ac613bb7acb25668fb24b79151210a9cb9ef7abf0e23cb8c33d25792ba",
+        "93026be2efd178bfd90fa95e96e76db20e6a4fb9a0a994cba64a43e087197f90",
+        "49b30c73428cb4282aef34f8e00297351974a632072f138203eca26c893f13ed"
+      ]
+    }
+  },
+  "runtime_total_bytes": 940306,
+  "actors": {
+    "cat": {
+      "sheet": "assets/guests-v08/cat-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_cell_bbox": [
+            138,
+            16,
+            637,
+            494
+          ],
+          "source_scale": 0.550209,
+          "source_anchor_x": 440,
+          "paste_origin": [
+            89,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            90,
+            93,
+            365,
+            356
+          ],
+          "file": "assets/guests-v08/cat-walk-0.webp",
+          "bytes": 27418,
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "name": "cat-walk-0"
+        },
+        {
+          "source_cell_bbox": [
+            77,
+            16,
+            561,
+            500
+          ],
+          "source_scale": 0.543388,
+          "source_anchor_x": 380,
+          "paste_origin": [
+            90,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            91,
+            93,
+            354,
+            356
+          ],
+          "file": "assets/guests-v08/cat-walk-1.webp",
+          "bytes": 25584,
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "name": "cat-walk-1"
+        },
+        {
+          "source_cell_bbox": [
+            152,
+            8,
+            638,
+            480
+          ],
+          "source_scale": 0.557203,
+          "source_anchor_x": 441,
+          "paste_origin": [
+            94,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            95,
+            94,
+            366,
+            356
+          ],
+          "file": "assets/guests-v08/cat-walk-2.webp",
+          "bytes": 25996,
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "name": "cat-walk-2"
+        },
+        {
+          "source_cell_bbox": [
+            60,
+            9,
+            540,
+            487
+          ],
+          "source_scale": 0.550209,
+          "source_anchor_x": 380,
+          "paste_origin": [
+            79,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            80,
+            93,
+            344,
+            356
+          ],
+          "file": "assets/guests-v08/cat-walk-3.webp",
+          "bytes": 24860,
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "name": "cat-walk-3"
+        }
+      ],
+      "actions": {
+        "idle": "cat-idle",
+        "wave": "cat-idle"
+      },
+      "portrait": "assets/guests-v08/cat-portrait.webp",
+      "party_size": 1
+    },
+    "family": {
+      "sheet": "assets/guests-v08/bear-family-walk.webp",
+      "sheet_size": [
+        768,
+        768
+      ],
+      "columns": 2,
+      "rows": 2,
+      "frames": [
+        {
+          "source_cell_bbox": [
+            51,
+            71,
+            501,
+            471
+          ],
+          "source_scale": 0.6575,
+          "source_anchor_x": 335,
+          "paste_origin": [
+            68,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            69,
+            93,
+            366,
+            357
+          ],
+          "file": "assets/guests-v08/bear-family-walk-0.webp",
+          "bytes": 32808,
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "name": "family-walk-0"
+        },
+        {
+          "source_cell_bbox": [
+            39,
+            71,
+            473,
+            472
+          ],
+          "source_scale": 0.65586,
+          "source_anchor_x": 305,
+          "paste_origin": [
+            80,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            81,
+            93,
+            366,
+            357
+          ],
+          "file": "assets/guests-v08/bear-family-walk-1.webp",
+          "bytes": 30006,
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "name": "family-walk-1"
+        },
+        {
+          "source_cell_bbox": [
+            17,
+            70,
+            479,
+            479
+          ],
+          "source_scale": 0.643032,
+          "source_anchor_x": 305,
+          "paste_origin": [
+            70,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            71,
+            94,
+            369,
+            357
+          ],
+          "file": "assets/guests-v08/bear-family-walk-2.webp",
+          "bytes": 32220,
+          "sheet_rect": [
+            0,
+            384,
+            384,
+            384
+          ],
+          "name": "family-walk-2"
+        },
+        {
+          "source_cell_bbox": [
+            50,
+            38,
+            508,
+            448
+          ],
+          "source_scale": 0.641463,
+          "source_anchor_x": 335,
+          "paste_origin": [
+            72,
+            92
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "size": [
+            384,
+            384
+          ],
+          "visible_alpha_bbox": [
+            73,
+            93,
+            367,
+            357
+          ],
+          "file": "assets/guests-v08/bear-family-walk-3.webp",
+          "bytes": 30564,
+          "sheet_rect": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "name": "family-walk-3"
+        }
+      ],
+      "actions": {
+        "idle": "family-idle",
+        "wave": "family-idle"
+      },
+      "portrait": "assets/guests-v08/bear-family-portrait.webp",
+      "party_size": 2
+    },
+    "chef": {
+      "sheet": "assets/guests-v08/chef-work.webp",
+      "sheet_size": [
+        768,
+        384
+      ],
+      "columns": 2,
+      "rows": 1,
+      "frames": [
+        {
+          "name": "chef-work-0",
+          "file": "assets/guests-v08/chef-work-0.webp",
+          "size": [
+            384,
+            384
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "sheet_rect": [
+            0,
+            0,
+            384,
+            384
+          ],
+          "source_scale": 0.37787356321839083,
+          "source_crop": [
+            163,
+            9,
+            610,
+            705
+          ],
+          "source_paste_origin": [
+            159,
+            93
+          ]
+        },
+        {
+          "name": "chef-work-1",
+          "file": "assets/guests-v08/chef-work-1.webp",
+          "size": [
+            384,
+            384
+          ],
+          "foot_anchor": [
+            256,
+            356
+          ],
+          "sheet_rect": [
+            384,
+            0,
+            384,
+            384
+          ],
+          "source_scale": 0.3795093795093795,
+          "source_crop": [
+            145,
+            12,
+            615,
+            705
+          ],
+          "source_paste_origin": [
+            152,
+            93
+          ]
+        }
+      ],
+      "actions": {
+        "idle": "chef-idle",
+        "work": "chef-work-0"
+      },
+      "stationary": true,
+      "work_frames": [
+        "chef-work-0",
+        "chef-work-1"
+      ],
+      "work_fps": 3,
+      "portrait": "assets/guests-v08/chef-portrait.webp"
+    }
+  },
+  "actions": {
+    "cat-idle": {
+      "source_cell_bbox": [
+        51,
+        40,
+        445,
+        461
+      ],
+      "source_scale": 0.624703,
+      "source_anchor_x": 305,
+      "paste_origin": [
+        96,
+        92
+      ],
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "size": [
+        384,
+        384
+      ],
+      "visible_alpha_bbox": [
+        97,
+        94,
+        344,
+        356
+      ],
+      "file": "assets/guests-v08/cat-idle.webp",
+      "bytes": 25848,
+      "name": "cat-idle",
+      "sheet_rect": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    "family-idle": {
+      "source_cell_bbox": [
+        58,
+        39,
+        472,
+        446
+      ],
+      "source_scale": 0.646192,
+      "source_anchor_x": 305,
+      "paste_origin": [
+        95,
+        92
+      ],
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "size": [
+        384,
+        384
+      ],
+      "visible_alpha_bbox": [
+        96,
+        93,
+        364,
+        357
+      ],
+      "file": "assets/guests-v08/bear-family-idle.webp",
+      "bytes": 29834,
+      "name": "family-idle",
+      "sheet_rect": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    "chef-idle": {
+      "name": "chef-idle",
+      "file": "assets/guests-v08/chef-idle.webp",
+      "size": [
+        384,
+        384
+      ],
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "sheet_rect": [
+        0,
+        0,
+        384,
+        384
+      ],
+      "source_scale": 0.37625178826895567,
+      "source_crop": [
+        205,
+        7,
+        589,
+        706
+      ],
+      "source_paste_origin": [
+        175,
+        93
+      ]
+    },
+    "chef-work-0": {
+      "name": "chef-work-0",
+      "file": "assets/guests-v08/chef-work-0.webp",
+      "size": [
+        384,
+        384
+      ],
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "sheet_rect": [
+        0,
+        0,
+        384,
+        384
+      ],
+      "source_scale": 0.37787356321839083,
+      "source_crop": [
+        163,
+        9,
+        610,
+        705
+      ],
+      "source_paste_origin": [
+        159,
+        93
+      ]
+    },
+    "chef-work-1": {
+      "name": "chef-work-1",
+      "file": "assets/guests-v08/chef-work-1.webp",
+      "size": [
+        384,
+        384
+      ],
+      "foot_anchor": [
+        256,
+        356
+      ],
+      "sheet_rect": [
+        384,
+        0,
+        384,
+        384
+      ],
+      "source_scale": 0.3795093795093795,
+      "source_crop": [
+        145,
+        12,
+        615,
+        705
+      ],
+      "source_paste_origin": [
+        152,
+        93
+      ]
+    }
+  },
+  "portraits": {
+    "cat": "assets/guests-v08/cat-portrait.webp",
+    "family": "assets/guests-v08/bear-family-portrait.webp",
+    "chef": "assets/guests-v08/chef-portrait.webp"
+  },
+  "rooms": {
+    "luxury": "assets/guests-v08/room-luxury.webp",
+    "family": "assets/guests-v08/room-family.webp"
+  },
+  "serviceWing": "assets/guests-v08/service-wing.webp",
+  "serviceWingMetadata": {
+    "size": [
+      1200,
+      700
+    ],
+    "opaque": true,
+    "bays": {
+      "restaurant": {
+        "interaction": [
+          240,
+          250
+        ],
+        "visual_center": [
+          182,
+          210
+        ],
+        "bounds": [
+          68,
+          73,
+          238,
+          252
+        ]
+      },
+      "salon": {
+        "interaction": [
+          530,
+          250
+        ],
+        "visual_center": [
+          490,
+          210
+        ],
+        "bounds": [
+          379,
+          73,
+          239,
+          252
+        ]
+      },
+      "spa": {
+        "interaction": [
+          820,
+          250
+        ],
+        "visual_center": [
+          800,
+          210
+        ],
+        "bounds": [
+          683,
+          73,
+          238,
+          252
+        ]
+      }
+    },
+    "corridor_y": [
+      330,
+      700
+    ],
+    "reserved_stair_overlay_rect": [
+      950,
+      0,
+      250,
+      700
+    ],
+    "stairs_included": false
+  },
+  "roomOverlayMetadata": {
+    "size": [
+      256,
+      416
+    ],
+    "alpha": true,
+    "shape": "Tall round-top arch, transparent exterior, flat bottom",
+    "original_door_reference_crop": [
+      130,
+      55,
+      305,
+      305
+    ],
+    "suggested_render_size": [
+      124,
+      216
+    ],
+    "note": "Fit to the existing teal door leaf, below the original stone arch. Draw transparently; do not replace original hall pixels."
+  },
+  "paths": [
+    "assets/guests-v08/room-luxury.webp",
+    "assets/guests-v08/room-family.webp",
+    "assets/guests-v08/service-wing.webp",
+    "assets/guests-v08/cat-portrait.webp",
+    "assets/guests-v08/bear-family-portrait.webp",
+    "assets/guests-v08/chef-portrait.webp"
+  ],
+  "guest_runtime_bytes": 552456
+}
