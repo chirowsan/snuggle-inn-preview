@@ -8,3 +8,17 @@
 .layout-card.room-decoration-card .decor-tools button{width:auto;min-width:52px;height:auto;min-height:52px;padding:5px 8px 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font:800 11px/1 SnuggleText,Nunito,Arial,sans-serif;border-radius:14px}
 .layout-card.room-decoration-card .decor-tools button svg{flex:none;width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
 .layout-card.room-decoration-card .decor-tools button:disabled{opacity:.45}
+/* r3: on-canvas handle under the selected furniture (rotate left/right + more). */
+.layout-card.room-decoration-card .decor-handle{position:absolute;z-index:4;transform:translateX(-50%);display:flex;gap:6px;padding:5px;border-radius:18px;background:#fff8ea;border:2px solid #e0a526;box-shadow:0 6px 16px #3a24124d;animation:decor-handle-in .18s ease-out}
+.layout-card.room-decoration-card .decor-handle[hidden]{display:none}
+.layout-card.room-decoration-card .decor-handle::before{content:"";position:absolute;left:var(--arrow-x,50%);top:-9px;width:14px;height:14px;margin-left:-7px;background:#fff8ea;border-left:2px solid #e0a526;border-top:2px solid #e0a526;transform:rotate(45deg)}
+.layout-card.room-decoration-card .decor-handle.above::before{top:auto;bottom:-9px;transform:rotate(225deg)}
+.layout-card.room-decoration-card .decor-handle button{position:relative;min-width:54px;min-height:52px;padding:4px 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border:0;border-radius:13px;background:#f3e2bf;color:#4a3420;font:800 12px/1 SnuggleText,Nunito,Arial,sans-serif;touch-action:manipulation}
+.layout-card.room-decoration-card .decor-handle button:active{transform:scale(.94);background:#f0cf7d}
+.layout-card.room-decoration-card .decor-handle button:disabled{opacity:.4}
+.layout-card.room-decoration-card .decor-handle svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.layout-card.room-decoration-card .decor-handle [data-decor-more] svg{fill:currentColor;stroke:none}
+@keyframes decor-handle-in{from{opacity:0;transform:translateX(-50%) translateY(6px)}}
+@media (prefers-reduced-motion:reduce){.layout-card.room-decoration-card .decor-handle{animation:none}}
+/* r3: rotate buttons carry a solid arrowhead so the turn direction reads at a glance. */
+.layout-card.room-decoration-card .decor-handle svg .decor-arrowhead{fill:currentColor;stroke:currentColor;stroke-width:1.2}

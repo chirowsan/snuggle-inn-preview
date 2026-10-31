@@ -20,7 +20,7 @@ export function initializeStaffState(s,plan){s.staffAutomation={...copyStaffPlan
 export function staffRoutineKey(s,kind){return kind==='restaurant'?`visit:restaurant:${s.config.restaurantCuisine}`:['salon','spa','lounge','theater'].includes(kind)?`visit:${kind}`:kind;}
 export function learnStaffRoutine(s,kind){
  const plan=s.staffAutomation,key=staffRoutineKey(s,kind);
- if(plan&&keys.includes(key)&&!plan.learned.includes(key))plan.learned.push(key);
+ if(plan&&keys.includes(key)&&!plan.learned.includes(key)&&staffDutyOpen(key,s.config?.completedShifts))plan.learned.push(key);
 }
 export function validateStaffState(s){
  const plan=s.config?.staffPlan,current=s.staffAutomation;
@@ -29,8 +29,24 @@ export function validateStaffState(s){
   Number.isFinite(current.nextAt)&&current.nextAt>=0&&current.nextAt<=s.time+2.01;
 }
 export function settleStaffLearning(profile,state){if(state?.staffAutomation&&validStaffPlan(state.staffAutomation))profile.staffAutomation=copyStaffPlan(state.staffAutomation);}
-export function staffHireGate(p){return p.firstSteps&&(p.openRooms<2||p.guestsCompleted<1)?'Open room 2 after your first happy stay.':'';}
-export function staffHirePrice(p,fallback=200){return p.firstSteps?20:fallback;}
+/** R3: the first helper arrives only after real hands-on growth. Computed from the
+ * profile, so saves need no migration; a hotel that already hired keeps Rue. */
+export const STAFF_HIRE_REQUIREMENTS=Object.freeze({rooms:4,shifts:12,guests:30});
+export function staffHireProgress(p){const R=STAFF_HIRE_REQUIREMENTS;return [
+ {id:'rooms',icon:'🛏️',have:Math.min(R.rooms,p.openRooms|0),need:R.rooms},
+ {id:'shifts',icon:'🌙',have:Math.min(R.shifts,p.shiftsCompleted|0),need:R.shifts},
+ {id:'guests',icon:'💛',have:Math.min(R.guests,p.guestsCompleted|0),need:R.guests}];}
+export function staffHireGate(p){
+ if(p.staffCount>=3)return '';
+ const left=staffHireProgress(p).filter(x=>x.have<x.need);
+ return left.length?'🔒 Rue joins later: '+left.map(x=>x.icon+' '+x.have+'/'+x.need).join(' · '):'';
+}
+export function staffHirePrice(p,fallback=200){return fallback;}
+/** Rue may only learn a duty once the hotel has grown this far (completed shifts).
+ * Gates only block learning NEW duties; anything already learned is kept. */
+export const STAFF_DUTY_GATES=Object.freeze({welcome:12,towel:16,wash:16,fold:16,clean:20,meal:26,cook:26,restaurant:30,repair:34,salon:38,spa:42,lounge:48,theater:54});
+export function staffDutyGate(key){const k=key.startsWith('cook:')?'cook':key.startsWith('visit:restaurant')?'restaurant':key.startsWith('visit:')?key.slice(6):key;return STAFF_DUTY_GATES[k]??0;}
+export function staffDutyOpen(key,completedShifts){return !Number.isInteger(completedShifts)||completedShifts>=staffDutyGate(key);}
 export function setStaffEnabled(p,enabled){
  if(p.activeShift||p.staffCount!==3||typeof enabled!=='boolean')return false;
  const plan=staffPlanForProfile(p);if(!plan)return false;plan.enabled=enabled;p.staffAutomation=plan;return true;

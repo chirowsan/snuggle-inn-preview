@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "note": "Painted outside art (R3). Sprites pivot at bottom-centre; ground-* are seamless tiles.",
+  "totalBytes": 967048,
+  "assets": [
+    {
+      "path": "painted/fence-picket-segment.webp",
+      "sha256": "284d364d7a2d36cf85f677f89243a3b29be8e825746701d80a2bc13cadaa808f",
+      "bytes": 23356,
+      "pixels": [
+        480,
+        245
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/flowerbed-long.webp",
+      "sha256": "53af4e241123aead7db0e544d5500fcad107236538e4f163f9f029ac2f0e0651",
+      "bytes": 59608,
+      "pixels": [
+        640,
+        209
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/ground-flagstone-tile.webp",
+      "sha256": "28a1b00a8b37fe4e07f093678b4a8e4bed6427bcccb51580f47aff7d4d961108",
+      "bytes": 25454,
+      "pixels": [
+        384,
+        384
+      ],
+      "alpha": false,
+      "tile": true,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/ground-grass-tile.webp",
+      "sha256": "7aff3b178643ca0bebb84621f732a5034c80aac4228b28d298b3aacd5c1bb746",
+      "bytes": 97024,
+      "pixels": [
+        768,
+        768
+      ],
+      "alpha": false,
+      "tile": true,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/ground-gravel-tile.webp",
+      "sha256": "fa2bc051a2ecc01a7e577987c6a2cf08485e3a0f4934ff3312cad80257942890",
+      "bytes": 28112,
+      "pixels": [
+        384,
+        384
+      ],
+      "alpha": false,
+      "tile": true,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/inn-awning.webp",
+      "sha256": "c5a248c08f2bb5db68da7a288ef3964d504aeb4a7cbbaea58a0b51fb75785fdd",
+      "bytes": 25808,
+      "pixels": [
+        640,
+        193
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/lamp-post.webp",
+      "sha256": "5ec0da39b8089c3507772b327e2fe033d0f5b1203cb3e532c17cda6c49316a5f",
+      "bytes": 8092,
+      "pixels": [
+        77,
+        360
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/plot-coming-soon.webp",
+      "sha256": "4e23a900735ee43407100f238c55a169c29528faa5cf917d2743778995becfb2",
+      "bytes": 82568,
+      "pixels": [
+        640,
+        408
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/shrub-pink.webp",
+      "sha256": "9d39cf4af048c3624e750db3ab024e13e00a491d86ecf1e567c926f27347eedb",
+      "bytes": 32604,
+      "pixels": [
+        360,
+        259
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/shrub-yellow.webp",
+      "sha256": "d190a8cfc935a43fcde38008015335a9451f29d3f2ae92e01ec4b08b0356acb6",
+      "bytes": 33680,
+      "pixels": [
+        300,
+        270
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/tree-pine-1.webp",
+      "sha256": "19d62d812fe93624864e6f6a69298dcdba673e07aefd3c93f1203626ec65142a",
+      "bytes": 31110,
+      "pixels": [
+        299,
+        512
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/tree-round-1.webp",
+      "sha256": "5e085d6928fdb216867c2b2a2087bff4f10e803bc35b340184e2d36e00ff8fcf",
+      "bytes": 72926,
+      "pixels": [
+        426,
+        512
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/tree-round-2.webp",
+      "sha256": "00b0db0f2b28998931cec216289628ff76374cf0de7787bfb10b0c782397f2e1",
+      "bytes": 79838,
+      "pixels": [
+        462,
+        512
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/wing-concert.webp",
+      "sha256": "57977f52c630ae4cdf7d006ceea9e7d6a722a7ae7ba7fb57f36fc49c006a87c3",
+      "bytes": 95464,
+      "pixels": [
+        600,
+        646
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/wing-restaurant.webp",
+      "sha256": "5df9f32262769a8dac6e91d48dbcd7c50f01e1aed8312c49aa553c5a963cc308",
+      "bytes": 98860,
+      "pixels": [
+        640,
+        510
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/wing-spa.webp",
+      "sha256": "27312fce323767c9a2e8770fb4cef671666a54cfb10a3158eeb964d0276041d1",
+      "bytes": 94320,
+      "pixels": [
+        640,
+        523
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    },
+    {
+      "path": "painted/wing-theater.webp",
+      "sha256": "506348f95efd71a21b4469135a5c386a7688dd1fe736e66ca5c11c11a67af031",
+      "bytes": 78224,
+      "pixels": [
+        640,
+        535
+      ],
+      "alpha": true,
+      "tile": false,
+      "source": "captain-painted-r3 (art-r3/*.png, resized + WebP q82)"
+    }
+  ]
+}

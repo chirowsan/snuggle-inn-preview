@@ -1,7 +1,7 @@
 import {validRoomDoorXs,copyRoomDoorXs} from './hotel-room-doors.mjs';
 import {freshDoorCoins,validDoorCoins,copyDoorCoins,hasCoinPickups,validCoinState,coinCash,validCoinCash,pendingDoorCoins} from './hotel-coin-pickups.mjs';
 import {validFirstSteps,copyFirstSteps,firstStepsRule,firstStepsOptions} from './hotel-first-steps.mjs';
-import {validStaffPlan,copyStaffPlan,staffPlanForProfile,settleStaffLearning,staffHireGate,staffHirePrice} from './hotel-staff.mjs';
+import {validStaffPlan,copyStaffPlan,staffPlanForProfile,settleStaffLearning,staffHireGate,staffHirePrice,staffDutyOpen} from './hotel-staff.mjs';
 import {freshRewards,copyRewards,validRewards} from './hotel-rewards.mjs';
 import {validLocation,copyLocation} from './hotel-locations.mjs';
 import {validConstruction,copyConstruction} from './hotel-construction.mjs';
@@ -425,7 +425,7 @@ export function canPurchase(profile, kind) {
   const stale = requestedId !== null && requestedId !== id;
   const price = maxed ? null : kind === 'room' ? C.roomPrices[count + 1] : kind === 'staff' ? staffHirePrice(profile,C.staffPrice) : C.servicePrice;
   const label = kind === 'room' ? (maxed ? 'All rooms open' : count === 3 ? 'Open floor 2' : `Open room ${count + 1}`) :
-    kind === 'staff' ? (maxed ? 'Rue hired · automatic learned duties' : 'Hire Rue · automatic learned duties') : (maxed ? 'Service upgraded' : 'Faster service');
+    kind === 'staff' ? (maxed ? 'Rue hired · automatic learned duties' : 'Hire Rue · learns one duty at a time') : (maxed ? 'Service upgraded' : 'Faster service');
   const reason = profile.activeShift ? 'Finish the shift first.' : kind==='room' && profile.construction?.project ? 'Your builders are already at work.' : stale ? 'This offer is out of date.' : maxed ? 'Already fully upgraded.' :
     kind==='staff'&&staffHireGate(profile)?staffHireGate(profile):
     profile.bank < price ? `Need ${price - profile.bank} more coins.` : '';
@@ -467,7 +467,7 @@ export function purchase(profile, kind) {
   }
   const key = offer.kind === 'room' ? 'openRooms' : offer.kind === 'staff' ? 'staffCount' : 'serviceLevel';
   profile[key] += 1;
-  if(offer.kind==='staff')profile.staffAutomation={...staffPlanForProfile(profile),enabled:true};
+  if(offer.kind==='staff'){const plan=staffPlanForProfile(profile);profile.staffAutomation={...plan,enabled:true,learned:[...new Set(['welcome',...plan.learned])].filter(k=>staffDutyOpen(k,profile.shiftsCompleted))};}
   return { ...offer, bank: profile.bank, value: profile[key] };
 }
 

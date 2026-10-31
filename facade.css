@@ -40,3 +40,82 @@
 @media(max-height:430px){.land-bar{top:8px;left:225px;right:8px;max-width:none;justify-content:flex-end}.land-panel{top:62px;max-height:calc(100% - 142px);width:310px}.land-status{left:12px;right:12px;bottom:70px;max-height:42px}.land-preview-actions{left:auto;right:12px;transform:none;bottom:119px}.land-tools{grid-template-columns:repeat(2,1fr)}}
 .land-active .ex-toolbar .ex-button[aria-label="Build outdoor grounds"]{visibility:visible}.land-active .ex-toolbar .ex-button:disabled{opacity:0}.land-active .land-bar .land-button:disabled{opacity:.45}
 .ex-ground-plane .ex-building-ground-shadow{z-index:3}.ex-ground-plane .ex-prop-ground-shadow{z-index:5}
+/* R3 outside overhaul (exterior-grounds.mjs) */
+.ex-r3 .ex-viewport{background:#cfe6f3}
+.ex-sky{position:absolute;inset:0;pointer-events:none;background:linear-gradient(#5d9fe8 0,#6aaef6 22%,#9ccaf3 36%,#cfe7f1 44%,#d3e4bf 54%,#9cc170 62%,#7ea655 100%);overflow:hidden}
+.ex-hills{position:absolute;left:-5%;width:110%;top:44%;height:24%;object-fit:fill}
+.ex-cloud{position:absolute;display:block;width:150px;height:42px;border-radius:40px;background:#fff;opacity:.85;filter:blur(1px);box-shadow:40px -16px 0 6px #fff,-34px -8px 0 0 #fff;animation:ex-cloud 90s linear infinite}
+.ex-cloud-0{top:7%;left:-20%}.ex-cloud-1{top:16%;left:-20%;transform:scale(.7);animation-duration:120s;animation-delay:-50s}.ex-cloud-2{top:4%;left:-20%;transform:scale(.55);animation-duration:150s;animation-delay:-100s;opacity:.7}.ex-cloud-3{top:22%;left:-20%;transform:scale(.9);animation-duration:105s;animation-delay:-20s;opacity:.6}
+@keyframes ex-cloud{to{left:120%}}
+.ex-bird{position:absolute;display:block;left:-5%;top:12%;width:26px;animation:ex-bird 34s linear infinite}.ex-bird-1{top:17%;animation-delay:-3s;width:20px}.ex-bird-2{top:9%;animation-delay:-6s;width:18px}
+.ex-bird-img{width:100%;animation:ex-flap .5s ease-in-out infinite alternate;transform-origin:50% 60%}
+@keyframes ex-bird{0%{left:-6%;transform:translateY(0)}50%{transform:translateY(-18px)}100%{left:106%;transform:translateY(6px)}}
+@keyframes ex-flap{to{transform:scaleY(.45)}}
+.ex-r3 .ex-ground{opacity:0}
+.ex-lawn{position:absolute;max-width:none;pointer-events:none}
+.ex-up{position:absolute;max-width:none;pointer-events:none}
+.ex-tree{transform-origin:50% 100%;animation:ex-sway 7s ease-in-out infinite alternate}
+@keyframes ex-sway{from{transform:rotate(-.8deg)}to{transform:rotate(.8deg)}}
+.ex-awning,.ex-wall-lamp,.ex-string-lights,.ex-chimney{position:absolute;max-width:none;pointer-events:none;filter:drop-shadow(0 6px 5px #0003)}
+.ex-awning{z-index:4}
+.ex-smoke{position:absolute;display:block;width:18px;height:18px;border-radius:50%;background:#fff;opacity:0;z-index:9;pointer-events:none;animation:ex-smoke 6s ease-out infinite}.ex-smoke-1{animation-delay:-2s}.ex-smoke-2{animation-delay:-4s}
+@keyframes ex-smoke{0%{opacity:.0;transform:translate(0,0) scale(.6)}15%{opacity:.55}100%{opacity:0;transform:translate(26px,-90px) scale(2.2)}}
+.ex-butterfly{position:absolute;display:block;width:20px;height:22px;pointer-events:none;animation:ex-flutter 9s ease-in-out infinite}.ex-butterfly-1{animation-delay:-3s;animation-duration:11s}.ex-butterfly-2{animation-delay:-6s}
+.ex-bf-img{width:100%;animation:ex-wing .25s ease-in-out infinite alternate}
+@keyframes ex-wing{to{transform:scaleX(.35)}}
+@keyframes ex-flutter{0%,100%{transform:translate(0,0)}25%{transform:translate(40px,-24px)}50%{transform:translate(70px,6px)}75%{transform:translate(24px,-34px)}}
+.ex-walker{position:absolute;left:0;top:0;display:block;width:24px;height:46px;offset-rotate:0deg;offset-anchor:50% 100%;pointer-events:none;animation:ex-walk 46s linear infinite}.ex-walker-1{animation-delay:-23s;animation-direction:reverse}
+.ex-walker-img{width:100%;animation:ex-bob .45s ease-in-out infinite alternate}
+@keyframes ex-walk{0%{offset-distance:0%;opacity:0}6%,94%{opacity:1}100%{offset-distance:100%;opacity:0}}
+@keyframes ex-bob{to{transform:translateY(-2px)}}
+.ex-daylight{position:absolute;inset:0;pointer-events:none;z-index:1;transition:background 2s}
+.ex-viewport>.ex-hit-layer{z-index:2}
+.ex-daylight-day{background:radial-gradient(120% 90% at 70% 0,#fff6d433,transparent 60%)}
+.ex-daylight-dawn{background:linear-gradient(#ffc6a83a,#ffe2b522);mix-blend-mode:multiply}
+.ex-daylight-dusk{background:linear-gradient(#ff9f6a40,#8a5fa033);mix-blend-mode:multiply}
+.ex-daylight-night{background:linear-gradient(#1d2a5acc,#2a3566a6);mix-blend-mode:multiply}
+.ex-phase-night .lamp-glass,.ex-phase-dusk .lamp-glass{filter:drop-shadow(0 0 6px #ffd76a)}
+.ex-phase-night .ex-lamp,.ex-phase-night .ex-wall-lamp,.ex-phase-night .ex-string-lights,.ex-phase-dusk .ex-string-lights{filter:drop-shadow(0 0 8px #ffd76a) brightness(1.25)}
+.ex-phase-night .ex-window-interior{filter:brightness(1.25) sepia(.3)}
+.ex-phase-night .ex-cloud{opacity:.35}
+@media (prefers-reduced-motion:reduce){.ex-cloud,.ex-bird,.ex-bird-img,.ex-tree,.ex-smoke,.ex-butterfly,.ex-walker{animation:none}}
+.ex-r3 .ex-facade-environment{mask-image:linear-gradient(to bottom,transparent,#000 90px,#000 70%,transparent 100%),linear-gradient(to right,transparent,#000 14%,#000 86%,transparent);-webkit-mask-composite:source-in;mask-composite:intersect}
+.ex-daylight-night{background:linear-gradient(#34407acc,#4a5590a0)}
+.ex-scene>.ex-daylight{left:-3000px;top:-3000px;right:auto;bottom:auto;width:8000px;height:8000px;z-index:5000}
+.ex-daylight-night{background:#27306acc;mix-blend-mode:multiply}
+.ex-daylight-dusk{background:#ff9a6a55;mix-blend-mode:multiply}
+.ex-glow{position:absolute;display:block;border-radius:50%;pointer-events:none;z-index:5001;background:radial-gradient(closest-side,#ffd98a88,#ffc46a33 55%,transparent);mix-blend-mode:screen;animation:ex-glow 4s ease-in-out infinite alternate}
+@keyframes ex-glow{to{opacity:.8}}
+.ex-phase-night .ex-sky{filter:brightness(.42) saturate(.7) hue-rotate(10deg)}.ex-phase-dusk .ex-sky{filter:sepia(.35) saturate(1.3) brightness(.9)}
+/* R3 perf: tree sway and cloud blur cost ~15% fps on a throttled CPU; keep the small movers on their own layers */
+.ex-r3 .ex-tree{animation:none}.ex-r3 .ex-cloud{filter:none}
+.ex-bird,.ex-butterfly,.ex-walker,.ex-smoke,.ex-cloud{will-change:transform,opacity}
+.ex-r3 .ex-hills{top:27%;height:42%}
+/* R3 painted outside art: tiled ground planes + painted sprites, tinted with the day phase. */
+.ex-lawn,.ex-lawn-tone,.ex-gravel,.ex-flagstone,.ex-ground-edges,.ex-ground-shade{position:absolute;max-width:none;pointer-events:none;background-repeat:repeat;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.ex-lawn,.ex-lawn-tone{background-repeat:no-repeat,repeat;-webkit-mask-image:linear-gradient(transparent,#000 4%);mask-image:linear-gradient(transparent,#000 4%)}
+.ex-lawn-tone{background-repeat:repeat;opacity:.32;mix-blend-mode:soft-light}
+.ex-up{image-rendering:auto}
+.ex-flowerbed,.ex-shrub{filter:drop-shadow(0 6px 4px #1c2a1255)}
+.ex-phase-dawn :is(.ex-up,.ex-awning,.ex-lawn,.ex-gravel,.ex-flagstone){filter:sepia(.18) saturate(1.05) brightness(.96)}
+.ex-phase-dusk :is(.ex-up,.ex-awning,.ex-lawn,.ex-gravel,.ex-flagstone){filter:sepia(.3) saturate(1.1) brightness(.82) hue-rotate(-8deg)}
+.ex-phase-night :is(.ex-up,.ex-awning,.ex-lawn,.ex-gravel,.ex-flagstone){filter:brightness(.5) saturate(.7) hue-rotate(12deg)}
+.ex-phase-night .ex-lamp,.ex-phase-dusk .ex-lamp{filter:brightness(.9) drop-shadow(0 0 10px #ffd76a)}
+.ex-r3 .ex-walkway{display:none}
+
+/* R3 upper venue floors (outside): lit venue windows, tall blade sign, rooftop concert terrace */
+.ex-venue-lit{position:absolute;pointer-events:none;border-radius:6px;mix-blend-mode:screen;opacity:.32;background:radial-gradient(ellipse at 50% 60%,var(--venue-glow,#ffcf7a) 0,transparent 70%);animation:ex-venue-flicker 4.5s ease-in-out infinite alternate}
+.ex-venue-lit[data-venue=restaurant]{--venue-glow:#ffb35a}.ex-venue-lit[data-venue=salon]{--venue-glow:#ff9fc8}.ex-venue-lit[data-venue=spa]{--venue-glow:#7fe0d0}.ex-venue-lit[data-venue=lounge]{--venue-glow:#b79bff}.ex-venue-lit[data-venue=theater]{--venue-glow:#ff7a7a}
+.ex-phase-dusk .ex-venue-lit{opacity:.6}.ex-phase-night .ex-venue-lit{opacity:.9}
+@keyframes ex-venue-flicker{to{filter:brightness(1.25)}}
+.ex-tall-sign{position:absolute;width:58px;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;pointer-events:none;background:linear-gradient(#2f5d4a,#1f4537);border:4px solid #c9a45a;border-radius:10px;box-shadow:0 6px 10px #0006,inset 0 0 0 3px #1a3a2e;z-index:3}
+.ex-tall-letter{font:900 30px/1 "Nunito","Trebuchet MS",system-ui,sans-serif;color:#ffe7a8;text-shadow:0 0 6px #ffcf6a,0 2px 0 #6b4a1a}
+.ex-tall-gap{height:10px}
+.ex-phase-night .ex-tall-letter,.ex-phase-dusk .ex-tall-letter{text-shadow:0 0 12px #ffd27a,0 0 22px #ffb84a}
+.ex-roof-terrace{position:absolute;pointer-events:none;filter:drop-shadow(0 4px 3px #0005);z-index:2}
+.ex-note{position:absolute;pointer-events:none;font:900 26px/1 system-ui,sans-serif;color:#fff3c4;text-shadow:0 0 6px #b79bff;animation:ex-note-rise 3.2s ease-in infinite;opacity:0}
+.ex-note-1{animation-delay:1.1s}.ex-note-2{animation-delay:2.1s}
+@keyframes ex-note-rise{0%{opacity:0;transform:translate(0,0)}20%{opacity:1}100%{opacity:0;transform:translate(14px,-60px)}}
+@media (prefers-reduced-motion:reduce){.ex-venue-lit,.ex-note{animation:none}}
+.ex-lawn-far{position:absolute;max-width:none;pointer-events:none;background-repeat:repeat;-webkit-mask-image:linear-gradient(transparent,#000 3%);mask-image:linear-gradient(transparent,#000 3%)}
+.ex-phase-dawn .ex-lawn-far{filter:sepia(.18) brightness(.96)}.ex-phase-dusk .ex-lawn-far{filter:sepia(.3) brightness(.82)}.ex-phase-night .ex-lawn-far{filter:brightness(.5) saturate(.7) hue-rotate(12deg)}

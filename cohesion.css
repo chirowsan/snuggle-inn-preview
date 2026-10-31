@@ -13,3 +13,11 @@
 @media(orientation:portrait) and (max-width:650px){.varied-visit .visit-ticket{top:-43px;padding:2px 3px;gap:2px}.visit-ticket svg{width:14px;height:14px}}
 
 #floor-offer{position:absolute;right:0;top:calc(100% + 8px);display:flex;align-items:center;gap:5px;white-space:nowrap;padding:7px 10px;background:#fff0ca;border:2px solid #d8bd7c;border-radius:9px;color:#3e6149;box-shadow:0 3px 6px #163b2b55;font:13px Georgia;pointer-events:none}#floor-offer svg{width:17px;height:17px}#floor-offer:before{content:'';position:absolute;right:16px;top:-8px;border-width:0 6px 7px;border-style:solid;border-color:transparent transparent #d8bd7c}
+/* R3 guest expressions on waiting guests */
+.world-item[data-mood]::after{position:absolute;right:-6px;top:4px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:15px;line-height:1;background:#fff8e8;box-shadow:0 1px 3px #0003;pointer-events:none;animation:mood-pop .4s ease-out}
+.world-item[data-mood=happy]::after{content:'😊'}
+.world-item[data-mood=ok]::after{content:'🙂'}
+.world-item[data-mood=worried]::after{content:'😟';animation:mood-wobble 1.6s ease-in-out infinite}
+@keyframes mood-pop{from{transform:scale(.3)}to{transform:scale(1)}}
+@keyframes mood-wobble{0%,100%{transform:rotate(0)}50%{transform:rotate(-10deg)}}
+.gentle-motion .world-item[data-mood]::after{animation:none}

@@ -76,6 +76,7 @@ export function createHotelAudio(options = {}) {
   const fetchFile = options.fetch ?? globalThis.fetch?.bind(globalThis);
   let musicVolume = clamp(options.musicVolume ?? .55), effectsVolume = clamp(options.effectsVolume ?? .65);
   let weatherVolume = clamp(options.weatherVolume ?? 0), rainIntensity = 0;
+  let footsteps = ['normal','soft','off'].includes(options.footsteps) ? options.footsteps : 'normal';
   let weatherGain = null, weatherSource = null;
   let ctx = null, master = null, musicGain = null, effectsGain = null, ambienceGain = null;
   let musicSource = null, ambienceSource = null, musicBuffer = null, loadPromise = null, abort = null;
@@ -264,6 +265,7 @@ export function createHotelAudio(options = {}) {
       return true;
     },
     setEffectsVolume(value) { if (destroyed) return; effectsVolume = clamp(value); if (!effectsVolume) stopEffects(); levels(); },
+    setFootsteps(mode) { footsteps = ['normal','soft','off'].includes(mode) ? mode : 'off'; return footsteps; },
     setWeatherVolume(value) { if(destroyed)return;weatherVolume=clamp(value);makeWeather();levels(); },
     setWeather(value) { if(destroyed)return;const next=clamp(value);if(next===rainIntensity)return;rainIntensity=next;makeWeather();levels(); },
     setPaused(value) { if (destroyed) return; paused = !!value; syncTransport(); },
@@ -287,7 +289,8 @@ export function createHotelAudio(options = {}) {
         const inView = a.visible !== false && (floorOf(a) === floor || !!stairAt(a));
         if (!fresh && playable() && old && inView) {
           const pan = ((a.x ?? 600)-600)/1000;
-          if (a.moving && Math.floor((a.walkTime || 0)/.22) !== Math.floor(old.walkTime/.22)) event(stairAt(a) ? 'stair' : 'step', {pan,volume:a.id.startsWith('guest')?.48:.68});
+          const stepEvery = footsteps === 'soft' ? .6 : .22;
+          if (footsteps !== 'off' && a.moving && Math.floor((a.walkTime || 0)/stepEvery) !== Math.floor(old.walkTime/stepEvery)) event(stairAt(a) ? 'stair' : 'step', {pan,volume:(a.id.startsWith('guest')?.48:.68)*(footsteps === 'soft' ? .3 : 1)});
           if (phase !== old.phase) {
             if (phase === 'register') event('reception',{pan});
             else if (phase === 'welcome') event('door',{pan});

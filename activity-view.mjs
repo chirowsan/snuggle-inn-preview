@@ -5,6 +5,7 @@ import {leisureSceneArt,leisureToolArt,leisurePropArt,leisureMotionArt,leisurePe
 import {icon} from './rush-icons.mjs';
 import {LeisurePerformerMotion} from './leisure-performer-motion.mjs';
 import {nextActivityTap} from './tap-guide.mjs';
+import {FINISH_MOTIONS,finishMotionFor,evaluateFinish} from './finish-motions.mjs';
 import {NEW_FOOD_ART,ramenArt,pipeBackdrop,fixtureBackdrop,salonBackdrop,spaBackdrop,tuftArt,fastenerArt,tensionArt,serviceBackdrop,serviceTargetArt} from './activity-art.mjs';
 const wrap=(body)=>`<svg viewBox="0 0 120 100" aria-hidden="true"><defs><linearGradient id="bread" x2="0" y2="1"><stop stop-color="#f8d68c"/><stop offset=".45" stop-color="#d58d43"/><stop offset="1" stop-color="#95542e"/></linearGradient><radialGradient id="cream"><stop stop-color="#fff9df"/><stop offset="1" stop-color="#d2bd8b"/></radialGradient><linearGradient id="tea" x2="0" y2="1"><stop stop-color="#e8c27b"/><stop offset="1" stop-color="#946137"/></linearGradient></defs>${body}</svg>`;
 export const foodArt={
@@ -85,7 +86,7 @@ export class ActivityView {
  open(activity) {
   this.leisureMotion?.close();this.leisureMotion=null;
   if(this.activity)cancelActivity(this.activity);
-  this.token++;this.activity=activity;this.finishing=false;this.selected=null;this.drag=null;this.suppress=0;
+  this.token++;this.activity=activity;this.finishing=false;this.selected=null;this.drag=null;this.suppress=0;this.pending=null;
   this.root.className='activity-board '+activity.kind+(Object.hasOwn(CUISINE_ACTIVITIES,activity.kind)?' cooking':'')+(Object.hasOwn(LEISURE_ACTIVITIES,activity.kind)?' performance-activity':'')+(activity.command.recipe?' recipe-'+activity.command.recipe:'');
   this.build();this.sync();
   globalThis.addEventListener?.('resize',this.resize);globalThis.addEventListener?.('blur',this.blur);globalThis.document?.addEventListener?.('visibilitychange',this.visibility);
@@ -94,7 +95,7 @@ export class ActivityView {
  }
  close() {
   this.leisureMotion?.close();this.leisureMotion=null;
-  this.token++;if(this.activity)cancelActivity(this.activity);this.activity=null;this.cancelGesture();
+  this.token++;if(this.activity)cancelActivity(this.activity);this.activity=null;this.pending=null;this.cancelGesture();
   this.observer?.disconnect();globalThis.removeEventListener?.('resize',this.resize);globalThis.removeEventListener?.('blur',this.blur);globalThis.document?.removeEventListener?.('visibilitychange',this.visibility);this.root.replaceChildren();
  }
  act(action) {
@@ -138,7 +139,7 @@ export class ActivityView {
  }
  click(e) {
   if(!this.activity||this.finishing)return;
-  if(e.target.closest('.motion-assist')){this.cancelGesture();this.tapAssist=!this.tapAssist;this.selected=null;this.sync();return;}
+  if(e.target.closest('.motion-assist')){this.cancelGesture();this.pending=null;this.tapAssist=!this.tapAssist;this.selected=null;this.sync();return;}
   if(performance.now()<this.suppress)return;
   if(isMotionActivity(this.activity.kind)&&!this.tapAssist)return;
   const leisureTool=e.target.closest('[data-leisure-tool]'),leisureTarget=e.target.closest('[data-leisure-target]'),leisureStage=getLeisureStage(this.activity);
@@ -164,6 +165,7 @@ export class ActivityView {
   // drag's synthetic-click guard. The synthetic click has no new down event.
   this.suppress=0;
   this.root.classList?.remove('cooking-retry','cooking-pick-tool','leisure-retry','leisure-pick-tool');
+  if(this.pending){if(!e.target.closest('.motion-assist')){this.root.classList?.remove('finish-retry');this.drag={id:e.pointerId,finish:true,x:e.clientX,y:e.clientY,moved:false,rect:this.root.getBoundingClientRect(),pts:[{x:e.clientX,y:e.clientY,t:performance.now()}]};this.root.classList?.add('finish-working');e.target.setPointerCapture?.(e.pointerId);return;}this.pending=null;this.sync();}
   const leisureTool=e.target.closest('[data-leisure-tool]'),leisureTarget=e.target.closest('[data-leisure-target]'),leisureStage=getLeisureStage(this.activity);
   const cookTool=e.target.closest('[data-cook-tool]'),cookTarget=e.target.closest('[data-cook-target]');
   const stage=getCookingStage(this.activity);
@@ -185,6 +187,7 @@ export class ActivityView {
  move(e) {
   const d=this.drag;if(!d||e.pointerId!==d.id)return;
   if(!rectEqual(d.rect,this.root.getBoundingClientRect())){this.cancelGesture();return;}
+  if(d.finish){if(d.pts.length<400)d.pts.push({x:e.clientX,y:e.clientY,t:performance.now()});const cue=this.root.querySelector('.finish-cue');if(cue){cue.style.setProperty('--fx',(e.clientX-d.x)*.35+'px');cue.style.setProperty('--fy',(e.clientY-d.y)*.35+'px');}return;}
   d.travel+=Math.hypot(e.clientX-d.lastX,e.clientY-d.lastY);d.lastX=e.clientX;d.lastY=e.clientY;
   if(Math.hypot(e.clientX-d.x,e.clientY-d.y)>7)d.moved=true;
   if(!d.moved)return;
@@ -217,6 +220,7 @@ export class ActivityView {
   const d=this.drag;if(!d||e.pointerId!==d.id)return;
   if(!rectEqual(d.rect,this.root.getBoundingClientRect())){this.cancelGesture();return;}
   this.drag=null;this.root.classList.remove('cooking-working','leisure-working');this.root.style.setProperty('--curtain-pull','0');this.root.querySelector('.activity-drag').hidden=true;this.root.querySelector('.sponge')?.classList.remove('wiping');this.root.querySelector('.service-tool')?.classList.remove('working');
+  if(d.finish){this.root.classList.remove('finish-working');this.finishGesture(d,e);return;}
   const heldSpa=d.service!==null&&this.activity.kind==='spa'&&performance.now()-d.start>=400;
   if(!d.moved&&!heldSpa)return;
   this.suppress=performance.now()+400;
@@ -233,6 +237,7 @@ export class ActivityView {
     else this.nudgeCooking();
    }
   }else if(d.tuck){const dx=e.clientX-d.x,dy=e.clientY-d.y;if(Math.abs(dy)<110&&(d.tuck==='left'?dx>28:dx< -28))this.act({type:'tuck',side:d.tuck});}
+  else if(d.item&&['tray','ramen'].includes(this.activity.kind)&&finishMotionFor(d.item)&&(()=>{const slot=document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-slot]');return slot&&this.root.contains(slot)&&!slot.disabled&&slot.dataset.slot===d.item&&!this.activity.steps.includes(d.item);})()){this.selected=null;this.pending={item:d.item,motion:finishMotionFor(d.item),count:0};this.onSound('tray');this.sync();}
   else if(d.item){const slot=document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-slot]');const accepted=slot&&this.root.contains(slot)&&!slot.disabled&&this.act(d.item==='pillow'&&slot.dataset.slot==='pillow'?{type:'pillow'}:{type:'place',item:d.item,slot:slot.dataset.slot});this.selected=accepted?null:d.item;this.sync();}
   else if(d.scrubbing){const r=d.rect;if(e.clientX>=r.left&&e.clientX<=r.left+r.width&&e.clientY>=r.top&&e.clientY<=r.top+r.height){for(const action of d.sectors.values())this.act(action);}this.sync();}
   else if(d.service!==null){
@@ -240,6 +245,31 @@ export class ActivityView {
    const meaningful=this.activity.kind==='fixture'?Math.abs(d.arc)>=.42&&d.travel>=14:this.activity.kind==='salon'?d.travel>=22:heldSpa||d.travel>=24;
    if(inside&&meaningful)this.act({type:actionFor[this.activity.kind],index:d.service,gestureId:'drag'+(++this.serial)});
   }
+ }
+ finishGesture(d,e){
+  const p=this.pending;if(!p||!this.activity)return;
+  d.pts.push({x:e.clientX,y:e.clientY,t:performance.now()});this.suppress=performance.now()+400;
+  const r=evaluateFinish(p.motion,d.pts,p.count);
+  const cue=this.root.querySelector('.finish-cue');cue?.style.setProperty('--fx','0px');cue?.style.setProperty('--fy','0px');
+  if(!r.done){p.count=r.count;if(r.count===0||FINISH_MOTIONS[p.motion].taps===0){this.root.classList.remove('finish-retry');void this.root.offsetWidth;this.root.classList.add('finish-retry');}else this.onSound('tray');this.sync();return;}
+  this.pending=null;const accepted=this.act({type:'place',item:p.item,slot:p.item});
+  const slot=this.root.querySelector(this.activity.kind==='ramen'?'.ramen-bowl-art':'.slot-'+p.item);
+  if(accepted&&slot&&!this.reducedMotion()){slot.classList.remove('finish-'+p.motion);void slot.offsetWidth;slot.classList.add('finish-done','finish-'+p.motion);setTimeout(()=>slot.classList?.remove('finish-done','finish-'+p.motion),700);}
+  this.sync();
+ }
+ syncFinish(){
+  let cue=this.root.querySelector('.finish-cue');const p=this.pending;
+  this.root.querySelectorAll('.awaiting-finish').forEach(el=>el.classList.remove('awaiting-finish'));
+  this.root.classList.toggle('finish-pending',!!p);
+  if(!p){if(cue)cue.hidden=true;return;}
+  const m=FINISH_MOTIONS[p.motion],slot=this.root.querySelector(this.activity.kind==='ramen'?'.ramen-drop':'.slot-'+p.item);
+  if(!cue){this.root.insertAdjacentHTML('beforeend','<div class="finish-cue" aria-live="polite"></div>');cue=this.root.querySelector('.finish-cue');}
+  slot?.classList.add('awaiting-finish','next');this.root.querySelector('.item-'+p.item)?.classList.add('used');
+  cue.hidden=false;cue.dataset.motion=p.motion;
+  const dots=m.taps?`<b class="finish-dots">${Array.from({length:m.taps},(_,i)=>`<i class="${i<p.count?'done':''}"></i>`).join('')}</b>`:'';
+  cue.innerHTML=`<span class="finish-food">${artFor(p.item)}</span><span class="finish-gesture" aria-hidden="true">${m.cue}</span><span class="finish-label">${m.label}</span>${dots}`;
+  const rr=this.root.getBoundingClientRect?.(),sr=slot?.getBoundingClientRect?.();
+  if(rr&&sr&&rr.width){cue.style.left=Math.max(70,Math.min(rr.width-70,sr.left-rr.left+sr.width/2))+'px';cue.style.top=Math.max(60,Math.min(rr.height-50,sr.top-rr.top+sr.height/2))+'px';}
  }
  nudgeLeisure(pickTool=false){this.root.classList.remove('leisure-retry','leisure-pick-tool');void this.root.offsetWidth;this.root.classList.add(pickTool?'leisure-pick-tool':'leisure-retry');}
  nudgeCooking(pickTool=false){this.root.classList.remove('cooking-retry','cooking-pick-tool');void this.root.offsetWidth;this.root.classList.add(pickTool?'cooking-pick-tool':'cooking-retry');}
@@ -321,7 +351,8 @@ export class ActivityView {
   const next=stage&&!this.tapAssist?(['drop','pour','plate'].includes(stage.gesture)?stage.gesture==='plate'?'.cooking-source':'.cooking-tool':'.cooking-surface'):nextActivityTap(a,this.selected,stage,getLeisureStage(a));
   this.root.classList.toggle('motion-primary',isMotionActivity(a.kind)&&!this.tapAssist);
   const assist=this.root.querySelector('.motion-assist');if(assist){assist.setAttribute('aria-pressed',String(this.tapAssist));assist.textContent=this.tapAssist?'Use motions':'Tap assist';}
-  const caption=this.root.querySelector('.motion-caption');if(caption)caption.textContent=a.status!=='active'||stage?'':this.tapAssist?(a.kind==='scrub'?'Tap each patch to wipe':'Tap an item, then its place'):a.kind==='scrub'?'Rub each patch back and forth':'Drag each ingredient to its place';
+  const caption=this.root.querySelector('.motion-caption');if(caption)caption.textContent=a.status!=='active'||stage?'':this.tapAssist?(a.kind==='scrub'?'Tap each patch to wipe':'Tap an item, then its place'):a.kind==='scrub'?'Rub each patch back and forth':this.pending?FINISH_MOTIONS[this.pending.motion].label:'Drag each ingredient to its place';
+  this.syncFinish();
   this.root.querySelector(next||'.no-next-target')?.classList.add('next');
   if(this.selected)this.root.querySelector(`[data-item="${this.selected}"]`)?.classList.add('chosen');
   this.positionTapHand();

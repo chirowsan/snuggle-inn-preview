@@ -1,0 +1,39 @@
+{
+  "createdAt": "2026-10-25T01:20:00Z",
+  "generationMode": "Built-in image_gen__imagegen only; no API keys, CLI fallback or external paid services.",
+  "references": [
+    {
+      "path": "dist/assets/exterior/hotel-exterior.webp",
+      "role": "Historical exterior composition reference, retained unchanged."
+    },
+    {
+      "path": "dist/assets/background.webp",
+      "role": "Approved original reception painting and material reference, retained unchanged."
+    }
+  ],
+  "steps": [
+    {
+      "id": "modern-exterior-candidate",
+      "path": "artwork/exterior-modern/originals/hotel-modern-closed.png",
+      "prompt": "Use case: precise-object-edit.\nAsset type: production hand-painted exterior background for a cozy hotel game. Landscape 12:7 composition, logical 1200 x 700.\nPrimary request: replace the old-fashioned exterior architecture with a beautiful upscale contemporary boutique hotel. Reference image 1 is the exterior to redesign; reference image 2 is ONLY the approved interior's painting craft, warmth and material-quality reference. Do not alter or reproduce that interior.\nStyle: polished, lush hand-painted premium cozy game illustration with dimensional natural materials and warm late-afternoon light. Elegant modern architecture, not flat vector art, not blocky schematic geometry, not photorealism, not cyberpunk.\nHotel: ground-floor glazed lobby plus THREE complete upper guestroom stories; full roofline visible. Clean horizontal architectural lines, pale warm limestone, honey timber soffits and vertical oak accents, fine dark bronze window mullions, large floor-to-ceiling glass windows, luminous curtains and inviting warmly lit rooms, restrained glass balcony rails, a lightly planted setback roof terrace. Subtle rounded corners and tactile stone. No historic mansard roof, shutters, arches, ornate ironwork or ivy covering the facade.\nComposition: near-frontal architectural elevation with very mild elevated perspective, centered single hotel, full width of building roughly x=190 to 1010. Keep roof below y=35 with sky above. Keep three upper window stories readable above y=385. Elegant broad projecting entrance canopy spanning roughly x=188 to 1012. Its front is ONE CONTINUOUS EMPTY MATTE DARK FOREST-BRONZE SIGN FASCIA from y=390 to 455, directly facing camera, with slim bronze edge and warm wood soffit beneath. This fascia must be blank, opaque, visibly attached to the building, with no beams, glass, plants or ornaments interrupting its broad front. It will carry live customizable neon lettering.\nBelow the canopy, full-height lobby glazing and a central glass double entrance. Closed rectangular bronze-framed glass sliding door leaves in a simple rectangular opening roughly x=546 to 654, y=466 to 566. Clearly visible center seam; welcoming warm vestibule visible through glass. Keep the doorway frontal and centered at x=600, threshold at y=566. Do not paint literal neon anywhere.\nForecourt: broad elegant warm light-stone paved approach across the entire lower y=574 to 700. Clear central path. Beautiful low sculptural landscaping, tall ornamental grasses, olive trees, small flowering shrubs in neat integrated beds ONLY at far edges and alongside hotel. Keep the foreground x=100..1100 and y=574..690 unobstructed, with no permanent benches, pots, lanterns, fountain, cars or obstacles, since the player places furniture. Soft appealing dappled shadows, sparse subtle paving seams.\nAtmosphere: airy pale blue sky, warm sun, serene landscaped destination, luxurious but genuinely cozy, inviting and charming. Forest green/bronze ties to the interior while architecture unmistakably modern.\nConstraints: NO people, characters, animals, text, letters, numbers, logos, decorative symbols, watermarks or UI. Preserve the broad existing composition and open foreground, but completely replace the historical facade with the contemporary architecture described. Do not leave any old-fashioned arched doors or roof details. The canopy fascia must be blank for runtime text."
+    },
+    {
+      "id": "modern-open-endpoint",
+      "path": "artwork/exterior-modern/originals/hotel-modern-open.png",
+      "prompt": "Use case: precise-object-edit.\nThis is the selected painted modern hotel exterior for a game. Change ONLY the narrow CENTRAL TWO glass entrance doors at the bottom center of the hotel, under the wide blank dark green canopy. Slide the two central bronze-framed glass door leaves horizontally outward into their adjacent fixed side windows, like an automatic hotel sliding door, leaving a clear open central rectangular passage to the warm lobby. Keep the overhead rectangular door frame and threshold in exactly the same position, size and perspective. Open passage occupies only the original two door leaves' rectangle. Leave all other pixels of the hotel, windows, canopy, shrubs, courtyard, sky and shadows visually unchanged. In particular do NOT move/reframe the building, do not change the canopy, do not relight the exterior, and do not add foreground shadows, beams or glow. Keep the warm cozy painted vestibule behind the doorway, with a little golden floor visible. No person, animal, words, text or symbols anywhere. Exact same image dimensions/composition. This output is only for a small animated open-door endpoint patch, so architecture alignment must be exact."
+    },
+    {
+      "id": "deepen-fascia-only",
+      "path": "artwork/exterior-modern/originals/hotel-modern-fascia-refined.png",
+      "prompt": "Use case: precise-object-edit.\nThis is the SELECTED modern hotel painting. Make one precise architectural adjustment only: increase the HEIGHT of the long BLANK dark forest-bronze entrance-canopy fascia, growing it UPWARD while leaving its BOTTOM EDGE, warm timber underside and entrance completely stationary. The existing blank fascia is about 60 pixels high; make it about 110 pixels high in this 1642 x 958 image. Its new top should be at roughly y=390 instead of y=438; its bottom stays y=499. The wider-height sign surface is necessary for large editable lettering. Keep its full left-right extent, perspective, brass rim, and empty matte green-bronze surface. It may obscure only the lowest narrow portion of the lower balcony glazing; the guest windows above remain recognizable. The new fascia must look like one intentional sleek integrated modern architectural band, not an added floating board or multiple bands.\nKeep EVERYTHING ELSE exactly the same, including entire camera framing, full building, roofline, two upper guestroom stories and roof pavilion, garden, all foreground paving, center double glass entrance and warm interior behind it. No other design changes. Do not change doorway pixels or positions, especially central closed double doors. No text, logos, people, animals or UI. No words on the fascia. Same painterly warm contemporary appearance and same 1642×958 composition."
+    }
+  ],
+  "processing": "Mechanical Lanczos resizing, rectangle cropping of generated door endpoints, and WebP encoding only. No repainting, synthetic art, or alpha alteration. Pillow text/prop composites are inspection proofs, not production art.",
+  "quality": {
+    "background": 86,
+    "doorPatches": 90,
+    "method": 6
+  },
+  "preserved": "All historical exterior originals in dist/assets/exterior remain. All original interior/reception, characters, garden props and gameplay code remain byte-identical to 485118b6a99f56015b83c637e234bcc80c68461a.",
+  "verification": "Deterministic migration and controller tests included. Browser verification is owned by integration; no browser result claimed here."
+}

@@ -10,16 +10,18 @@ export function newspaperMarkup(state,profile) {
  const rep=profile.reputation||{rank:50,bookings:0},articles=newspaperArticles(state,profile);
  return `<div class="hotel-standing"><strong>${esc(rankTitle(rep.rank))}</strong><span>${rep.rank}/100 · ${rep.bookings} reader booking${rep.bookings===1?'':'s'} reserved</span><small>⭐ Happy guests and good news raise your rank</small></div>`+
  articles.map(newspaperArticleMarkup).join('')+
- (!articles.length?'<p class="press-coming">A press-badged guest visits after two shifts. Their newspaper follows the stay they actually receive.</p>':'');
+ (!articles.length?'<p class="press-coming">A secret critic checks in every few shifts, disguised as an ordinary guest. Their newspaper follows the stay they actually receive.</p>':'');
 }
-export function drawPressAccessories(renderer,actor) {
- if(!actor.visible)return;
- renderer.badge(actor.x,actor.y-156,'PRESS','#f7ecc7','#386253');
- const p=renderer.point(actor.x,actor.y),c=renderer.ctx,scale=renderer.spriteScale;
- c.save();c.translate(p.x+24*scale,p.y-56*scale);c.rotate(-.12);c.fillStyle='#315c53';c.strokeStyle='#e3cc8e';c.lineWidth=2*scale;
- c.fillRect(-10*scale,-14*scale,20*scale,28*scale);c.strokeRect(-10*scale,-14*scale,20*scale,28*scale);
- c.fillStyle='#f7ecc7';c.fillRect(-6*scale,-10*scale,12*scale,18*scale);c.strokeStyle='#7e806d';c.lineWidth=scale;
- for(let y=-6;y<7;y+=4){c.beginPath();c.moveTo(-4*scale,y*scale);c.lineTo(4*scale,y*scale);c.stroke();}c.restore();
+/** The critic is disguised: no badge. Only once their stay is written up does a tiny
+ * notebook with a soft glint peek out, a hint you notice after the fact. */
+export function drawPressAccessories(renderer,actor,revealed=false) {
+ if(!actor.visible||!revealed)return;
+ const p=renderer.point(actor.x,actor.y),c=renderer.ctx,scale=renderer.spriteScale,t=(renderer.now||0)*3;
+ c.save();c.translate(p.x+20*scale,p.y-50*scale);c.rotate(-.12);c.fillStyle='#315c53';c.strokeStyle='#e3cc8e';c.lineWidth=1.5*scale;
+ c.fillRect(-6*scale,-8*scale,12*scale,16*scale);c.strokeRect(-6*scale,-8*scale,12*scale,16*scale);
+ c.fillStyle='#f7ecc7';c.fillRect(-3.5*scale,-5.5*scale,7*scale,10*scale);
+ const a=.45+.45*Math.sin(t);c.globalAlpha=a;c.fillStyle='#fff6c8';c.beginPath();
+ for(let i=0;i<8;i++){const r=i%2?2*scale:6*scale,ang=i*Math.PI/4;c.lineTo(8*scale+Math.cos(ang)*r,-10*scale+Math.sin(ang)*r);}c.closePath();c.fill();c.restore();
 }
 export function pestLabel(p) {return p.kind==='mouse'?(p.phase==='prepared'?'Relocate gently':'Set cozy carrier'):(p.phase==='prepared'?'Sweep into dustpan':'Pick up dustpan');}
 export function pestMarkup(p) {

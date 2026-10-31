@@ -21,7 +21,7 @@ export function firstStepsTask(profile,state,{selection=null,floor=0}={}){
  const pile=coinPiles(state)[0];if(pile){const room=state.rooms.find(r=>r.id===pile.roomId);return pip('collect-coins','🪙 Tap the coins at the door!',floor===room.floor?'coins-'+room.id:'floor-'+room.floor);}
  if(profile.construction?.project)return pip('building','🔨 Bramble is building. Keep welcoming!');
  if(!profile.activeShift&&profile.openRooms===1&&profile.guestsCompleted>0){const missions=profile.rewards?.missions;if(missions&&Object.values(missions).some(m=>m==='earned'))return pip('first-milestone','🎁 Grab your reward, then build a room!','first-stay-reopen');return pip('build-room','🛏️ Let’s build a room for a friend!','open-build');}
- if(!profile.activeShift&&profile.openRooms===2&&profile.staffCount<3)return pip('hire-rue','🧺 Two rooms! Hire Rue to help · 20 🪙','upgrade');
+ if(!profile.activeShift&&profile.openRooms===2&&profile.staffCount<3)return pip('grow-by-hand','🌱 Two rooms! Keep welcoming guests and save for room 3.','open-build');
  if(g?.status==='waiting')return pip('check-in',first?'👋 I’m Pip! Tap Willow, then her room.':g.name==='Willow'?'👋 Willow is back! Tap her, then a room.':'👋 '+g.name+' is here! Tap them, then a room.',selection?.kind==='guest'?'room-1':floor===0?'guest-'+g.id:'floor-0');
  if(g?.status==='checking-in')return willow('check-in-travel','🛏️ A soft bed! Feels like home.');
  if(g?.request==='towel')return pip('towel','🧺 Tap the towel bubble!',floor===1?g.roomId:'floor-1');

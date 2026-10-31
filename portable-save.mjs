@@ -62,6 +62,7 @@ function validateData(data){
  if(!equal(rushSnapshot(restored.session.state),e.checkpoint))fail('Hotel checkpoint would require repair.');
  for(const k of Object.keys(p))if(k!=='version'&&Object.hasOwn(restored.profile,k)&&!equal(p[k],restored.profile[k]))fail('Hotel profile would require repair ('+k+').');
  if(data.saved.newspaperReveal!==undefined&&!validNewspaperReveal(data.saved.newspaperReveal))fail('Unsupported newspaper presentation save.');
+ if(data.saved.manage!==undefined&&(!record(data.saved.manage)||data.saved.manage.version!==1))fail('Unsupported management save.'); // field values are sanitized by migrateManage on load
  const s=data.saved.settings;
  if(s!==undefined){if(!record(s))fail('Invalid audio settings.');
   for(const k of ['sound','reducedMotion','musicEnabled','effectsEnabled','weatherEnabled'])if(s[k]!==undefined&&typeof s[k]!=='boolean')fail('Invalid audio preference.');

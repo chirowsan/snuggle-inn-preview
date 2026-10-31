@@ -1,0 +1,10 @@
+{
+  "asset": "furnishings-v1.png",
+  "method": "OpenAI built-in image generation",
+  "generated": "2026-10-25",
+  "references": ["assets/guests-v08/room-luxury.webp", "assets/rush-wing.webp"],
+  "referenceRole": "Existing project art used only for style continuity; no outside artwork.",
+  "source": "generated_images/exec-055bd45e-d603-4bde-9ed0-fed8363364ba.png",
+  "alpha": "Preserved original RGBA; no manual background removal or raster editing.",
+  "description": "Four separate front/elevated painted sprites: bed, lamp cabinet, curtained window, fern. Runtime canvas crops the atlas into bounded model furniture envelopes."
+}

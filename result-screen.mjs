@@ -52,7 +52,7 @@ export function installResultScreen({ document, root, celebrate = null, reducedM
     const inside = $('inside-result'), decorNote = decorTile.querySelector('.tile-note');
     decorTile.classList.toggle('locked', !!inside.disabled);
     decorNote.textContent = inside.disabled ? (/^(🔨|⚠)/u.test(inside.title) ? inside.title : '🔒 Not now') : '';
-    shopTile.querySelector('.tile-note').textContent = hintShop ? (hint === 'upgrade' ? '🧺 Hire Rue here!' : '🔨 Build here!') : 'Rooms & helpers';
+    shopTile.querySelector('.tile-note').textContent = hintShop ? (hint === 'upgrade' ? '🛍️ Shop here!' : '🔨 Build here!') : shopSubtitle([...($('shop-tabs')?.querySelectorAll('[data-shop]') || [])].map(b => b.dataset.shop));
     shopTile.classList.toggle('hint', hintShop); mini.textContent = '🪙 ' + bank(); mini.setAttribute('aria-label', bank() + ' coins saved');
     decorTile.hidden = inside.hidden;
   }
@@ -62,4 +62,14 @@ export function installResultScreen({ document, root, celebrate = null, reducedM
     setPage(false, false); if (!root.hidden) animate();
   }
   return { show, sync, setPage, starsFor };
+}
+
+// Shop tile subtitle names only the shop tabs that are actually open right now.
+const SHOP_WORDS = { rooms: 'Rooms', team: 'helpers', visits: 'visits', cuisines: 'menu' };
+export function shopSubtitle(tabs = []) {
+  const words = tabs.map(t => SHOP_WORDS[t]).filter(Boolean);
+  if (!words.length) return 'Rooms';
+  if (words.length === 1) return words[0];
+  const text = words.slice(0, -1).join(', ') + ' & ' + words.at(-1);
+  return text[0].toUpperCase() + text.slice(1);
 }

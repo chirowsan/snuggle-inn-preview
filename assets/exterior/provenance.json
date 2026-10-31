@@ -1,0 +1,71 @@
+{
+  "createdAt": "2026-10-24T23:29:00Z",
+  "generationMode": "Built-in image_gen__imagegen only. No external paid service, API key or CLI fallback.",
+  "references": [
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-mischief-clarity/dist/assets/background.webp",
+      "role": "Approved original lobby palette and painterly materials; not modified."
+    },
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-leisure-art/runtime/leisure-floor.webp",
+      "role": "Approved leisure-floor palette and painterly materials; not modified."
+    }
+  ],
+  "steps": [
+    {
+      "id": "facade-v1",
+      "result": "originals/hotel-exterior.png",
+      "prompt": "Use case: style-transfer.\nAsset type: production painted background for the exterior decorating stage of a cozy animal-hotel game, landscape 12:7 ratio, intended logical size 1200 x 700.\nInput image 1 and 2 are only STYLE AND MATERIAL references for the same hotel. Paint an entirely new exterior viewpoint, not another interior. Preserve their beautiful warm illustrated painterly craft: honey limestone, deep forest green enamel, restrained old brass, pale jasmine flowers and ivy, golden afternoon sun. Original storybook boutique hotel, elegant and inviting, not cyberpunk, not modern city neon.\nComposition: fixed almost frontal camera, very mildly elevated, near-orthographic architectural elevation with just enough top surfaces visible to place garden furniture. Center the entire honey-stone hotel facade between garden edges. Ground floor plus THREE plainly readable upper window levels, each with forest-green shutters and small balconies/flower boxes. Keep the building substantial, symmetrical-ish and readable as a single hotel. Roofline visible near the top. No cutaway.\nGround-floor entrance at exact horizontal center, around x=600, from y=366 to y=505 in logical 1200x700 space: closed dark forest-green DOUBLE DOORS, straight rectangular leaves under an arched limestone surround. The door leaves have warm amber window glass and brass handles. Door leaves must face squarely towards the camera, not diagonal, so they can later be animated as overlay panels. Simple rectangular inner door opening.\nAbove entrance, large EMPTY flat dark forest-green horizontal signboard with a thin tasteful brass border, straight-on to camera, roughly x=405 to 795, y=310 to 360. Leave its entire inside perfectly blank for a live sign editor. It is not an awning and has no lettering, illustration, logo, badge, curl ornaments, or flowers crossing over it.\nFacade base near y=505. Entire lower ~27 percent of image (y=510 to 700) is a broad unobstructed softly textured honey-stone courtyard suitable for draggable garden props. Clear main entrance path. Very sparse planted landscaping only at far left/right perimeter. No large central flower pot, fountain, bench, lamp or tree baked into courtyard. Broad light stone slabs with few subtle fine joints; painterly warm shadows not dense clutter.\nStyle: polished, richly hand-painted cozy high-end game illustration; natural perspective consistent across all details. Soft dimensional rounded forms, tactile limestone and wood, warm reflected light. Dark forest-green details visually anchor luminous golden stone. Jasmine vines across edges/cornices, restrained purple and cream blooms. Sun from upper left. Blue-green distant foliage and a hint of pale blue sky at top.\nConstraints: absolutely NO characters, people, animals, letters, words, numbers, icons, symbols, UI, interface elements, watermarks or logos. No neon baked into art. No photography. No washed-out flat vector geometry. Do not show original lobby, reception counter, stage or theater. Paint the exterior of that same tasteful hotel.",
+      "selected": false,
+      "note": "Initial composition had only two complete upper window levels."
+    },
+    {
+      "id": "facade-v2",
+      "result": "originals/hotel-exterior-v2.png",
+      "prompt": "Use case: precise-object-edit.\nThis image is the hotel facade for a game. Preserve this exact beautiful warm painterly honey-limestone, green, brass and jasmine look, including blank central sign, double entrance, sunny courtyard, and matching style. Change only the vertical architectural arrangement and camera framing to satisfy the production composition: show the WHOLE roofline with a little sky above and THREE complete, clearly separated window stories ABOVE the ground-floor entrance level. The current image only has two full upper stories and roof cropped. Add one complete matching upper story and re-compose the hotel to fit, using shorter upper stories. Three full upper window stories plus ground floor must each be readable, and small attic dormers can optionally be in the complete roof. Do not crop top roof or side facade. Keep near frontal perspective, horizontal geometry. Entrance and sign centered. Keep all text absent and signboard fully blank. Keep an unobscured foreground courtyard covering the bottom 24% of the frame, never add props or people to it. Shrink the whole building only enough to fit the complete four-level facade into the upper 76% of the frame. Wide landscape 12:7 proportions. No character, text, logos, UI. All other visual decisions and materials stay as close to the input as possible.",
+      "selected": true,
+      "note": "Three complete upper window levels plus complete attic/roof, centered entrance and blank sign."
+    },
+    {
+      "id": "planter",
+      "result": "originals/flower-planter.png",
+      "prompt": "Use case: stylized-concept.\nAsset type: one production reusable garden prop sprite for this cozy hotel game, real transparent background.\nMake a SINGLE elegant small freestanding warm ivory/honey-stone fluted urn planter filled with cream jasmine flowers, a few muted lavender blooms, and deep green leaves. Same richly hand-painted storybook game materials, soft dimensional golden light, restrained old brass accents, sumptuous but readable silhouette as the hotel reference. Item only, isolated and centered with full silhouette visible.\nFixed almost-frontal mildly elevated camera, only a little elliptical top surface visible; object sits naturally on a horizontal courtyard viewed from low elevated frontal angle. No deep isometric tilt. Soft warm light from upper left. Draw the planter base clearly with a flat level contact point.\nNo scene/background, no ground plane, no floor, NO cast shadow, NO opaque rectangle, NO white or checkerboard backdrop, no text, letters, people, animals or labels. True transparent alpha around every leaf and through gaps. Object should fill most of the frame but have 8% clear margin. Painterly colors warm honey, ivory, forest green, cream and lavender; not plastic, flat icon or photoreal.",
+      "selected": true
+    },
+    {
+      "id": "bench",
+      "result": "originals/garden-bench.png",
+      "prompt": "Use case: stylized-concept.\nAsset type: one production reusable garden prop sprite for this cozy hotel game, real transparent background.\nMake a SINGLE elegant small TWO-SEAT garden bench: curved dark forest-green painted wood slats, restrained warm brass scrollwork on arms and feet, curved cozy back, tasteful miniature boutique hotel furniture. Same richly hand-painted storybook game materials, soft dimensional golden light and detail quality as the hotel reference. No cushion, decoration, planter or other object. Item only, isolated and centered with full silhouette visible.\nFixed almost-frontal mildly elevated camera, symmetrical face-on bench with a little top of the seat visible. Back and seat horizontal, not diagonal in perspective. Object sits naturally on a horizontal courtyard seen from low elevated frontal angle. Soft warm light from upper left. Four feet all clear, coherent level contact points.\nNo scene/background, no ground plane, no floor, NO cast shadow, NO opaque rectangle, NO white or checkerboard backdrop, no text, letters, people, animals or labels. True transparent alpha around the silhouette and through the arm/leg gaps. Object fills most of a landscape frame with 8% clear margin. Painterly warm forest green and old brass, not plastic, flat icon or photoreal.",
+      "selected": true
+    },
+    {
+      "id": "lantern",
+      "result": "originals/garden-lantern-v1.png",
+      "prompt": "Use case: stylized-concept.\nAsset type: one production reusable garden prop sprite for this cozy hotel game, real transparent background.\nMake a SINGLE small tasteful freestanding GARDEN LANTERN ON A SHORT POST, about waist height relative to an animal hotel guest: antique warm brass lantern housing with simple peaked cap, amber glowing glass, slender forest-green post with brass collar on a small solid round foot. Same richly hand-painted storybook game materials and soft dimensional golden upper-left sunlight as the honey-stone and forest-green hotel reference. The lantern is lit warmly but NO glow outside the silhouette, no rays. Full single lantern and post, not wall mounted, no hook.\nFixed almost-frontal mildly elevated camera, only a little top surface visible. Object sits upright on a horizontal courtyard viewed from low elevated frontal angle. Foot has clearly defined level ground contact. Entire silhouette visible with 8% clear margin.\nNo scene/background, no ground plane, no floor, NO cast shadow, NO opaque rectangle, NO white or checkerboard backdrop, no text, letters, people, animals or labels. True transparent alpha around and through gaps. Not modern electric pole, not cyberpunk, no neon, not flat icon or photoreal.",
+      "selected": true
+    },
+    {
+      "id": "open-door",
+      "result": "originals/hotel-exterior-open.png",
+      "prompt": "Use case: precise-object-edit. This is the approved warm painted exterior of a cozy hotel game. Change ONLY the two forest-green ground-floor entrance door leaves at the exact bottom-center of the building: swing both leaves inward to a fully open state revealing a softly glowing warm golden hotel hallway inside. Keep the doorway at EXACTLY the same coordinates, same size, same perspective. The dark green frame and arched fanlight transom above the leaves remain unchanged, as do every wall, stone jamb, planter, handle style, window, sign and shadow elsewhere in the image. The two door leaves are hinged to their existing left and right jambs, naturally opened inward so a bright empty welcoming passage is visible between them. Show no people or characters inside. The interior can show a tiny hint of honey stone floor and forest-green wood at the far back but no details outside the doorway. No outside beams or large glow; illumination stays within the doorway so this small central portion can be used as an opening animation. Every pixel of the rest of the composition must retain the same look, architecture and framing. Blank signboard stays blank; no text or symbols.",
+      "selected": true,
+      "note": "Only a small entrance patch from this edit is shipped, not a second full background."
+    }
+  ],
+  "processing": "Mechanical resizing, visible-alpha-bounds cropping with four source pixels of margin, and WebP encoding only. No chroma keying, matting, repainting, synthesized art, or alpha alteration. QA composites are inspection artifacts only.",
+  "quality": {
+    "background": 86,
+    "props": 88,
+    "doorPatches": 90,
+    "webpMethod": 6,
+    "alphaQuality": 100
+  },
+  "qa": {
+    "proofs": [
+      "proof/exterior-props-667x375.png",
+      "proof/exterior-open-667x375.png",
+      "proof/alpha-on-light-dark.png"
+    ],
+    "method": "Pillow alpha inspection composites at the requested 667×375 viewport, with aspect-preserving contain. Local headless Chromium QA was attempted but could not launch due environment socket/filesystem restrictions; no browser behavior claims are made."
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "generated_on": "2026-10-24",
+  "method": "OpenAI built-in image_gen",
+  "paid_external_services_used": false,
+  "new_site_or_publication": false,
+  "repository_or_original_assets_modified": false,
+  "prompt_file": "prompts.json",
+  "references": [
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-mischief-clarity/dist/assets/guests-v08/service-wing.webp",
+      "sha256": "1d72f8490a0b87cb699277820e437ecc788c4d840d71e4408d4c464b3b44a669"
+    },
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-mischief-clarity/dist/assets/characters/rabbit-walk-0.webp",
+      "sha256": "aa81cbf3ad05d8547959abf23faf98402808761238ad6403675cbd0a30af3ae1"
+    },
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-mischief-clarity/dist/assets/characters/badger-walk-0.webp",
+      "sha256": "a54b3753526f8a0890fd9d4a6ee0c58340a0dee9a4d47b43a4c3e83761abb997"
+    },
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-mischief-clarity/dist/assets/characters/fox-walk-0.webp",
+      "sha256": "39ddd2f49304e3f38e23404e313a04fb4cccba52aa6c9322ee3ffa42543cbca6"
+    },
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-mischief-clarity/dist/assets/guests-v08/cat-idle.webp",
+      "sha256": "57477b883f838a3803d945d33db7c9e5f32689273392ec37bf5e79d0c9b78104"
+    },
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-mischief-clarity/dist/assets/guests-v08/bear-family-idle.webp",
+      "sha256": "06e91fd84970e0f99473e91325a645fa3f8e412a3e69bd4ba13f99337928853b"
+    },
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-mischief-clarity/dist/assets/guests-v08/chef-idle.webp",
+      "sha256": "57e94f56e00d46c860141ed70250c664d7c556b8837b7b041fdf3190027d9606"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-leisure-art/originals/deer-source-atlas.png",
+      "sha256": "ddfa7d3ffba944c4bcac763b99dc9ddbd2682b00eca305ead6dde32e91567179",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-leisure-art/originals/hedgehog-source-atlas.png",
+      "sha256": "3886663fbd4e3f045a7e7b69a155ba509ad55ef6730fa9900e0844280283c413",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-leisure-art/originals/leisure-floor.png",
+      "sha256": "a070645c798f0389d55db38f7c1872fe47a87535c265dcc5807e0fe6555b515d",
+      "size": [
+        1642,
+        958
+      ]
+    },
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-leisure-art/originals/owl-opposite-v3.png",
+      "sha256": "92a36eef692f6a4db13c7181fb6fd0a4acc35c48364f6b4e800baba7c21d3a55",
+      "size": [
+        1586,
+        992
+      ]
+    },
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-leisure-art/originals/owl-source-atlas-v1.png",
+      "sha256": "e1ab9f42d014637b32f1fe2c2ea301710e312fcdf9ed624f86135881a6c649ac",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "/workspace/scratch/845bc1fb6d7d/neighborhood-leisure-art/originals/owl-walk-v2.png",
+      "sha256": "a8f57d2fec9bdd0ad762ba43e10fcaacda3c8979879641a30e908c9643faca5f",
+      "size": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "selected_sources": {
+    "floor": "originals/leisure-floor.png",
+    "hedgehog": "originals/hedgehog-source-atlas.png",
+    "deer": "originals/deer-source-atlas.png",
+    "owl_idle_and_portrait": "originals/owl-source-atlas-v1.png",
+    "owl_walk_0_and_1": "originals/owl-walk-v2.png",
+    "owl_walk_2_and_3": "originals/owl-opposite-v3.png"
+  },
+  "packaging_script": "package_assets.py",
+  "operations": [
+    "Atlas extraction only from generated raster sources",
+    "Generated alpha preserved",
+    "Transparent-padding and proportional resampling",
+    "Stable foot anchor [256,356]",
+    "WebP color compression, original alpha preserved",
+    "QA contact-sheet and scale-preview composites only"
+  ],
+  "notes": [
+    "A first owl walk source was superseded because the poses repeated an extended-leg stride.",
+    "No existing original lobby or floor was altered.",
+    "No real-person likeness or imitation is requested or used.",
+    "Artwork is staged, not integrated or deployed."
+  ]
+}

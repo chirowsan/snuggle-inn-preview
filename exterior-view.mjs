@@ -1,3 +1,4 @@
+import {mountExteriorGrounds} from './exterior-grounds.mjs';
 import {LandscapeView} from './landscape-view.mjs';
 import {GardenVisitorsView} from './garden-visitors-view.mjs';
 import {groundPoint,groundInverse,frontPoint,frontInverse,GROUND_MATRIX,FRONT_MATRIX,projectRect,homeBounds,PROJECTED_WORLD} from './exterior-projection.mjs';
@@ -145,6 +146,7 @@ class ExteriorView {
     this.sign = this.el('div', 'ex-lettering'); this.signText = this.el('span', 'ex-neon-text'); this.sign.append(this.signText); this.frontLayer.append(this.sign);
     this.hitLayer = this.el('div', 'ex-hit-layer'); this.signHit = this.button('Select sign, then tap a place on the canopy. Dragging is optional.', null, null, 'ex-object-hit ex-sign-hit'); this.signHit.dataset.object = 'sign'; this.hitLayer.append(this.signHit);
     this.viewport.append(this.scene, this.hitLayer); this.root.append(this.viewport);
+    try{this.grounds=mountExteriorGrounds(this,{hour:Number.isInteger(globalThis.__snuggleHour)?globalThis.__snuggleHour:new Date().getHours(),reducedMotion:!!(typeof this.options.reducedMotion==='function'?this.options.reducedMotion():this.options.reducedMotion)});}catch{this.grounds=null;}
     const toolbar = this.el('nav', 'ex-toolbar'); toolbar.setAttribute('aria-label', 'Exterior tools');
     this.buttons.sign = this.button('Edit sign', icon.sign, () => { this.cancelGesture();this.camera=null;this.resize();this.select('sign'); this.showPanel('sign'); });
     this.buttons.garden = this.button('Add garden decoration', icon.garden, () => this.openGarden());
